@@ -68,10 +68,11 @@ h1
 }
 .loginfield
 {
+  position: relative;
+  margin: 50px auto;
   font-family: 'Noto Sans',sans-serif;
   text-align: center;
   background-color: rgba(255,255,255,0.7);
-  margin: 50px auto;
   width: 20%;
   border-radius: 40px;
   clear: both;
