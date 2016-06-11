@@ -74,6 +74,7 @@ h1
   margin: 50 auto;
   width: 20%;
   border-radius: 40px;
+  clear: both;
 }
 .loginfield ul
 {
