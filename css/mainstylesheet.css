@@ -45,7 +45,6 @@ h1
   background-image: url(../img/2.jpg);
   padding-top: 150px;
   background-repeat: no-repeat;
-  padding-bottom: 150px;
   background-size: auto;
 
 }
@@ -55,7 +54,7 @@ h1
   color: white;
 }
 
-.loginfield>h3
+.loginfield h3, .signupfield h3
 {
   padding-top: 5px;
   padding-bottom: 20px;
@@ -76,6 +75,7 @@ h1
   width: 20%;
   border-radius: 40px;
   clear: both;
+  padding-bottom: 30px;
 }
 .loginfield ul
 {
@@ -88,7 +88,7 @@ h1
   padding-top: 5px;
 }
 
-.loginfield input[type="text"]
+.loginfield input[type="text"], input[type="password"]
 {
   border-radius: 5px;
   padding: 8px;
@@ -102,6 +102,55 @@ h1
 {
   border: solid 1px #707070;
   box-shadow: 0 0 5px 1px #969696;
+}
+
+.loginfield input[type="password"]:focus,
+.loginfield input[type="password"].focus
+{
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+.button
+{
+  font-family: 'Noto Sans',sans-serif;
+  display: inline-block;
+  width: 45%;
+  padding: 8px;
+  background-color: rgba(30, 200, 253, 1);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: all, 0.5s;
+}
+.button:hover
+{
+  background-color: rgba(30, 172, 253, 1);
+}
+.button span
+{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after
+{
+  content: '>>';
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span
+{
+  padding-right: 25px;
+}
+.button:hover span:after
+{
+  opacity: 1;
+  right: 0;
 }
 
 .content1
@@ -176,4 +225,13 @@ hr
   color: rgba(0, 76, 159, 1);
   width: 30%;
   font-size: 300px;
+}
+
+.movedown
+{
+  clear:both;
+  text-align: center;
+  width: 100%;
+  font-size: 5em;
+  color: rgba(0, 76, 159, 1);
 }
