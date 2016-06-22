@@ -1,0 +1,79 @@
+*
+{
+  margin: 0;
+}
+
+html,body
+{
+  font-family: 'Exo', sans-serif;
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+#logo
+{
+  float: left;
+  color: white;
+  font-size: 150px;
+  width: 50%;
+  text-align: center;
+  padding: 500px 0;
+}
+
+.line
+{
+  border-left: white solid;
+  height: 600px;
+  float:left;
+  margin: 300px 0;
+}
+
+.fields
+{
+  float: left;
+  padding: 540px 200px;
+}
+
+#loginfield, #signupfield
+{
+  display: none;
+}
+
+
+button
+{
+  font-size: 20px;
+  font-family: 'Noto Sans' ,sans-serif;
+  width: 300px;
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  transition: all, 0.5s;
+}
+
+input[type="text"], input[type="password"]
+{
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: rgba(0,0,0,0.7);
+}
+
+input[type="text"]:focus,
+input[type="text"].focus
+{
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+input[type="password"]:focus,
+input[type="password"].focus
+{
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
