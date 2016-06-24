@@ -21,7 +21,10 @@
   <title>polyNexus</title>
   <script>
   $(function() {
-    $( "#tabs" ).tabs();
+    $("#tabs").tabs();
+  });
+  $(function() {
+    $("#setting").tabs();
   });
   </script>
 </head>
@@ -43,6 +46,9 @@
   <div id="tabs-1" class="tabs">
     <div class="currentchats" id="chatlist">
       <ul class="currentchatlist">
+        <li>
+          <h2>Chats</h2>
+        </li>
         <li id="searchbar">
           <input type="text" placeholder="Search" />
         </li>
@@ -78,7 +84,7 @@
         </li>
       </ul>
     </div>
-    <div class="activechat" id="chatinterface">
+    <div class="activetab" id="chatinterface">
       <h2>Alice</h2>
       <div class="chatoutput">
       </div>
@@ -88,31 +94,104 @@
     </div>
   </div>
   <div class="tabs" id="tabs-2">
-    <div class="eventlist" id="eventlist">
-      <ul class="currentchatlist">
-        <li>
-          <h2>Events</h2>
-          <p>
-            you can only join events if you are in the specified chat group.
-          </p>
-        </li>
-        <li>
-          <h3>Gardening</h3>
-          <h4>making pot brownies</h4>
-          <p class="textchat">
-            19:00 at jz's house
-          </p>
-        </li>
-        <li class="addchat" id="addchat">
-          <i class="fa fa-plus-square-o" aria-hidden="true"></i> Create an event
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="tabs" id="tabs-3">
+  <div class="eventlist" id="eventlist">
     <ul class="currentchatlist">
+      <li>
+        <h2>Events</h2>
+        <p class="textchat">
+          you can only join events if you are in the specified chat group.
+        </p>
+      </li>
+      <li>
+        <h3>Gardening</h3>
+        <h4>making pot brownies</h4>
+        <p class="textchat">
+          19:00 at jz's house
+        </p>
+      </li>
+      <li class="addchat" id="addchat">
+        <i class="fa fa-plus-square-o" aria-hidden="true"></i> Create an event
+      </li>
     </ul>
   </div>
+</div>
+<div class="tabs" id="tabs-3">
+  <div id="setting">
+    <ul class="currentchatlist">
+      <li>
+        <h2>Settings</h2>
+        <p class="textchat">
+          Change how the application works.
+        </p>
+      </li>
+      <li><a href="#setting-1">
+        <h3><i class="fa fa-user" aria-hidden="true"></i> Username</h3>
+        <p class="textchat">
+          Change your username
+        </p></a>
+      </li>
+      <li><a href="#setting-2">
+        <h3><i class="fa fa-lock" aria-hidden="true"></i> Password</h3>
+        <p class="textchat">
+          Change your password
+        </p></a>
+      </li>
+      <li><a href="#setting-3">
+        <h3><i class="fa fa-user-times" aria-hidden="true"></i> Blocked Users
+        </h3>
+        <p class="textchat">
+          Displays a list of blocked users.
+        </p></a>
+      </li>
+      <li><a href="#setting-4">
+        <h3><i class="fa fa-paint-brush" aria-hidden="true"></i> Theme</h3>
+        <p class="textchat">
+          Change the look and feel of the application.
+        </p></a>
+      </li>
+    </ul>
+    <div id="setting-1" class="activetab">
+      <h2>Username</h2>
+      <h3>Please select a username of your liking.</h3>
+      <h4>Current Username:</h4>
+      <h4>New Username:</h4>
+      <input class="settingsinput" type="text" placeholder="New Username"/>
+    <br />
+    <button class="button"><span>Change Password</span></button>
+    </div>
+    <div id="setting-2" class="activetab">
+      <h2>Password</h2>
+      <h3>Please choose a secure password.</h3>
+      <h4>Current Password:</h4>
+      <input id="changepasswordvalidation" class="settingsinput" type="password" placeholder="New Username"/>
+      <h4>New Password:</h4>
+      <input id="changepassword" class="settingsinput" type="password" placeholder="Password"/>
+      <h4>Re-enter Password</h4>
+      <input id="changepasswordcheck" class="settingsinput" type="password" placeholder="Re-enter Password"/>
+      <br />
+      <button><span>Change Password</span></button>
+    </div>
+    <div id="setting-3" class="activetab">
+      <h2>Blocked Users</h2>
+      <h3>Manage blocked users.</h3>
+      <ol id="blockedusers">
+        <li>
+          Donald Trump <button class="unblockbutton">Unblock</button>
+        </li>
+        <li>
+          Eugene <button class="unblockbutton">Unblock</button>
+        </li>
+        <li>
+          DJKeemstar <button class="unblockbutton">Unblock</button>
+        </li>
+      </ul>
+      <button><span>Unblock All</span></button>
+    </div>
+    <div id="setting-4" class="activetab">
+      <h2>Theme</h2>
+    </div>
+  </div>
+
 </div>
 
 </body>

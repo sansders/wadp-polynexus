@@ -37,6 +37,7 @@ h1
 
 .navbarlist li a
 {
+  padding: 20px 15px;
   text-decoration: none;
   font-size: 20px;
   color: white;
@@ -76,6 +77,13 @@ h1
 .currentchatlist li:hover
 {
   box-shadow: 0 0 5px 1px #969696;
+}
+
+.currentchatlist a
+{
+  width: 100%;
+  text-decoration:none;
+  color: black;
 }
 
 #searchbar input[type="text"]
@@ -118,14 +126,14 @@ h1
   color: white;
 }
 
-.activechat
+.activetab
 {
   padding: 10px 10px;
   position: relative;
   left: 20%;
 }
 
-.activechat h2
+.activetab h2
 {
   padding: 7px 6px;
   width: 100%;
@@ -177,4 +185,98 @@ h1
   margin: 10px 10px;
   border: 1px solid #dcdcdc;
   border-radius: 5px;
+}
+
+.activetab h3, .activetab h4
+{
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px 10px
+}
+
+.settingsinput
+{
+  width: 50%;
+  border-radius: 5px;
+  padding: 8px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: rgba(0,0,0,0.7);
+}
+
+.settingsinput:hover, .settingsinput:focus
+{
+  border: solid 1px #707070;
+}
+
+button
+{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  padding: 10px 30px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  transition: all, 0.5s;
+}
+
+button:hover
+{
+  background-color: rgba(30, 172, 253, 1);
+}
+
+button span
+{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after
+{
+  content: '>>';
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span
+{
+  padding-right: 25px;
+}
+
+button:hover span:after
+{
+  opacity: 1;
+  right: 0;
+}
+
+.unblockbutton
+{
+  font-size: 13px;
+  padding: 5px 15px;
+}
+
+#blockedusers
+{
+  font-family: 'Noto Sans',sans-serif;
+  padding-left: 0px;
+  margin: 20px 10px;
+  overflow: hidden;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+#blockedusers li
+{
+  border-bottom: 1px solid #999;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 10px 10px;
+  list-style-position: inside;
 }
