@@ -19,3 +19,162 @@ h1
   padding-bottom: 15px;
   z-index: 100;
 }
+
+.navbarlist
+{
+  position: fixed;
+  left: 60%;
+  z-index: 101;
+}
+
+.navbarlist li
+{
+  padding: 23px 15px;
+  list-style-type: none;
+  display: inline-block;
+  transition: background, 0.5s;
+}
+
+.navbarlist li a
+{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.navbarlist li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+.tabs
+{
+  position: relative;
+  top: 74px;
+}
+
+.currentchatlist
+{
+  position: fixed;
+  list-style-type: none;
+  padding: 0;
+  width: 20%;
+  height: 100%;
+  border: solid 1px #dcdcdc;
+  overflow: auto;
+  border-collapse: collapse;
+
+}
+
+.currentchatlist li
+{
+  padding: 10px 10px;
+  border: solid 1px #dcdcdc;
+  border-collapse: collaspe;
+}
+
+.currentchatlist li:hover
+{
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+#searchbar input[type="text"]
+{
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: rgba(0,0,0,0.7);
+}
+
+#searchbar input[type="text"]:focus
+{
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+.textchat
+{
+  font-family: 'Noto Sans', sans-serif;
+  width: 80%;
+}
+.timestamp
+{
+  position: relative;
+  float: right;
+  bottom: 45px;
+}
+
+.addchat
+{
+  color: rgba(0,0,0,0.7);
+  transition: all .5s;
+}
+
+.addchat:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+  color: white;
+}
+
+.activechat
+{
+  padding: 10px 10px;
+  position: relative;
+  left: 20%;
+}
+
+.activechat h2
+{
+  padding: 7px 6px;
+  width: 100%;
+  border-bottom: solid 1px #dcdcdc;
+}
+
+.chatinputbox
+{
+  top: 90%;
+  position: fixed;
+  width: 100%;
+  padding: 10px 10px;
+  border: solid 1 px #dcdcdc;
+}
+
+.chatinputbox input[type="text"]
+{
+  width: 70%;
+  border-radius: 5px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  color: rgba(0,0,0,0.7);
+  transition: all, 0.3s;
+}
+
+.chatinputbox input[type="text"]:hover, .chatinputbox input[type="text"]:focus
+{
+  border: solid 1px #707070;
+}
+
+.chatinputbox i
+{
+ padding-left: 10px;
+ font-size: 20px;
+ transition: all, 0.3s;
+}
+.chatinputbox i:hover
+{
+  color: rgba(0, 76, 159, 0.7);
+}
+
+.chatoutput
+{
+  position: fixed;
+  overflow: auto;
+  padding: 10px 10px;
+  width: 77%;
+  height: 70%;
+  margin: 10px 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+}

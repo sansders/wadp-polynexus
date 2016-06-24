@@ -116,6 +116,7 @@ input[type="password"].focus
 and (max-width: 640px)
 {
   #logo{
+    text-align: center;
     font-size: 80px;
     clear:both;
     width: 100%;
