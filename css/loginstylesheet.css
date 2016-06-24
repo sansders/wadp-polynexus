@@ -113,7 +113,7 @@ input[type="password"].focus
 }
 
 @media screen
-and (max-width: 768px)
+and (max-width: 640px)
 {
   #logo{
     font-size: 100px;
