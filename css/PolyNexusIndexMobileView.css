@@ -20,6 +20,12 @@ input[type="password"]{
 	right: 10px;
 }
 
+.loginfield{
+	padding-right: 70px;
+	padding-left: 70px;
+}
+
+
 .loginfield li>button
 {
   width: 80px;
