@@ -20,8 +20,8 @@ input[type="password"]{
 	right: 10px;
 }
 
-button{
-	padding-right: 10px;
+.button span{
+	padding: 20px;
 	text-align: center;
 }
 
