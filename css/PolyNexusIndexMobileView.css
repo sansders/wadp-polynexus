@@ -30,6 +30,8 @@ input[type="password"]{
 
 .button span{
 	text-align: left;
+	position: relative;
+	right: 15px;
 }
 
 .content1content{
