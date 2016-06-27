@@ -46,9 +46,8 @@ input[type="password"]{
 
 .content1content{
 	clear: both;
-	position:relative;
-	right:auto;
-	left:auto;
+	margin:auto;
+
 	
 	
 }
