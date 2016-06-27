@@ -1,0 +1,53 @@
+<!--Matt Will Do!-->
+
+*
+{
+  margin: 0;
+  padding:0;
+}
+
+html,body
+{
+  font-family: 'Exo', sans-serif;
+}
+
+h1
+{
+  width: 100%;
+  background-color: rgba(0, 76, 159, 0.7);
+  color: white;
+  padding-left: 15%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 100;
+}
+
+.content2
+{
+  margin: 0 auto;
+  clear:both;
+  text-align: center;
+  padding: 50px 0;
+  color: white;
+}
+
+.content2 h2
+{
+  font-size: 40px;
+}
+
+.content2 p
+{
+  font-size: 25px;
+  padding: 10px 50px;
+  width: 69%;
+}
+
+.content2 i
+{
+  float: left;
+  color: rgba(0, 76, 159, 1);
+  width: 30%;
+  font-size: 300px;
+}
