@@ -10,7 +10,7 @@ form {
 
 input[type="text"] {
 	width: 80px;
-	float: relative ;
+	position: relative ;
 	right: 30px;
 }
 
