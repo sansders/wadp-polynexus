@@ -17,7 +17,7 @@ input[type="password"]{
 }
 
 button{
-	width:40px;
+	padding-right: 10px;
 	text-align: center;
 }
 
