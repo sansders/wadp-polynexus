@@ -40,6 +40,10 @@ input[type="password"]{
 	right: 15px;
 }
 
+#newacc h3{
+	padding-top: 20px;
+}
+
 .content1content{
 	clear: both;
 	
