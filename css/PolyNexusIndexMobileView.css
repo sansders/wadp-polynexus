@@ -16,6 +16,11 @@ input[type="password"]{
 	width:80px;
 }
 
+button{
+	width:40px;
+	text-align: center;
+}
+
 .content1content{
 	clear: both;
 	
