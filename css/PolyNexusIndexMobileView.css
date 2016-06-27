@@ -1,4 +1,4 @@
-@media screen and (max-width: 481px){
+@media screen and (max-width: 400px){
 
 
 form {
@@ -46,6 +46,9 @@ input[type="password"]{
 
 .content1content{
 	clear: both;
+	position:relative;
+	right:auto;
+	left:auto;
 	
 	
 }
