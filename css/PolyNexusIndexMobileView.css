@@ -10,14 +10,12 @@ form {
 
 input[type="text"] {
 	width: 80px;
-	position: relative ;
-	right: 10px;
+
 }
 
 input[type="password"]{
 	width:80px;
-	position: relative;
-	right: 10px;
+
 }
 
 .loginfield{
