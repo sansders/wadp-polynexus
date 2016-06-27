@@ -8,6 +8,9 @@ form {
 	text-align: center;
 }
 
+input[type="text"] {
+    width: 100px;
+}
 
 .content1content{
 	clear: both;
