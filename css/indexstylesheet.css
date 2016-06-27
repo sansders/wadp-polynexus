@@ -270,5 +270,6 @@ and (max-width:640px)
 		text-align:right;
 		background-color: rgba(77,77,77,0.87);
 		border-radius: 25px;
+		margin: auto;
 	}
 }
