@@ -10,6 +10,8 @@ form {
 
 input[type="text"] {
 	width: 80px;
+	float: relative ;
+	right: 30px;
 }
 
 input[type="password"]{
