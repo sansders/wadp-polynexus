@@ -314,3 +314,13 @@ button:hover span:after
   list-style-position: inside;
 }
 
+.eventdetails{
+	border: 1px solid black;
+	width: 20%;
+	border-radius: 10px;
+}
+
+.eventdescription{
+	padding: 10px 10px;
+	width: 40%;
+}
