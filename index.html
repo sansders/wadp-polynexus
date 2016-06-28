@@ -17,6 +17,11 @@
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
         crossorigin="anonymous"></script>
   <script src="js/smoothscroll.js"></script>
+  <script>
+  $(function(){
+    $('#movedown a').smoothScroll();
+  });
+  </script>
 </head>
 <body>
 <h1>polyNexus</h1>
@@ -59,7 +64,7 @@
       </form>
     </div>
   </form>
-  <div id="movedown" onclick="$('#movedown a').smoothScroll()">
+  <div id="movedown">
     <a href="#content1"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
   </div>
 
@@ -97,7 +102,7 @@
     </p>
   </div>
 </div>
-<div id="movedown" onclick="$('#movedown a').smoothScroll()">
+<div id="movedown">
   <a href="#content2"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
 </div>
 <div class="content2" id="content2">
