@@ -98,7 +98,7 @@
     </div>
   </div>
   <div class="tabs" id="tabs-2">
-  <div class="eventlist" id="eventlist">
+  <div class="eventlist" id="setting">
     <ul class="currentchatlist">
       <li>
         <h2>Events</h2>
@@ -106,19 +106,19 @@
           You can only join events if you are in the specified chat group.
         </p>
       </li>
-      <li>
+      <li><a href="#event-1" >
         <h3>Gardening</h3>
         <h4>making pot brownies</h4>
         <p class="textchat">
           19:00 at jz's house
         </p>
-      </li>
-      <li class="addchat" id="addchat">
+      </a></li>
+      <li class="addchat" id="addchat"><a href="#event-2" >
         <i class="fa fa-plus-square-o" aria-hidden="true"></i> Create an event
-      </li>
+      </li></a>
     </ul>
 		<div id="event-1" class="activetab">
-		<h2> Making pot brownies </h2>
+		<h2><i class="eventtitle" aria-hidden="true"></i> Making pot brownies </h2>
 		<br/>
 		<br/>
 		<h4 class="eventdetails"> Date: 29/2/2017<br/> Time: 19:00 <br/> Venue: Jz's house</h4>
@@ -128,6 +128,18 @@
 		<br/>
 		<br/>
 		Join me in my flowery adventures as I attempt to make hashbrowns with my home-grown, organic, cannabis! </p>
+		</div>
+		
+		<div id="event-2" class="activetab"> 
+		<h2><i class="eventtitle" aria-hidden="true"></i> Organize an event </h2>
+		<br/>
+		<br/>
+		<h4 class="inputeventdetails">&nbsp;&nbsp;Event Name:<br/><input type="text" /> <br/>
+			&nbsp;&nbsp;Date:<br/><input type="text" placeholder="dd/mm/yyy" /> <br/>
+			&nbsp;&nbsp;Time:<br/><input type="time" /><br/>
+			&nbsp;&nbsp;Venue:<br/><input type="text" /><br/>
+			&nbsp;&nbsp;Event description:<br/><input type="text" style="input-height: 40px;" /> <br/>
+			</h4>
 		</div>
   </div>
 </div>

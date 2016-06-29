@@ -324,3 +324,17 @@ button:hover span:after
 	padding: 10px 10px;
 	width: 40%;
 }
+
+.inputeventdetails{
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	width: 40%;
+}
+
+.inputeventdetails input{
+	padding: 8px 5px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-bottom: 13px;
+}
