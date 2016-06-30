@@ -7,8 +7,29 @@
 			<link rel="stylesheet" href="css/rulesstylesheet.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+			<script>
+			function hidecontent(){
+				div1 = document.getElementById('rules1');
+				div1.style.display = "none";
+				div2 = document.getElementById('rules2');
+				div2.style.display = "none";
+				div3 = document.getElementById('rules3');
+				div3.style.display = "none";
+			}
+			function contentshow(content)
+    {
+      div = document.getElementById(content);
+      if(div.style.display == "block")
+      {
+        div.style.display = "none";
+      }
+      else{
+        div.style.display = "block";
+      }
+    }
+			</script>
 		</head>
-		<body>
+		<body onload="hidecontent()">
 			<h1>polyNexus</h1>
 			<div class="intro">
 				<h2>Rules of polyNexus</h2>
@@ -20,18 +41,32 @@
 					</p>
 			</div>
 			<div class="content2">
-				<h3>General Rules</h3>
+				<button onclick="contentshow('rules1')"><span>General Rules</span></button>
+				<div id="rules1">
 						<p>Line 1</p>
+					</br>
 						<p>Line 2</p>
+					</br>
 						<p>Line 3</p>
-				<h3>Chat Rules</h3>
+				</div>
+			</br>
+				<button onclick="contentshow('rules2')"><span>More Rules</span></button>
+				<div id="rules2">
 						<p>Line 1</p>
+					</br>
 						<p>Line 2</p>
+					</br>
 						<p>Line 3</p>
-				<h3>Disclaimer</h3>
+				</div>
+			</br>
+				<button onclick="contentshow('rules3')"><span>Even More Rules</span></button>
+				<div id="rules3">
 						<p>Line 1</p>
+					</br>
 						<p>Line 2</p>
+					</br>
 						<p>Line 3</p>
+				</div>
 			</div>
 		</body>
 	</html>
