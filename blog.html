@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+        crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+        crossorigin="anonymous"></script>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href= "css/Bootstrap/bootstrap.min.css" />
+		<!-- Page Design -->
+		<link type="text/css" rel="stylesheet" href= "css/blogstylesheet.css" />
+		<!-- Script -->
+		<script>
+		$(document).ready(function(){
+			$("#article-1").hide();
+				$("#article-preview-1").click(function(){
+					$("#article-1").slideToggle("slow");
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#article-2").hide();
+				$("#article-preview-2").click(function(){
+					$("#article-2").slideToggle("slow");
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#article-3").hide();
+				$("#article-preview-3").click(function(){
+					$("#article-3").slideToggle("slow");
+				});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- Navigation Bar -->
+		<div class="background-image">
+			<div class="navbar-container">
+				<h1>polyNexus</h1>
+				<nav class="navbar">
+					<ul class="navbarlist">
+						<li>
+							<a href="main.html#tabs-1">Chats</a>
+						</li>
+						<li>
+							<a href="main.html#tabs-2">Events</a>
+						</li>
+						<li>
+							<a href="main.html#tabs-3">Settings</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+					</ul>
+				</nav>
+				<hr>
+			</div>
+		<!-- Header -->
+			<header>
+				<div class="header-container">
+					<div class="heading">
+						<h1>Blog</h1>
+						<hr>
+						<p class="subheading">A place where polyNexus's social blogging starts</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- Row of Articles with Preview -->
+		<div class="article-container-container">
+			<ul>
+				<li>
+				<!-- Article with Written and Preview 1 -->
+					<div class="article-container">
+						<!-- Article Preview 1 -->
+						<div id="article-preview-1" class="article-preview">
+							<div class="article-image">
+								<div class="article-header">
+									<h3 class="article-title">First</h3>
+									<hr>
+									<h4 class="article-subtitle">First</h4>
+								</div>
+							</div>
+						</div>
+						<!-- Written Article 1 -->
+						<div id="article-1" class="article">
+						<p>1</p>
+						</div>
+					</div>
+				</li>
+				<li>
+				<!-- Article with Written and Preview 2 -->
+					<div class="article-container">
+						<!-- Article Preview 2 -->
+						<div id="article-preview-2" class="article-preview">
+							<div class="article-image">
+								<div class="article-header">
+									<h3 class="article-title">Second</h3>
+									<hr>
+									<h4 class="article-subtitle">Second</h4>
+								</div>
+							</div>
+						</div>
+						<!-- Written Article 2 -->
+						<div id="article-2" class="article">
+						<p>2</p>
+						</div>
+					</div>
+				</li>
+				<li>
+				<!-- Article with Written and Preview 3 -->
+					<div class="article-container">
+						<!-- Article Preview 3 -->
+						<div id="article-preview-3" class="article-preview">
+							<div class="article-image-float-right">
+								<div class="article-header">
+									<h3 class="article-title">Third</h3>
+									<hr>
+									<h4 class="article-subtitle">Third</h4>
+								</div>
+							</div>
+						</div>
+						<!-- Written Article 3 -->
+						<div id="article-3" class="article">
+						<p>3</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
