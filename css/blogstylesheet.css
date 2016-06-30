@@ -122,9 +122,110 @@ header
 .article-container
 {
 	background-color: rgba(240, 245, 245, 0.8);
+	cursor: pointer;
+	max-height: 900px;
+}
+
+.article-preview
+{
+	width: 100%;
+	max-height: 300px;
+}
+
+.article-header
+{
+	width: 100%;
+	height: 50px;
+}
+
+.article-title
+{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.article-preview hr
+{
+	margin: 0px;
+}
+
+.article-subheader
+{
+	width: 100%;
+	max-height: 100px;
+}
+
+.article-subtitle
+{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 20px;
 }
 
 .article
 {
-	
+	height: 500px;
+	width: 100%;
 }
+
+.written-article
+{
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+
+p
+{
+	padding-left: 50px;
+}
+
+.article-image
+{
+	width: 50%;
+	max-height: 100%;
+	text-align: center;
+	float: right;
+}
+
+.article-image img
+{
+	max-width: 100%;
+	max-height: 500px;
+}
+
+/* Button */
+
+.button {
+	box-shadow:inset 0px 1px 0px 0px rgb(255, 255, 255);
+	background:linear-gradient(to bottom, rgb(255, 255, 255) 5%, rgb(246, 246, 246) 100%);
+	background-color: rgb(255, 255, 255);
+	border-radius:16px;
+	border:2px solid rgb(220, 220, 220);
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(102, 102, 102);
+	font-family:Trebuchet MS;
+	font-size:20px;
+	font-weight:bold;
+	padding:10px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px rgb(255, 255, 255);
+}
+.button:hover {
+	background:linear-gradient(to bottom, rgb(246, 246, 246) 5%, rgb(255, 255, 255) 100%);
+	background-color:rgb(246, 246, 246);
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+
+.button-container
+{
+	text-align: center;
+}
+
+/* Footer */
