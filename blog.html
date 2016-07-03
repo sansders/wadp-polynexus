@@ -15,6 +15,13 @@
 		<!-- Script -->
 		<script>
 		$(document).ready(function(){
+			$("#posted-article").hide();
+				$("#posted-article-preview").click(function(){
+					$("#posted-article").slideToggle("slow");
+				});
+		});
+		
+		$(document).ready(function(){
 			$("#article-1").hide();
 				$("#article-preview-1").click(function(){
 					$("#article-1").slideToggle("slow");
@@ -47,6 +54,18 @@
 			medium = lenghtFromTop;
 		});
 		
+		$(document).ready(function(){
+			$("#newblog").click(function(){
+				$("#createblog").show("fold");
+			});
+			$("#close").click(function(){
+				$("#createblog").hide("fold");
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#createblog").hide();
+		});
 		</script>
 	</head>
 	<body>
@@ -72,7 +91,7 @@
 				</nav>
 				<hr>
 			</div>
-		<!-- Header -->
+			<!-- Header -->
 			<header>
 				<div class="header-container">
 					<div class="heading">
@@ -87,6 +106,32 @@
 		<div class="article-container-container-container">
 			<div class="article-container-container">
 				<ul>
+					<!-- Posted Article with Written and Preview -->
+					<li>
+						<div id="posted-article-container">
+							<!-- Posted Article Preview -->
+							<div id="posted-article-preview" class="article-preview">
+								<div class="article-header">
+									<h3 class="article-title"></h3>
+								</div>
+								<hr>
+								<div class="article-subheader">
+									<h4 class="article-subtitle"></h4>
+								</div>
+							</div>
+							<!-- Posted Written Article -->
+							<div id="posted-article" class="article">
+								<div class="written-article">
+									<p>
+									</p>
+								</div>
+								<!-- Posted Article Image -->
+								<div class="article-image">
+									<img src="" />
+								</div>
+							</div>
+						</div>
+					</li>
 					<!-- Article with Written and Preview 1 -->
 					<li>
 						<div class="article-container">
@@ -182,14 +227,57 @@
 				</div>
 			</div>
 			<!-- Side Navigation -->
-			<div id="navigation-side-1">
+			<div id="navigation-side-left">
+				<button type="button" class="button" id="newblog">Create New Blog</button>
 			</div>
-			<div id="navigation-side-2">
+			<div id="navigation-side-right">
+			</div>
+			<!-- Create Blog Page -->
+			<div id="createblog">
+				<!-- Close Button -->
+				<div id="close">
+					<img src="https://cdn3.iconfinder.com/data/icons/interface/100/close_button_1-512.png" />
+				</div>
+				<!-- Forms -->
+				<form>
+					<p>
+					Title:
+					<input type="text" placeholder="Title" required><br>
+					
+					Subtitle:
+					<input type="text" placeholder="Subtitle"><br>
+					
+					Image URL:
+					<input type="url" placeholder="http://www.google.com/"><br>OR<br>
+					
+					Image file location:
+					<input type="file" name="img"><br>
+					
+					Article: <br>
+					<textarea></textarea>
+					
+					<input type="reset" value="Reset">
+					<input type="submit" value="Submit" onclick="document.getElementById('posted-article-container').style.display='block'">
+					</p>
+				</form>
 			</div>
 		</div>
 		<!-- Footer -->
-		<div class="footer">
-			
-		</div>
+		<footer>
+			<ul class="footerlist">
+				<li>
+					<a href="index.html">About</a>
+				</li>
+				<li>
+					<a href="rules.html">Rules</a>
+				</li>
+				<li>
+					<a href="faq.html">FAQ</a>
+				</li>
+				<li>
+					<a href="">Contact?</a>
+				</li>
+			</ul>
+		</footer>
 	</body>
 </html>
