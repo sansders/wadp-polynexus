@@ -73,7 +73,7 @@ h1
   margin:0 auto;
   font-size: 25px;
   width:60%;
-  background-color:pink;
+  background-color:rgba(128,0,128,0.7);
   border-radius:12.5px;
   padding-left:1%;
 }
