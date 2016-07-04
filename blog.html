@@ -14,58 +14,148 @@
 		<link type="text/css" rel="stylesheet" href= "css/blogstylesheet.css" />
 		<!-- Script -->
 		<script>
-		$(document).ready(function(){
-			$("#posted-article").hide();
+			$(document).ready(function(){
+				$("#posted-article").hide();
 				$("#posted-article-preview").click(function(){
 					$("#posted-article").slideToggle("slow");
 				});
-		});
-		
-		$(document).ready(function(){
-			$("#article-1").hide();
-				$("#article-preview-1").click(function(){
-					$("#article-1").slideToggle("slow");
+			});
+					
+			$(document).ready(function(){
+				$("#article-1").hide();
+					$("#article-preview-1").click(function(){
+						$("#article-1").slideToggle("slow");
+					});
+			});
+					
+			$(document).ready(function(){
+				$("#article-2").hide();
+					$("#article-preview-2").click(function(){
+						$("#article-2").slideToggle("slow");
+					});
+			});
+					
+			$(document).ready(function(){
+				$("#article-3").hide();
+					$("#article-preview-3").click(function(){
+						$("#article-3").slideToggle("slow");
+					});
+			});
+					
+			var medium = 0;
+			$(window).scroll(function () {
+				var lenghtFromTop = $(window).scrollTop();
+				if (lenghtFromTop > medium){
+					$(".navbar-container").hide("swing");
+				} 
+				else {
+					$(".navbar-container").show("swing");
+				}
+				medium = lenghtFromTop;
+			});
+					
+			$(document).ready(function(){
+				$("#createblog").hide();
+				$("#newblog").click(function(){
+					$("#createblog").show("fold");
 				});
-		});
-		
-		$(document).ready(function(){
-			$("#article-2").hide();
-				$("#article-preview-2").click(function(){
-					$("#article-2").slideToggle("slow");
+				$("#close").click(function(){
+					$("#createblog").hide("fold");
 				});
-		});
-		
-		$(document).ready(function(){
-			$("#article-3").hide();
-				$("#article-preview-3").click(function(){
-					$("#article-3").slideToggle("slow");
-				});
-		});
-		
-		var medium = 0;
-		$(window).scroll(function () {
-			var lenghtFromTop = $(window).scrollTop();
-			if (lenghtFromTop > medium){
-				$(".navbar-container").hide("swing");
-			} 
-			else {
-				$(".navbar-container").show("swing");
+			});
+
+			var title, article, subtitle;
+			function wordcheck(clicked_id){
+				var word = document.getElementById(clicked_id).value;
+				switch(clicked_id){
+					case "title":
+						if (word != "") {
+							title = 1;
+						}
+						else {
+							title = 0;
+						}
+						break;
+						
+					case "subtitle":
+						if (word != "") {
+							subtitle = 1;
+						}
+						else {
+							subtitle = 0;
+						}
+						break;
+						
+					case "article":
+						if (word != "") {
+							article = 1;
+						}
+						else {
+							article = 0;
+						}
+						break;
+				}
 			}
-			medium = lenghtFromTop;
-		});
-		
-		$(document).ready(function(){
-			$("#newblog").click(function(){
-				$("#createblog").show("fold");
-			});
-			$("#close").click(function(){
-				$("#createblog").hide("fold");
-			});
-		});
-		
-		$(document).ready(function(){
-			$("#createblog").hide();
-		});
+
+			function verify() {
+				if (title == 1 && article == 1 && subtitle == 1) {
+					var confirmation = confirm("Are you sure you want to continue?");
+					if (confirmation == true) {
+						document.getElementById('posted-article-container').style.display='block';
+						document.getElementById("createblog").style.display='none';
+					}
+					else {
+						return false;
+					}
+				}
+				else if (title != 1 || subtitle != 1 || article != 1) {
+					if (title != 1 && subtitle != 1 && article != 1) {
+							var confirmation = alert("WRITE SOMETHING!");
+					}
+					else if (title != 1 && subtitle != 1) {
+						var confirmation = confirm("There is no title and subtitle. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById('posted-article-container').style.display='block';
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (title != 1 && article != 1) {
+							var confirmation = confirm("There is no title and article. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById('posted-article-container').style.display='block';
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (subtitle != 1 && article != 1) {
+						var confirmation = confirm("There is no subtitle and article. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById('posted-article-container').style.display='block';
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (title != 1){
+						var confirmation = confirm("There is no title. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById('posted-article-container').style.display='block';
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (subtitle != 1 ) {
+						var confirmation = confirm("There is no subtitle. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById('posted-article-container').style.display='block';
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else {
+						var confirmation = confirm("There is no article. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById('posted-article-container').style.display='block';
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -239,13 +329,13 @@
 					<img src="https://cdn3.iconfinder.com/data/icons/interface/100/close_button_1-512.png" />
 				</div>
 				<!-- Forms -->
-				<form>
+				<form onsubmit="return false">
 					<p>
 					Title:
-					<input type="text" placeholder="Title" required><br>
+					<input type="text" placeholder="Title" id="title" onfocusout="wordcheck(this.id)"><br>
 					
 					Subtitle:
-					<input type="text" placeholder="Subtitle"><br>
+					<input type="text" placeholder="Subtitle" id="subtitle" onfocusout="wordcheck(this.id)"><br>
 					
 					Image URL:
 					<input type="url" placeholder="http://www.google.com/"><br>OR<br>
@@ -254,10 +344,10 @@
 					<input type="file" name="img"><br>
 					
 					Article: <br>
-					<textarea></textarea>
+					<textarea id="article" onfocusout="wordcheck(this.id)"></textarea>
 					
-					<input type="reset" value="Reset">
-					<input type="submit" value="Submit" onclick="document.getElementById('posted-article-container').style.display='block'">
+					<input type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
+					<button onclick="verify()">Submit</button>
 					</p>
 				</form>
 			</div>
