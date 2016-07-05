@@ -42,8 +42,10 @@ h1
 .intro p
 {
   font-size: 25px;
-  padding: 10px 100px;
+  padding-top: 10px;
+  padding-left:200px;
   width: 69%;
+  text-align:center;
 }
 
 

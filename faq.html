@@ -7,8 +7,55 @@
 			<link rel="stylesheet" href="css/faqstylesheet.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+			<script>
+			function hidecontent(){
+				div1a = document.getElementById('questionSet1');
+				div1a.style.display = "none";
+				div2a = document.getElementById('questionSet2');
+				div2a.style.display = "none";
+				div3a = document.getElementById('questionSet3');
+				div3a.style.display = "none";
+				div4a = document.getElementById('questionSet4');
+				div4a.style.display = "none";
+				div1b = document.getElementById('answer1');
+				div1b.style.display = "none";
+				div2b = document.getElementById('answer2');
+				div2b.style.display = "none";
+				div3b = document.getElementById('answer3');
+				div3b.style.display = "none";
+				div4b = document.getElementById('answer4');
+				div4b.style.display = "none";
+				div5b = document.getElementById('answer5');
+				div5b.style.display = "none";
+				div6b = document.getElementById('answer6');
+				div6b.style.display = "none";
+				div7b = document.getElementById('answer7');
+				div7b.style.display = "none";
+				div8b = document.getElementById('answer8');
+				div8b.style.display = "none";
+				div9b = document.getElementById('answer9');
+				div9b.style.display = "none";
+				div10b = document.getElementById('answer10');
+				div10b.style.display = "none";
+				div11b = document.getElementById('answer11');
+				div11b.style.display = "none";
+				div12b = document.getElementById('answer12');
+				div12b.style.display = "none";
+			}
+			function contentshow(content)
+		{
+			div = document.getElementById(content);
+			if(div.style.display == "block")
+			{
+				div.style.display = "none";
+			}
+			else{
+				div.style.display = "block";
+			}
+		}
+			</script>
 		</head>
-		<body>
+		<body onload="hidecontent()">
 			<h1>polyNexus</h1>
 			<div class="intro">
 				<h2>FAQ</h2>
@@ -19,35 +66,55 @@
             as much potential as you can from polyNexus.
 					</p>
 			</div>
+
 			<div class="content2">
-				<h3>Cat 1</h3>
-						<p class="question">Line 1?</p>
-							<p class="answer">Reply!</p>
-						<p class="question">Line 2?</p>
-							<p class="answer">Reply!</p>
-						<p class="question">Line 3?</p>
-							<p class="answer">Reply!</p>
-				<h3>Cat 2</h3>
-						<p class="question">Line 1?</p>
-              <p class="answer">Reply!</p>
-						<p class="question">Line 2?</p>
-	            <p class="answer">Reply!</p>
-						<p class="question">Line 3?</p>
-			        <p class="answer">Reply!</p>
-				<h3>Cat 3</h3>
-						<p class="question">Line 1?</p>
-							<p class="answer">Reply!</p>
-						<p class="question">Line 2?</p>
-							<p class="answer">Reply!</p>
-						<p class="question">Line 3?</p>
-							<p class="answer">Reply!</p>
-				<h3>Cat 4</h3>
-						<p class="question">Line 1?</p>
-							<p class="answer">Reply!</p>
-						<p class="question">Line 2?</p>
-							<p class="answer">Reply!</p>
-						<p class="question">Line 3?</p>
-							<p class="answer">Reply!</p>
+
+				<button onclick="contentshow('questionSet1')"><span>Q about A</span></button>
+
+				<div id="questionSet1">
+						<button onclick="contentshow('answer1')" class="buttont2"><span>How do I do XZY on 123?</span></button>
+							<p class="answerGroup" id="answer1">Reply!</p>
+						<button onclick="contentshow('answer2')" class="buttont2"><span>Question2</span></button>
+							<p class="answerGroup" id="answer2">Reply!</p>
+						<button onclick="contentshow('answer3')" class="buttont2"><span>Question3</span></button>
+							<p class="answerGroup" id="answer3">Reply!</p>
+				</div>
+
+				<button onclick="contentshow('questionSet2')"><span>Q about B</span></button>
+
+				<div id="questionSet2">
+						<button onclick="contentshow('answer4')" class="buttont2"><span>Question4</span></button>
+              <p class="answerGroup" id="answer4">Reply!</p>
+						<button onclick="contentshow('answer5')" class="buttont2"><span>Question5</span></button>
+	            <p class="answerGroup" id="answer5">Reply!</p>
+						<button onclick="contentshow('answer6')" class="buttont2"><span>Question6</span></button>
+			        <p class="answerGroup" id="answer6">Reply!</p>
+				</div>
+
+				<button onclick="contentshow('questionSet3')"><span>Q about C</span></button>
+
+				<div id="questionSet3">
+						<button onclick="contentshow('answer7')" class="buttont2"><span>Question7</span></button>
+							<p class="answerGroup" id="answer7">Reply!</p>
+						<button onclick="contentshow('answer8')" class="buttont2"><span>Question8</span></button>
+							<p class="answerGroup" id="answer8">Reply!</p>
+						<button onclick="contentshow('answer9')" class="buttont2"><span>Question9</span></button>
+							<p class="answerGroup" id="answer9">Reply!</p>
+
+				</div>
+
+				<button onclick="contentshow('questionSet4')"><span>Q about D</span></button>
+
+				<div id="questionSet4">
+						<button onclick="contentshow('answer10')" class="buttont2"><span>Question10</span></button>
+							<p class="answerGroup" id="answer10">Reply!</p>
+						<button onclick="contentshow('answer11')" class="buttont2"><span>Question11</span></button>
+							<p class="answerGroup" id="answer11">Reply!</p>
+						<button onclick="contentshow('answer12')" class="buttont2"><span>Question12</span></button>
+							<p class="answerGroup" id="answer12">Reply!</p>
+
+				</div>
+
 			</div>
 		</body>
 	</html>
