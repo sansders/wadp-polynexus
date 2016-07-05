@@ -9,7 +9,6 @@ $(document).ready(function(){
     $("#events").tabs();
   });
 });
-});
 
 function changeUsername(){
   //will contain two parts.
