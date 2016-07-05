@@ -15,5 +15,6 @@ function changeUsername(){
   //first part: change the html to display username
   var username = document.getElementById('usernamefield').value;
   document.getElementById('userid').innerHTML=username;
+  document.getElementById('displaycurrentid').innerHTML="Current Username:"+username;
   //do second part later
 }
