@@ -161,10 +161,14 @@
 				var posttitle = document.getElementById("Title").value;
 				var postsubtitle = document.getElementById("Subtitle").value;
 				var postarticle = document.getElementById("Article").value;
+				var postimage = document.getElementById("Image").value;
+				var postfile = document.getElementById("File").value
 				document.getElementById("posted-article-title").innerHTML = posttitle;
 				document.getElementById("posted-article-subtitle").innerHTML = postsubtitle;
 				document.getElementById("posted-written-article").innerHTML = postarticle;
-			};
+				document.getElementById("posted-image").src = postimage;
+			}
+			
 		</script>
 	</head>
 	<body>
@@ -226,7 +230,7 @@
 								</div>
 								<!-- Posted Article Image -->
 								<div class="article-image">
-									<img src="" />
+									<img id="posted-image" src="" />
 								</div>
 							</div>
 						</div>
@@ -338,27 +342,29 @@
 					<img src="https://cdn3.iconfinder.com/data/icons/interface/100/close_button_1-512.png" />
 				</div>
 				<!-- Forms -->
-				<form onsubmit="return false">
-					<p>
-					Title:
-					<input type="text" placeholder="Title" id="Title" onfocusout="wordcheck(this.id)"><br>
-					
-					Subtitle:
-					<input type="text" placeholder="Subtitle" id="Subtitle" onfocusout="wordcheck(this.id)"><br>
-					
-					Image URL:
-					<input type="url" placeholder="http://www.google.com/"><br>OR<br>
-					
-					Image file location:
-					<input type="file" name="img"><br>
-					
-					Article: <br>
-					<textarea id="Article" onfocusout="wordcheck(this.id)"></textarea>
-					
-					<input type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
-					<button onclick="verify(); posting();">Submit</button>
-					</p>
-				</form>
+				<div id="form-container">
+					<form onsubmit="return false">
+						<p>
+						Title:
+						<input type="text" placeholder="Title" id="Title" class="forminput" onfocusout="wordcheck(this.id)"><br>
+						
+						Subtitle:
+						<input type="text" placeholder="Subtitle" id="Subtitle" class="forminput" onfocusout="wordcheck(this.id)"><br>
+						
+						Image URL: 
+						<input type="url" placeholder="http://www.google.com/" id="Image" class="forminput"><br><br>OR<br><br>
+						
+						Image file location:
+						<input type="file" name="img" accept="image/*" id="File"><br>
+						
+						Article: <br>
+						<textarea rows="2" cols="100" id="Article" placeholder="Article" class="forminput" onfocusout="wordcheck(this.id)"></textarea><br>
+						
+						<input type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
+						<button onclick="verify(); posting();">Submit</button>
+						</p>
+					</form>
+				</div>
 			</div>
 		</div>
 		<!-- Footer -->

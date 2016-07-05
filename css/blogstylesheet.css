@@ -314,12 +314,40 @@ header
 	left: 10%;
 	width: 80%;
 	height: 100%;
+	background-color: rgb(240, 245, 245);
 }
 
 form
 {
 	height: 100%;
-	background-color: rgb(240, 245, 245);
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.forminput
+{
+	margin: 10px;
+	box-shadow: 5px 5px grey;
+	resize: none;
+}
+
+.forminput:hover
+{
+	border: 2px solid lightblue;
+}
+
+.forminput:focus
+{
+	border: 2px solid lightblue;
+	background-color: lightyellow;
+}
+#form-container
+{
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 80%;
+	height: 100%;
 }
 
 /* Footer */
