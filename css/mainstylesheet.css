@@ -341,7 +341,7 @@ button:hover span:after
 .inputeventdetails{
 	background-color: #f2f2f2;
 	border-radius: 5px;
-	width: 40%;
+	width: 500px;
 	margin-top: -20px;
 }
 
@@ -359,3 +359,16 @@ button:hover span:after
 {
   border: solid 1px #707070;
 }
+
+#invisibleBarrier{
+  width: 100%;
+  background-color: #FFFFFF;
+  color: white;
+  padding-left: 5%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 99;
+	
+}
+
