@@ -18,18 +18,8 @@
         src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
         crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
   <title>polyNexus</title>
-  <script>
-  $(function() {
-    $("#tabs").tabs();
-  });
-  $(function() {
-    $("#setting").tabs();
-  });
-   $(function() {
-    $("#events").tabs();
-  });
-  </script>
 </head>
 <body>
 <h1>polyNexus</h1>
@@ -54,7 +44,7 @@
     <div class="currentchats" id="chatlist">
       <ul class="currentchatlist">
         <li>
-          <h2>Chats</h2>
+          <h2 id="userid">Chats</h2>
         </li>
         <li id="searchbar">
           <input type="text" placeholder="Search" />
@@ -132,8 +122,8 @@
 		<br/>
 		Join me in my flowery adventures as I attempt to make hashbrowns with my home-grown, organic, cannabis! </p>
 		</div>
-		
-		<div id="events-2" class="activetab"> 
+
+		<div id="events-2" class="activetab">
 		<h2><i class="eventtitle" aria-hidden="true"></i> Organize an event </h2>
 		<br/>
 		<br/>
@@ -186,11 +176,11 @@
     <div id="setting-1" class="activetab">
       <h2>Username</h2>
       <h3>Please select a username of your liking.</h3>
-      <h4>Current Username:</h4>
+      <h4 id="displaycurrentid">Current Username:</h4>
       <h4>New Username:</h4>
-      <input class="settingsinput" type="text" placeholder="New Username"/>
+      <input class="settingsinput" type="text" id="usernamefield" placeholder="New Username"/>
     <br />
-    <button class="button"><span>Change Username</span></button>
+    <button class="button" onclick="changeUsername()"><span>Change Username</span></button>
     </div>
     <div id="setting-2" class="activetab">
       <h2>Password</h2>
@@ -223,7 +213,7 @@
     <div id="setting-4" class="activetab">
       <h2>Theme</h2>
     </div>
-   
+
   </div>
 
 </div>
