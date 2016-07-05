@@ -5,6 +5,10 @@ $(document).ready(function(){
   $(function() {
     $("#setting").tabs();
   });
+  $(function() {
+    $("#events").tabs();
+  });
+});
 });
 
 function changeUsername(){
