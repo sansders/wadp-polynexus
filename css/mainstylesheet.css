@@ -344,10 +344,11 @@ button:hover span:after
 	width: 40%;
 }
 
-.inputeventdetails input{
+.inputeventdetails input, textarea{
 	padding: 8px 5px;
 	border: 1px solid grey;
 	border-radius: 5px;
 	margin-left: 10px;
 	margin-bottom: 13px;
+	resize: none;
 }
