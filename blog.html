@@ -68,7 +68,7 @@
 			function wordcheck(clicked_id){
 				var word = document.getElementById(clicked_id).value;
 				switch(clicked_id){
-					case "title":
+					case "Title":
 						if (word != "") {
 							title = 1;
 						}
@@ -77,7 +77,7 @@
 						}
 						break;
 						
-					case "subtitle":
+					case "Subtitle":
 						if (word != "") {
 							subtitle = 1;
 						}
@@ -86,7 +86,7 @@
 						}
 						break;
 						
-					case "article":
+					case "Article":
 						if (word != "") {
 							article = 1;
 						}
@@ -156,6 +156,15 @@
 					}
 				}
 			}
+			
+			function posting() {
+				var posttitle = document.getElementById("Title").value;
+				var postsubtitle = document.getElementById("Subtitle").value;
+				var postarticle = document.getElementById("Article").value;
+				document.getElementById("posted-article-title").innerHTML = posttitle;
+				document.getElementById("posted-article-subtitle").innerHTML = postsubtitle;
+				document.getElementById("posted-written-article").innerHTML = postarticle;
+			};
 		</script>
 	</head>
 	<body>
@@ -198,21 +207,21 @@
 				<ul>
 					<!-- Posted Article with Written and Preview -->
 					<li>
-						<div id="posted-article-container">
+						<div class="article-container" id="posted-article-container">
 							<!-- Posted Article Preview -->
 							<div id="posted-article-preview" class="article-preview">
 								<div class="article-header">
-									<h3 class="article-title"></h3>
+									<h3 class="article-title" id="posted-article-title"></h3>
 								</div>
 								<hr>
 								<div class="article-subheader">
-									<h4 class="article-subtitle"></h4>
+									<h4 class="article-subtitle" id="posted-article-subtitle"></h4>
 								</div>
 							</div>
 							<!-- Posted Written Article -->
 							<div id="posted-article" class="article">
 								<div class="written-article">
-									<p>
+									<p id="posted-written-article">
 									</p>
 								</div>
 								<!-- Posted Article Image -->
@@ -332,10 +341,10 @@
 				<form onsubmit="return false">
 					<p>
 					Title:
-					<input type="text" placeholder="Title" id="title" onfocusout="wordcheck(this.id)"><br>
+					<input type="text" placeholder="Title" id="Title" onfocusout="wordcheck(this.id)"><br>
 					
 					Subtitle:
-					<input type="text" placeholder="Subtitle" id="subtitle" onfocusout="wordcheck(this.id)"><br>
+					<input type="text" placeholder="Subtitle" id="Subtitle" onfocusout="wordcheck(this.id)"><br>
 					
 					Image URL:
 					<input type="url" placeholder="http://www.google.com/"><br>OR<br>
@@ -344,10 +353,10 @@
 					<input type="file" name="img"><br>
 					
 					Article: <br>
-					<textarea id="article" onfocusout="wordcheck(this.id)"></textarea>
+					<textarea id="Article" onfocusout="wordcheck(this.id)"></textarea>
 					
 					<input type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
-					<button onclick="verify()">Submit</button>
+					<button onclick="verify(); posting();">Submit</button>
 					</p>
 				</form>
 			</div>
