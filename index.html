@@ -18,6 +18,7 @@
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
         crossorigin="anonymous"></script>
   <script src="js/smoothscroll.js"></script>
+  <script src="js/login.js"></script>
   <script>
   $(function(){
     $('#movedown a').smoothScroll();
@@ -35,13 +36,13 @@
     <h3>Login</h3>
     <ul>
       <li>
-        <input type="text" placeholder="Username"/>
+        <input type="text" id="usernameinput" placeholder="Username"/>
       </li>
       <li>
         <input type="password" placeholder="Password"/>
       </li>
       <li>
-        <button class="button"><span>Login</span></button>
+        <button class="button" onclick="login()"><span>Login</span></button>
       </li>
     </ul>
     <div class="newaccount" id="newacc">

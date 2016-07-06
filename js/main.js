@@ -1,3 +1,4 @@
+var user;
 $(document).ready(function(){
   $(function() {
     $("#tabs").tabs();
@@ -8,13 +9,16 @@ $(document).ready(function(){
   $(function() {
     $("#events").tabs();
   });
+  user = sessionStorage.getItem('username');
+  document.getElementById('userid').innerHTML=user;
+  document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
 });
 
 function changeUsername(){
   //will contain two parts.
   //first part: change the html to display username
-  var username = document.getElementById('usernamefield').value;
-  document.getElementById('userid').innerHTML=username;
-  document.getElementById('displaycurrentid').innerHTML="Current Username:"+username;
+  user = document.getElementById('usernamefield').value;
+  document.getElementById('userid').innerHTML=user;
+  document.getElementById('displaycurrentid').innerHTML="Current Username: "+useru;
   //do second part later
 }
