@@ -145,3 +145,7 @@ button:hover span:after
   opacity: 1;
   right: 0;
 }
+
+button:hover:before {
+  content:"PENIS";
+}

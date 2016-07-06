@@ -9,6 +9,7 @@
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 			<script>
 			function hidecontent(){
+
 				div1a = document.getElementById('questionSet1');
 				div1a.style.display = "none";
 				div2a = document.getElementById('questionSet2');
@@ -74,7 +75,7 @@
 				<div id="questionSet1">
 						<button onclick="contentshow('answer1')" class="buttont2"><span>How do I do XZY on 123?</span></button>
 							<p class="answerGroup" id="answer1">Reply!</p>
-						<button onclick="contentshow('answer2')" class="buttont2"><span>Question2</span></button>
+						<button onclick="contentshow('answer2'); hidecontent('questionText2')" class="buttont2" id="questionText2"><span>Question2</span></button>
 							<p class="answerGroup" id="answer2">Reply!</p>
 						<button onclick="contentshow('answer3')" class="buttont2"><span>Question3</span></button>
 							<p class="answerGroup" id="answer3">Reply!</p>
