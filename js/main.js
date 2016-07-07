@@ -1,17 +1,24 @@
 var user;
 $(document).ready(function(){
-  $(function() {
-    $("#tabs").tabs();
-  });
-  $(function() {
-    $("#setting").tabs();
-  });
-  $(function() {
-    $("#events").tabs();
-  });
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
   document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
+  if(user == null){
+    window.location = 'index.html';
+  }
+  else{
+    $(function() {
+      $("#tabs").tabs();
+    });
+    $(function() {
+      $("#setting").tabs();
+    });
+    $(function() {
+      $("#events").tabs();
+    });
+    setLanguage();
+  }
+
 });
 
 function changeUsername(){

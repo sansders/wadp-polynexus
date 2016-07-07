@@ -5,7 +5,21 @@ var xmlDoc = JSON.parse(xmlhttp.responseText);
 
 function login(){
   var input = document.getElementById('usernameinput').value;
-  var y = eval("xmlDoc.users['"+input+"'].username");
-  sessionStorage.setItem('username' , y);
-  window.location = "main.html"
+  input = input.toLowerCase();
+  try{
+    var username = eval("xmlDoc.users['"+input+"'].username");
+    var language = eval("xmlDoc.users['"+input+"'].lang")
+    sessionStorage.setItem('username' , username);
+    sessionStorage.setItem('language' , language);
+    document.location = "main.html"
+  }
+  catch(err){
+    if(err.name === 'TypeError'){
+      alert('Invalid User');
+    }
+    else{
+      alert('error');
+    }
+  }
+
 }

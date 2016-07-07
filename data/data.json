@@ -1,10 +1,15 @@
 {
   "users":{
     "161714f":{
-      "username":"jz"
+      "username":"jz",
+      "lang": "jp"
     },
-    "123456A":{
+    "123456a":{
       "username":"john lim"
+    },
+    "111111a":{
+      "username":"小明",
+      "lang":"cn"
     }
   }
 }
