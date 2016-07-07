@@ -115,7 +115,6 @@ header
 	max-height: 900px;
 	margin-left: 10px;
 	margin-right: 10px;
-	display: none;
 }
 
 /* Article */
@@ -332,6 +331,7 @@ form
 	margin: 10px;
 	box-shadow: 5px 5px grey;
 	resize: none;
+	color: black;
 }
 
 .forminput:hover
