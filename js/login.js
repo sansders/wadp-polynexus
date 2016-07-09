@@ -11,6 +11,7 @@ function login(){
     var language = eval("xmlDoc.users['"+input+"'].lang")
     sessionStorage.setItem('username' , username);
     sessionStorage.setItem('language' , language);
+    sessionStorage.setItem('userid', input);
     document.location = "main.html"
   }
   catch(err){

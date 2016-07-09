@@ -1,4 +1,5 @@
 var user;
+var xmlDoc;
 $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
@@ -17,6 +18,10 @@ $(document).ready(function(){
       $("#events").tabs();
     });
     setLanguage();
+    var xmlhttp= new XMLHttpRequest();
+    xmlhttp.open("GET", "data/data.json", false);
+    xmlhttp.send();
+    xmlDoc = JSON.parse(xmlhttp.responseText);
   }
 
 });
@@ -28,4 +33,6 @@ function changeUsername(){
   document.getElementById('userid').innerHTML=user;
   document.getElementById('displaycurrentid').innerHTML="Current Username: "+useru;
   //do second part later
+  //store in json
+
 }
