@@ -9,6 +9,11 @@
 html,body
 {
   font-family: 'Exo', sans-serif;
+  margin:0;
+}
+
+body {
+  background-image: url(../img/6.jpg);
 }
 
 h1
@@ -27,7 +32,6 @@ h1
 
 .intro
 {
-	background-image: url(../img/3.jpg);
 	padding-top:60px;
 	padding-left:10px;
 	padding-bottom:50px;
@@ -42,9 +46,10 @@ h1
 .intro p
 {
   font-size: 25px;
-  padding: 10px 200px;
+  padding: 10px;
+  padding-left:450px;
   width: 69%;
-  text-align:center;
+  text-align:left;
 }
 
 
@@ -52,9 +57,10 @@ h1
 {
   margin: 0 auto;
   clear:both;
-  padding:50px 0;
+  padding-top:50px;
+  padding-bottom:300px;
   color: white;
-  background-color: rgba(0,76,159,0.7);
+  background-color: rgba(255,255,255,0.2);
   text-align:center;
 }
 
@@ -94,7 +100,8 @@ button
   border: none;
   border-radius: 50px;
   transition: all, 0.5s;
-  background-color:rgba(128,255,0,0.7);
+  background-color: rgba(0, 76, 159, 0.7);
+  color:white;
 }
 
 .buttont2 {
@@ -108,14 +115,14 @@ button
   border: none;
   border-radius: 50px;
   transition: all, 0.5s;
-  background-color:rgba(255,255,255,0.7);
+  background-color:rgba(255,255,255,0.15);
   padding-top:70px;
   padding-bottom:70px;
 }
 
 button:hover
 {
-  background-color: rgba(172,30, 253, 1);
+  background-color: rgba(0, 76, 159, 0.4);
 }
 
 button span
@@ -146,6 +153,30 @@ button:hover span:after
   right: 0;
 }
 
-button:hover:before {
-  content:"PENIS";
+.hoverable {
+  cursor:default;
+  color:#000;
+  text-decoration:none;
+  font-size: 20px;
+  font-family: 'Noto Sans' ,sans-serif;
+  width: 40%;
+  margin-left:50px;
+  margin-right:50px;
+  margin-top:50px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  transition: all, 0.5s;
+  background-color:rgba(255,255,255,0.3);
+  padding:10px;
+}
+.hoverable .hover {
+  display:none;
+}
+.hoverable:hover .normal {
+  display:none;
+}
+.hoverable:hover .hover {
+  display:inline;
 }
