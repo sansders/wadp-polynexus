@@ -1,5 +1,6 @@
 var user;
 var xmlDoc;
+var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
@@ -18,7 +19,7 @@ $(document).ready(function(){
       $("#events").tabs();
     });
     setLanguage();
-    var xmlhttp= new XMLHttpRequest();
+
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
@@ -31,8 +32,19 @@ function changeUsername(){
   //first part: change the html to display username
   user = document.getElementById('usernamefield').value;
   document.getElementById('userid').innerHTML=user;
-  document.getElementById('displaycurrentid').innerHTML="Current Username: "+useru;
+  document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
   //do second part later
   //store in json
+  var input = sessionStorage.getItem('userid');
+  xmlDoc.users[input].username = user;
 
+}
+
+function logout(){
+  window.location.replace('index.html');
+  sessionStorage.removeItem('username');
+  sessionStorage.removeItem('language');
+  sessionStorage.removeItem('userid');
+  sessionStorage.removeItem('groupchats');
+  sessionStorage.removeItem('privatechats');
 }
