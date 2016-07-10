@@ -2,10 +2,15 @@
   "users":{
     "161714f":{
       "username":"jz",
-      "lang": "jp"
+      "lang": "jp",
+      "groupchats": ["anime" , "basketballers"],
+      "privatechats":["123456a"]
     },
     "123456a":{
-      "username":"john lim"
+      "username":"john lim",
+      "lang": "en",
+      "groupchats": ["CSIT scholarship", "Gardening"],
+      "privatechats": ["161714f"]
     },
     "111111a":{
       "username":"小明",
