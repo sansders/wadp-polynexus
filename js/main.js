@@ -7,7 +7,7 @@ $(document).ready(function(){
   document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
   if(user == null){
     window.location = 'index.html';
-  }
+  } 
   else{
     $(function() {
       $("#tabs").tabs();
