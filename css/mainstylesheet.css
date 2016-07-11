@@ -20,6 +20,18 @@ h1
   z-index: 100;
 }
 
+/*To prevent anything from being seen under the h1 header */
+#invisibleBarrier{
+  width: 100%;
+  background-color: #FFFFFF;
+  color: white;
+  padding-left: 5%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 99;
+}
+
 .navbarlist
 {
   position: fixed;
@@ -360,15 +372,6 @@ button:hover span:after
   border: solid 1px #707070;
 }
 
-#invisibleBarrier{
-  width: 100%;
-  background-color: #FFFFFF;
-  color: white;
-  padding-left: 5%;
-  position:fixed;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  z-index: 99;
-	
-}
+
+
 
