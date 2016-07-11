@@ -45,7 +45,7 @@ h1
   list-style-type: none;
   display: inline-block;
   position: relative;
-  right: 40%;
+  right: 40px;
   transition: background, 0.5s;
 }
 
