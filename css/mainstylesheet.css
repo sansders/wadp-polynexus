@@ -35,7 +35,7 @@ h1
 .navbarlist
 {
   position: fixed;
-  left: 60%;
+  left: 50%;
   z-index: 101;
 }
 
@@ -45,7 +45,7 @@ h1
   list-style-type: none;
   display: inline-block;
   position: relative;
-  right: 40px;
+  right: 1%;
   transition: background, 0.5s;
 }
 
