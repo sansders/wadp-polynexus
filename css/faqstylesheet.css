@@ -72,7 +72,7 @@ h1
   font-size: 40px;
   width:69%;
   background-color:rgba(255,128,0,0.7);
-  border-radius:20px;
+  border-radius:50px;
   text-align:center;
 }
 
@@ -85,7 +85,7 @@ h1
   padding-top:75px;
   padding-bottom:75px;
   background-color:rgba(128,0,128,0.7);
-  border-radius:12.5px;
+  border-radius:50;
 }
 
 button
@@ -125,6 +125,11 @@ button:hover
   background-color: rgba(0, 76, 159, 0.4);
 }
 
+button:hover span
+{
+  padding-right: 25px;
+}
+
 button span
 {
   display: inline-block;
@@ -142,11 +147,6 @@ button span:after
   transition: 0.5s;
 }
 
-button:hover span
-{
-  padding-right: 25px;
-}
-
 button:hover span:after
 {
   opacity: 1;
@@ -154,19 +154,14 @@ button:hover span:after
 }
 
 .hoverable {
-  cursor:default;
   color:#000;
   text-decoration:none;
   font-size: 20px;
   font-family: 'Noto Sans' ,sans-serif;
   width: 40%;
-  margin-left:50px;
-  margin-right:50px;
-  margin-top:50px;
   cursor: pointer;
   outline: none;
   border: none;
-  border-radius: 50px;
   transition: all, 0.5s;
   background-color:rgba(255,255,255,0.3);
   padding:10px;
