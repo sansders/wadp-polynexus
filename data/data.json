@@ -1,10 +1,11 @@
 {
   "users":{
     "161714f":{
-      "username":"jz",
+      "username":"タンさん",
       "lang": "jp",
       "groupchats": ["anime" , "basketballers"],
-      "privatechats":["123456a"]
+      "privatechats":["123456a"],
+      "theme": "mono"
     },
     "123456a":{
       "username":"john lim",
@@ -15,6 +16,11 @@
     "111111a":{
       "username":"小明",
       "lang":"cn"
+    },
+    "160280x":{
+      "username": "baguette matte",
+      "lang": "fr",
+      "theme": "pink"
     }
   }
 }

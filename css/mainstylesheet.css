@@ -20,10 +20,22 @@ h1
   z-index: 100;
 }
 
+/*To prevent anything from being seen under the h1 header */
+#invisibleBarrier{
+  width: 100%;
+  background-color: #FFFFFF;
+  color: white;
+  padding-left: 5%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 99;
+}
+
 .navbarlist
 {
   position: fixed;
-  left: 60%;
+  left: 50%;
   z-index: 101;
 }
 
@@ -33,7 +45,7 @@ h1
   list-style-type: none;
   display: inline-block;
   position: relative;
-  right: 40px;
+  right: 1%;
   transition: background, 0.5s;
 }
 
@@ -48,7 +60,7 @@ h1
   text-decoration: none;
   font-size: 20px;
   color: white;
- 
+
 }
 
 .navbarlist li:hover
@@ -112,7 +124,7 @@ h1
   border: solid 1px #dcdcdc;
   overflow: auto;
   border-collapse: collapse;
-  
+
 
 }
 
@@ -220,7 +232,7 @@ h1
 
 #chatinterface
 {
-  width:77.5%;	
+  width:77.5%;
 }
 
 .chatinputbox
@@ -262,7 +274,7 @@ h1
 {
   position: fixed;
   top: 75px;
-  
+
   overflow: auto;
   padding: 10px 10px;
   width: 77%;
@@ -399,6 +411,10 @@ button:hover span:after
   border: solid 1px #707070;
 }
 
+<<<<<<< HEAD
+
+
+=======
 #invisibleBarrier{
   width: 100%;
   background-color: #FFFFFF;
@@ -408,6 +424,10 @@ button:hover span:after
   padding-top: 15px;
   padding-bottom: 15px;
   z-index: 99;
-	
-}
+>>>>>>> origin/gh-pages
 
+}
+#themehr
+{
+  width: 50%;
+}

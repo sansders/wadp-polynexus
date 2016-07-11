@@ -19,11 +19,16 @@
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
         crossorigin="anonymous"></script>
   <script src="js/language.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script> 
+  <script>
+    if (screen.width <= 800) {
+      window.location = "mainmobile.html";
+    } //redirect
+  </script> 
   <title>polyNexus</title>
 </head>
 <body>
-<h1>polyNexus</h1>
+<h1 id="titlebar">polyNexus</h1>
 
 <h1 id="invisibleBarrier"> This is das box </h1>
 
@@ -107,7 +112,7 @@
     <ul class="currentchatlist">
       <li>
         <h2>Events</h2>
-        <p class="textchat">
+        <p class="textchat" id="eventsdesc">
           You can only join events if you are in the specified chat group.
         </p>
       </li>
@@ -160,37 +165,37 @@
     <ul class="currentchatlist">
       <li>
         <h2>Settings</h2>
-        <p class="textchat">
+        <p class="textchat" id="settingsdesc">
           Change how the application works.
         </p>
       </li>
       <li><a href="#setting-1">
-        <h3><i class="fa fa-user" aria-hidden="true"></i> Username</h3>
-        <p class="textchat">
+        <h3 id="setting1h3"><i class="fa fa-user" aria-hidden="true"></i> Username</h3>
+        <p class="textchat" id="settingsusernamedesc">
           Change your username
         </p></a>
       </li>
       <li><a href="#setting-2">
-        <h3><i class="fa fa-lock" aria-hidden="true"></i> Password</h3>
-        <p class="textchat">
+        <h3 id="setting2h3"><i class="fa fa-lock" aria-hidden="true"></i> Password</h3>
+        <p class="textchat" id="settingspassworddesc">
           Change your password
         </p></a>
       </li>
       <li><a href="#setting-3">
-        <h3><i class="fa fa-user-times" aria-hidden="true"></i> Blocked Users
+        <h3 id="setting3h3"><i class="fa fa-user-times" aria-hidden="true"></i> Blocked Users
         </h3>
-        <p class="textchat">
+        <p class="textchat" id="settingsblockedesc">
           Displays a list of blocked users.
         </p></a>
       </li>
       <li><a href="#setting-4">
-        <h3><i class="fa fa-paint-brush" aria-hidden="true"></i> Theme</h3>
-        <p class="textchat">
+        <h3 id="setting4h3"><i class="fa fa-paint-brush" aria-hidden="true"></i> Theme</h3>
+        <p class="textchat" id="settingsthemedesc">
           Change the look and feel of the application.
         </p></a>
       </li>
       <li><a href="#setting-5">
-        <h3><i class="fa fa-globe" aria-hidden="true"></i> Language</h3>
+        <h3 id="setting5h3"><i class="fa fa-globe" aria-hidden="true"></i> Language</h3>
         <p class="textchat">
           Change the language of the application.
         </p></a>
@@ -235,6 +240,19 @@
     </div>
     <div id="setting-4" class="activetab">
       <h2>Theme</h2>
+      <h3>Please select a new look</h3>
+      <ul>
+        Monochrome <button class="themeclass" onclick="changetheme('mono')"><span>Select Theme</span></button>
+        <hr id="themehr"/>
+      </ul>
+      <ul>
+        Pink <button class="themeclass" onclick="changetheme('pink')"><span>Select Theme</span></button>
+        <hr id="themehr" />
+      </ul>
+      <ul>
+        Classic <button class="themeclass" onclick="changetheme('classic')"><span>Select Theme</span></button>
+        <hr id="themehr" />
+      </ul>
     </div>
     <div id="setting-5" class="activetab">
       <h2>Language</h2>
