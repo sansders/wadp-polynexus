@@ -14,34 +14,20 @@
 		<link type="text/css" rel="stylesheet" href= "css/blogstylesheet.css" />
 		<!-- Script -->
 		<script>
-			$(document).ready(function(){
-				$("#posted-article").hide();
-				$("#posted-article-preview").click(function(){
-					$("#posted-article").slideToggle("slow");
+			$(document).ready(function() {
+				$(".article-content").hide();
+				$(".article-preview").click(function(){
+					$(this).next(".article-content").slideToggle("slow");
 				});
 			});
-					
-			$(document).ready(function(){
-				$("#article-1").hide();
-					$("#article-preview-1").click(function(){
-						$("#article-1").slideToggle("slow");
-					});
-			});
-					
-			$(document).ready(function(){
-				$("#article-2").hide();
-					$("#article-preview-2").click(function(){
-						$("#article-2").slideToggle("slow");
-					});
-			});
-					
-			$(document).ready(function(){
-				$("#article-3").hide();
-					$("#article-preview-3").click(function(){
-						$("#article-3").slideToggle("slow");
-					});
-			});
-					
+			
+			function divToggle() {
+				$(".posted-article-content").hide();
+				$(".posted-article-preview").click(function(){
+					$(this).next(".posted-article-content").slideToggle("slow");
+				});
+			}
+			
 			var medium = 0;
 			$(window).scroll(function () {
 				var lenghtFromTop = $(window).scrollTop();
@@ -101,7 +87,6 @@
 				if (title == 1 && article == 1 && subtitle == 1) {
 					var confirmation = confirm("Are you sure you want to continue?");
 					if (confirmation == true) {
-						document.getElementById('posted-article-container').style.display='block';
 						document.getElementById("createblog").style.display='none';
 					}
 					else {
@@ -115,46 +100,97 @@
 					else if (title != 1 && subtitle != 1) {
 						var confirmation = confirm("There is no title and subtitle. Are you sure you want to continue?");
 						if (confirmation == true) {
-							document.getElementById('posted-article-container').style.display='block';
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (title != 1 && article != 1) {
 							var confirmation = confirm("There is no title and article. Are you sure you want to continue?");
 						if (confirmation == true) {
-							document.getElementById('posted-article-container').style.display='block';
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (subtitle != 1 && article != 1) {
 						var confirmation = confirm("There is no subtitle and article. Are you sure you want to continue?");
 						if (confirmation == true) {
-							document.getElementById('posted-article-container').style.display='block';
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (title != 1){
 						var confirmation = confirm("There is no title. Are you sure you want to continue?");
 						if (confirmation == true) {
-							document.getElementById('posted-article-container').style.display='block';
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (subtitle != 1 ) {
 						var confirmation = confirm("There is no subtitle. Are you sure you want to continue?");
 						if (confirmation == true) {
-							document.getElementById('posted-article-container').style.display='block';
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else {
 						var confirmation = confirm("There is no article. Are you sure you want to continue?");
 						if (confirmation == true) {
-							document.getElementById('posted-article-container').style.display='block';
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 				}
+			}
+			
+			var counter = "";
+			function creatingDiv() {
+				var Li1 = document.createElement("li");
+				var Div1 = document.createElement("div"); //class="article-container" 	id="posted-article-container"
+				var Div2 = document.createElement("div"); //class="article-preview" 	id="posted-article-preview"
+				var Div3 = document.createElement("div"); //class="article-header"
+				var Div4 = document.createElement("div"); //class="article-subheader"
+				var Div5 = document.createElement("div"); //class="article" 			id="posted-article"
+				var Div6 = document.createElement("div"); //class="written-article"
+				var Div7 = document.createElement("div"); //class="article-image"
+				var Div8 = document.createElement("div"); //class="article-content"
+				var Div9 = document.createElement("div"); //class="show-time"
+				var H3 = document.createElement("H3"); //class="article-title"			id="posted-article-title"
+				var H4 = document.createElement("H4"); //class="article-subtitle"		id="posted-article-subtitle"
+				var P1 = document.createElement("p"); //								id="posted-written-article"
+				var P2 = document.createElement("p"); //								id="posttime"
+				var IMG1 = document.createElement("img"); //							id="posted-image"
+				var Ul1 = document.getElementById("ullist");
+				
+				Div1.className = "article-container";
+				Div2.className = "article-preview";
+				Div3.className = "article-header";
+				Div4.className = "article-subheader";
+				Div5.className = "article";
+				Div6.className = "written-article";
+				Div7.className = "article-image";
+				Div8.className = "article-content";
+				Div9.className = "show-time";
+				H3.className = "article-title";
+				H4.className = "article-subtitle";
+				
+				Div1.setAttribute("id", "posted-article-container" + counter);
+				Div2.setAttribute("id", "posted-article-preview"  + counter);
+				Div5.setAttribute("id", "posted-article"  + counter);
+				H3.setAttribute("id", "posted-article-title"  + counter);
+				H4.setAttribute("id", "posted-article-subtitle"  + counter);
+				P1.setAttribute("id", "posted-written-article"  + counter);
+				P2.setAttribute("id", "posted-time"  + counter);
+				IMG1.setAttribute("id", "posted-image" + counter);
+				
+				Ul1.insertBefore(Li1, Ul1.childNodes[0]);
+				Li1.appendChild(Div1);
+				Div1.appendChild(Div2);
+				Div1.appendChild(Div8);
+				Div2.appendChild(Div3);
+				Div2.appendChild(Div4);
+				Div3.appendChild(H3);
+				$(Div9).insertAfter($(Div4));
+				Div4.appendChild(H4);
+				Div5.appendChild(Div6);
+				Div5.appendChild(Div7);
+				Div6.appendChild(P1);
+				Div7.appendChild(IMG1);
+				Div8.appendChild(Div5);
+				Div9.appendChild(P2);
 			}
 			
 			function posting() {
@@ -163,10 +199,31 @@
 				var postarticle = document.getElementById("Article").value;
 				var postimage = document.getElementById("Image").value;
 				var postfile = document.getElementById("File").value
-				document.getElementById("posted-article-title").innerHTML = posttitle;
-				document.getElementById("posted-article-subtitle").innerHTML = postsubtitle;
-				document.getElementById("posted-written-article").innerHTML = postarticle;
-				document.getElementById("posted-image").src = postimage;
+				document.getElementById("posted-article-title" + counter).innerHTML = posttitle;
+				document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
+				document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
+				document.getElementById("posted-image" + counter).src = postimage;
+				
+				if (counter == "") {
+					$("#posted-article").hide();
+					$("#posted-article-preview").click(function(){
+						$("#posted-article").slideToggle("slow");
+					});
+				}
+				else if (counter == 1) {
+					$("#posted-article1").hide();
+					$("#posted-article-preview1").click(function(){
+						$("#posted-article1").slideToggle("slow");
+					});
+				}
+				else if (counter == 2) {
+					$("#posted-article2").hide();
+					$("#posted-article-preview2").click(function(){
+						$("#posted-article2").slideToggle("slow");
+					});
+				}
+				
+				counter++
 			}
 			
 		</script>
@@ -208,33 +265,7 @@
 		<!-- Row of Articles with Preview -->
 		<div class="article-container-container-container">
 			<div class="article-container-container">
-				<ul>
-					<!-- Posted Article with Written and Preview -->
-					<li>
-						<div class="article-container" id="posted-article-container">
-							<!-- Posted Article Preview -->
-							<div id="posted-article-preview" class="article-preview">
-								<div class="article-header">
-									<h3 class="article-title" id="posted-article-title"></h3>
-								</div>
-								<hr>
-								<div class="article-subheader">
-									<h4 class="article-subtitle" id="posted-article-subtitle"></h4>
-								</div>
-							</div>
-							<!-- Posted Written Article -->
-							<div id="posted-article" class="article">
-								<div class="written-article">
-									<p id="posted-written-article">
-									</p>
-								</div>
-								<!-- Posted Article Image -->
-								<div class="article-image">
-									<img id="posted-image" src="" />
-								</div>
-							</div>
-						</div>
-					</li>
+				<ul id="ullist">
 					<!-- Article with Written and Preview 1 -->
 					<li>
 						<div class="article-container">
@@ -246,6 +277,9 @@
 								<hr>
 								<div class="article-subheader">
 									<h4 class="article-subtitle">I play Overwatch about 6 times every year so I concluded my top 3.</h4>
+									<div class="show-time">
+										<p id="time3"></p>
+									</div>
 								</div>
 							</div>
 							<div class="article-content">
@@ -278,6 +312,9 @@
 								<hr>
 								<div class="article-subheader">
 									<h4 class="article-subtitle">Due to a recent science new breakthrough, bananas are found not to growing on trees but... </h4>
+									<div class="show-time">
+										<p id="time2"></p>
+									</div>
 								</div>
 							</div>
 							<div class="article-content">
@@ -307,22 +344,28 @@
 								<hr>
 								<div class="article-subheader">
 									<h4 class="article-subtitle">Is it really yellow or green like you sees?</h4>
+									<div class="show-time">
+										<p id="time"></p>
+									</div>
 								</div>
 							</div>
 							<!-- Written Article 3 -->
-							<div id="article-3" class="article">
-								<div class="written-article">
-									<p>
-									i still dk
-									</p>
-								</div>
-								<!-- Article Image -->
-								<div class="article-image">
-									<img src="http://i.telegraph.co.uk/multimedia/archive/01367/pducks1_1367221c.jpg" />
+							<div class="article-content">
+								<div id="article-3" class="article">
+									<div class="written-article">
+										<p>
+										i still dk
+										</p>
+									</div>
+									<!-- Article Image -->
+									<div class="article-image">
+										<img src="http://i.telegraph.co.uk/multimedia/archive/01367/pducks1_1367221c.jpg" />
+									</div>
 								</div>
 							</div>
 						</div>
 					</li>
+					<!-- Posted Article with Written and Preview -->
 				</ul>
 				<!-- Button -->
 				<div class="button-container">
@@ -339,7 +382,7 @@
 			<div id="createblog">
 				<!-- Close Button -->
 				<div id="close">
-					<img src="https://cdn3.iconfinder.com/data/icons/interface/100/close_button_1-512.png" />
+					<img src="http://www.ge.com/ar2012/img/close-button-large.png" />
 				</div>
 				<!-- Forms -->
 				<div id="form-container">
@@ -360,8 +403,8 @@
 						Article: <br>
 						<textarea rows="2" cols="100" id="Article" placeholder="Article" class="forminput" onfocusout="wordcheck(this.id)"></textarea><br>
 						
-						<input type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
-						<button onclick="verify(); posting();">Submit</button>
+						<input class="sbutton" type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
+						<button class="sbutton" onclick="verify(); creatingDiv(); posting(); showtime();">Submit</button>
 						</p>
 					</form>
 				</div>
@@ -384,5 +427,60 @@
 				</li>
 			</ul>
 		</footer>
+		<!-- Time Script -->
+		<script type="text/javascript">
+			function addZero(i) {
+				if (i < 10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+			
+			var date = new Date("2016-06-25 20:15:43");
+			var hour = addZero(date.getHours());
+			var minute = addZero(date.getMinutes());
+			var second = addZero(date.getSeconds());
+			document.getElementById("time").innerHTML = "-" + date.toDateString() + " " + hour + ":" + minute + ":" + second;
+			
+			var date2 = new Date("2016-06-30 04:20:42");
+			var hour = addZero(date2.getHours());
+			var minute = addZero(date2.getMinutes());
+			var second = addZero(date2.getSeconds());
+			document.getElementById("time2").innerHTML = "-" + date2.toDateString() + " " + hour + ":" + minute + ":" + second;
+			
+			var date3 = new Date("2016-07-03 01:26:29");
+			var hour = addZero(date3.getHours());
+			var minute = addZero(date3.getMinutes());
+			var second = addZero(date3.getSeconds());
+			document.getElementById("time3").innerHTML = "-" + date3.toDateString() + " " + hour + ":" + minute + ":" + second;
+			
+			var press = 0
+			function showtime() {
+				switch (press){
+				case 0:	var postdate = new Date();
+						var hour = addZero(postdate.getHours());
+						var minute = addZero(postdate.getMinutes());
+						var second = addZero(postdate.getSeconds());
+						document.getElementById("posted-time").innerHTML = "-" + postdate.toDateString() + " " + hour + ":" + minute + ":" + second; 
+						break;
+				
+				case 1:	var postdate1 = new Date();
+						var hour = addZero(postdate1.getHours());
+						var minute = addZero(postdate1.getMinutes());
+						var second = addZero(postdate1.getSeconds());
+						document.getElementById("posted-time1").innerHTML = "-" + postdate1.toDateString() + " " + hour + ":" + minute + ":" + second;
+						break;
+						
+				case 2:	var postdate2 = new Date();
+						var hour = addZero(postdate2.getHours());
+						var minute = addZero(postdate2.getMinutes());
+						var second = addZero(postdate2.getSeconds());
+						document.getElementById("posted-time2").innerHTML = "-" + postdate2.toDateString() + " " + hour + ":" + minute + ":" + second;
+						break;
+				}
+				alert(press);
+				press++
+			}
+		</script>
 	</body>
 </html>

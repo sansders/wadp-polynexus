@@ -1,3 +1,26 @@
 {
-
+  "users":{
+    "161714f":{
+      "username":"タンさん",
+      "lang": "jp",
+      "groupchats": ["anime" , "basketballers"],
+      "privatechats":["123456a"],
+      "theme": "mono"
+    },
+    "123456a":{
+      "username":"john lim",
+      "lang": "en",
+      "groupchats": ["CSIT scholarship", "Gardening"],
+      "privatechats": ["161714f"]
+    },
+    "111111a":{
+      "username":"小明",
+      "lang":"cn"
+    },
+    "160280x":{
+      "username": "baguette matte",
+      "lang": "fr",
+      "theme": "pink"
+    }
+  }
 }
