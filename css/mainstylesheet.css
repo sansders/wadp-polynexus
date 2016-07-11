@@ -56,6 +56,45 @@ h1
   background-color: rgba(0, 76, 159, 0.7);
 }
 
+/******* Blog Button ********/
+#blogDiv
+{
+	position: absolute;
+	width: 60%;
+	height: 72px;
+	z-index: 103;
+}
+
+#blogUl
+{
+	float:right;
+}
+
+#blogUl li
+{
+	padding: 23px 15px;
+	list-style-type: none;
+	display: inline-block;
+	transition: background, 0.5s;
+}
+
+#blogUl li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+#blogbutton
+{
+	padding:0;
+	margin:0;
+	z-index: 103;
+	padding: 20px 15px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+}
+/****** End of Blog Button *******/
+
 .tabs
 {
   position: relative;
