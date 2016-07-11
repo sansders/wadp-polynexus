@@ -23,10 +23,24 @@
   <title>polyNexus</title>
 </head>
 <body>
-<h1><i class="fa fa-bars" aria-hidden="true" id="bars"></i> polyNexus <a onclick="logout()" id="logoutbtn"><i class="fa fa-sign-out" aria-hidden="true"></i></a></h1>
-<div id="tabs">
+<h1><i class="fa fa-bars" aria-hidden="true" id="bars" ></i> polyNexus <a onclick="logout()" id="logoutbtn"><i class="fa fa-sign-out" aria-hidden="true"></i></a></h1>
 
-	<div id="tabs-1" class="tabs">
+<!-- <div id="tabs">
+  <nav class="navbar">
+  <ul class="navbarlist">
+    <li>
+      <a href="#tabs-1"  id="tab-1">Chats</a>
+    </li>
+    <li>
+      <a href="#tabs-2" id="tab-2">Events</a>
+    </li>
+    <li>
+      <a href="#tabs-3" id="tab-3">Settings</a>
+    </li>
+  </ul>
+  </nav> -->
+  
+	<!--<div id="tabs-1" class="tabs">
     <div class="currentchats" id="chatlist">
       <ul class="currentchatlist">
 		<li>
@@ -63,10 +77,180 @@
           <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add a group
         </li>
       </ul>
-    </div>
+	</div>
+    </div> -->
+	
+	<!--<div id="tabs-2" class="tabs">
+	
+	<div id="events">
+    <ul class="currentchatlist">
+      <li>
+        <h2>Events</h2>
+        <p class="textchat" id="eventsdesc">
+          You can only join events if you are in the specified chat group.
+        </p>
+      </li>
+      <li><a href="#events-1" >
+        <h3>Gardening</h3>
+        <h4>making pot brownies</h4>
+        <p class="textchat">
+          19:00 at jz's house
+        </p>
+      </a></li>
+      <li class="addchat" id="addevent"><a href="#events-2" >
+        <i class="fa fa-plus-square-o" aria-hidden="true"></i> Create an event
+      </li></a>
+    </ul>
+	</div> -->
+		<!-- <div id="events-1" class="activetab">
+		<h2><i class="eventtitle" aria-hidden="true"></i> Making pot brownies </h2>
+		<br/>
+		<br/>
+		<h4 class="eventdetails"> Date: 29/2/2017<br/> Time: 19:00 <br/> Venue: Jz's house</h4>
+		<br/>
+		<br/>
+		<p class="eventdescription"><b> Event description:</b>
+		<br/>
+		<br/>
+		Join me in my flowery adventures as I attempt to make hashbrowns with my home-grown, organic, cannabis! </p>
+		</div> -->
 
+		<!-- <div id="events-2" class="activetab">
+		<form method="post" action="">
+			<h4 class="inputeventdetails">
+			&nbsp;&nbsp;Event Name:	<br/><input type="text" id="inputeventname" /> <br/>
+			&nbsp;&nbsp;Event Type:<br/><input type="text" placeholder="Gathering, Party etc." id="inputeventtype" /><br/>
+			&nbsp;&nbsp;Date:<br/><input type="date" id="inputeventdate" placeholder="dd/mm/yyy" /> <br/>
+			&nbsp;&nbsp;Time:<br/><input type="time" id="inputeventtime" /><br/>
+			&nbsp;&nbsp;Venue:<br/><input type="text" id="inputeventvenue"/><br/>
+			&nbsp;&nbsp;Event description:<br/><textarea rows="4" cols="35" id="inputeventdescription"></textarea> <br/>
+			&nbsp;<input type="submit" id="submiteventButton" value="Submit!" />
+			</h4>
+		</form>
+		</div> -->
 
-</div>
+	</div>
+	
+	
+	</div>
+
+	
+	<!-- <div class="tabs" id="tabs-3">
+  <!--<div id="setting">
+    <ul class="currentchatlist">
+      <li>
+        <h2>Settings</h2>
+        <p class="textchat" id="settingsdesc">
+          Change how the application works.
+        </p>
+      </li>
+      <li><a href="#setting-1">
+        <h3 id="setting1h3"><i class="fa fa-user" aria-hidden="true"></i> Username</h3>
+        <p class="textchat" id="settingsusernamedesc">
+          Change your username
+        </p></a>
+      </li>
+      <li><a href="#setting-2">
+        <h3 id="setting2h3"><i class="fa fa-lock" aria-hidden="true"></i> Password</h3>
+        <p class="textchat" id="settingspassworddesc">
+          Change your password
+        </p></a>
+      </li>
+      <li><a href="#setting-3">
+        <h3 id="setting3h3"><i class="fa fa-user-times" aria-hidden="true"></i> Blocked Users
+        </h3>
+        <p class="textchat" id="settingsblockedesc">
+          Displays a list of blocked users.
+        </p></a>
+      </li>
+      <li><a href="#setting-4">
+        <h3 id="setting4h3"><i class="fa fa-paint-brush" aria-hidden="true"></i> Theme</h3>
+        <p class="textchat" id="settingsthemedesc">
+          Change the look and feel of the application.
+        </p></a>
+      </li>
+      <li><a href="#setting-5">
+        <h3 id="setting5h3"><i class="fa fa-globe" aria-hidden="true"></i> Language</h3>
+        <p class="textchat">
+          Change the language of the application.
+        </p></a>
+      </li>
+    </ul>
+    <!--<div id="setting-1" class="activetab">
+      <h2>Username</h2> 
+	  <br />
+      <h3>Please select a username of your liking.</h3>
+	  <br /> <br/>
+      <h4 id="displaycurrentid">Current Username:</h4>
+	  <br/>
+      <h4>New Username:</h4>
+      <input class="settingsinput" type="text" id="usernamefield" placeholder="New Username"/>
+	  <br/>
+    <br />
+    <button class="button" onclick="changeUsername()"><span>Change Username</span></button>
+    </div> -->
+   <!-- <div id="setting-2" class="activetab">
+      <h2>Password</h2>
+	  <br />
+      <h3>Please choose a secure password.</h3>
+	  <br /><br/>
+      <h4>Current Password:</h4>
+      <input id="changepasswordvalidation" class="settingsinput" type="password" placeholder="Current password"/>
+	  <br/><br/>
+      <h4>New Password:</h4>
+      <input id="changepassword" class="settingsinput" type="password" placeholder="New password"/>
+	  <br/><br/>
+      <h4>Re-enter Password</h4>
+      <input id="changepasswordcheck" class="settingsinput" type="password" placeholder="Re-enter Password"/>
+      <br /><br/>
+      <button><span>Change Password</span></button>
+    </div> -->
+    <!--<div id="setting-3" class="activetab">
+      <h2>Blocked Users</h2>
+	  <br/>
+      <h3>Manage blocked users.</h3>
+	  <br/> <br/>
+      <ol id="blockedusers">
+        <li>
+          Donald Trump <button class="unblockbutton">Unblock</button>
+        </li>
+        <li>
+          Eugene <button class="unblockbutton">Unblock</button>
+        </li>
+        <li>
+          DJKeemstar <button class="unblockbutton">Unblock</button>
+        </li>
+      </ol>
+      <button><span>Unblock All</span></button>
+    </div> --> 
+	<!-- <div id="setting-4" class="activetab">
+      <h2>Theme</h2>
+	  <br/>
+      <h3>Please select a new look:</h3>
+	  <br/>
+	  <hr id="themehr" />
+      <ul>
+        Monochrome <button class="themeclass" onclick="changetheme('mono')"><span>Select Theme</span></button>
+      </ul>  
+		<hr id="themehr"/>
+      <ul>
+        Pink <button class="themeclass" onclick="changetheme('pink')"><span>Select Theme</span></button>
+	  </ul>
+        <hr id="themehr" />
+      
+      <ul>
+        Classic <button class="themeclass" onclick="changetheme('classic')"><span>Select Theme</span></button>
+      </ul>  
+		<hr id="themehr" />
+    </div> -->
+    <!-- <div id="setting-5" class="activetab">
+      <h2>Language</h2>
+    </div> -->
+
+  </div>
+
+</div> 
+
 </ul>
 </nav>
 </body>
