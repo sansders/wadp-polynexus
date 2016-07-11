@@ -8,7 +8,7 @@ $(document).ready(function(){
   if(user == null){
     window.location = 'index.html';
   } 
-  else{
+  else { 
     $(function() {
       $("#tabs").tabs();
     });
@@ -21,10 +21,10 @@ $(document).ready(function(){
     var theme = sessionStorage.getItem('theme');
     changetheme(theme);
     setLanguage();
-
+	
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
-    xmlDoc = JSON.parse(xmlhttp.responseText);
+    xmlDoc = JSON.parse(xmlhttp.responseText); 
   }
 
 });
