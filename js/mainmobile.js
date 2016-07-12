@@ -1,4 +1,4 @@
-/*var user;
+var user;
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){
@@ -8,7 +8,7 @@ $(document).ready(function(){
   if(user == null){
     window.location = 'index.html';
   } 
-  else{ */
+  else{ 
     $(function() {
       $("#tabs").tabs();
     });
@@ -18,7 +18,12 @@ $(document).ready(function(){
     $(function() {
       $("#events").tabs();
     }); 
-    /*var theme = sessionStorage.getItem('theme');
+	
+	$(document).ready(function() {
+    $('#bars').dropit();
+	});
+	
+    var theme = sessionStorage.getItem('theme');
     changetheme(theme);
     setLanguage();
 
@@ -27,7 +32,7 @@ $(document).ready(function(){
     xmlDoc = JSON.parse(xmlhttp.responseText);
   }
 
-}); */
+}); 
 
 function changeUsername(){
   //will contain two parts.

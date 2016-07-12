@@ -85,17 +85,18 @@ h1
   width: 100%;
 }
 
-.navbarlist
+.menu
 {
   position: fixed;
   top: 53px;
   width: 100%;
   z-index: 101;
   padding-left: 0px;
+  display: none;
 
 }
 
-.navbarlist li
+.menu li
 {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -105,13 +106,13 @@ h1
   margin: 0 auto;
 }
 
-.navbarlist li:nth-child(3)
+.menu li:nth-child(3)
 {
 	margin-bottom: 600px; 
 	/* Logout button appears below the settings tab for some reason, so the margin makes it disappear */
 }
 
-.navbarlist li a
+.menu li a
 {
   padding: 10px;
   text-decoration: none;
