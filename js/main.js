@@ -1,10 +1,10 @@
-/*var user;
+/* var user;
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
-  document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
+  document.getElementById('displaycurrentid').innerHTML="Current Username: "+user; 
   if(user == null){
     window.location = 'index.html';
   } 
@@ -18,16 +18,16 @@ $(document).ready(function(){
     $(function() {
       $("#events").tabs();
     }); 
-    /*var theme = sessionStorage.getItem('theme');
+   /* var theme = sessionStorage.getItem('theme');
     changetheme(theme);
     setLanguage();
 
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
-  }
+  } */
 
-}); */
+}); 
 
 function changeUsername(){
   //will contain two parts.

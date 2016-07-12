@@ -1,14 +1,16 @@
-var user;
+/* var user;
+var randomVar = true;
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
-  document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
-  if(user == null){
+  document.getElementById('displaycurrentid').innerHTML="Current Username: "+user; 
+  if (user == null){
     window.location = 'index.html';
+	console.log("if runs!");
   } 
-  else{ 
+  else{ */
     $(function() {
       $("#tabs").tabs();
     });
@@ -16,23 +18,30 @@ $(document).ready(function(){
       $("#setting").tabs();
     });
     $(function() {
-      $("#events").tabs();
+      $("#events").tabs(); 
     }); 
 	
-	$(document).ready(function() {
-    $('#bars').dropit();
-	});
+
 	
-    var theme = sessionStorage.getItem('theme');
+   /* var theme = sessionStorage.getItem('theme');
     changetheme(theme);
     setLanguage();
 
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
+	
+	console.log("else runs");
   }
 
-}); 
+}); */
+
+$(document).ready(function() {
+$('#bars').dropit();
+}); //Jz I added this -Sean
+	//Jz fucking save us -matt
+
+console.log("this thing runs");
 
 function changeUsername(){
   //will contain two parts.
