@@ -89,6 +89,10 @@ h1
   text-decoration:underline;
 }
 
+.answer {
+
+}
+
 button
 {
   font-size: 20px;
@@ -149,11 +153,6 @@ button span:after
   transition: 0.5s;
 }
 
-button:hover span:after
-{
-  opacity: 1;
-  right: 0;
-}
 
 .hoverable {
   color:#000;
@@ -177,4 +176,47 @@ button:hover span:after
 }
 .hoverable:hover .hover {
   display:inline;
+}
+
+.navbar
+{
+  float:right;
+  width: 50%;
+}
+
+.navbarlist
+{
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  padding-left: 0px;
+}
+
+.navbarlist li
+{
+  padding: 23px 15px;
+  list-style-type: none;
+  display: inline-block;
+  transition: background, 0.5s;
+  position: relative;
+  left: 200px;
+}
+
+.navbarlist {
+  overflow: hidden;
+  width:100%;
+}
+
+.navbarlist li a
+{
+  padding: 20px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+
+}
+
+.navbarlist li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
 }

@@ -61,31 +61,32 @@ h1
   margin: 0 auto;
   clear:both;
   padding-top:50px;
-  padding-bottom:250px;
-  color: white;
+  padding-bottom:300px;
+  color: black;
+  background-color: rgba(255,255,255,0.2);
+  width:69%;
   text-align:center;
+  border-radius:12px;
 }
 
 .content2 h3
 {
+  clear:both;
+  margin:0 auto;
   text-decoration:underline;
   font-size: 40px;
   width:69%;
   background-color:rgba(255,128,0,0.7);
-  border-radius:20px;
-  padding-left:4%;
+  border-radius:50px;
+  text-align:center;
 }
-
 
 .content2 p
 {
-  margin:0 auto;
-  font-size: 20px;
-  width:60%;
-  background-color:rgba(255,255,255,0.5);
-  border-radius:12.5px;
-  padding-left:1%;
-  color:black;
+  text-align:left;
+  padding-left:40px;
+  padding-right:40px;
+  font-size:20px;
 }
 
 button
@@ -134,3 +135,22 @@ button:hover span:after
   opacity: 1;
   right: 0;
 }
+
+@media screen
+and (max-width:640px){
+
+  body {
+    width:60%;
+  }
+  .intro h2 {
+    text-align:center;
+    font-size:50px;
+    width:100%
+  }
+  .intro p {
+    width:100%;
+    text-align:center;
+    padding:0 0;
+    padding-left:60px;
+    font-size:17px;
+  }
