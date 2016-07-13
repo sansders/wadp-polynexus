@@ -18,11 +18,11 @@
 				div3a.style.display = "none";
 				div4a = document.getElementById('questionSet4');
 				div4a.style.display = "none";
-				div4a = document.getElementById('questionSet5');
-				div4a.style.display = "none";
+				div5a = document.getElementById('questionSet5');
+				div5a.style.display = "none";
 			}
-			function contentshow(content)
-		{
+			function contentshow(content){
+			
 			div = document.getElementById(content);
 			if(div.style.display == "block")
 			{
@@ -30,6 +30,7 @@
 			}
 			else{
 				div.style.display = "block";
+				
 			}
 		}
 			</script>
@@ -48,99 +49,102 @@
 
 			<div class="content2">
 
-				<button onclick="contentshow('questionSet1')"><span>Accounts</span></button>
+				<button onclick="contentshow('questionSet5')"><span>General</span></button>
 
-				<div id="questionSet1">
-					<a class="hoverable">
-				    <span class="normal">How do I create an account?</span>
-						<span class="hover">Sign up on our home page with your NYP email and set a password</span>
+				<div id="questionSet5">
+
+				    <p class="question">What is polyNexus for?</span>
+						<p class="answer">polyNexus provides a platform for polytechnic students to share and interact with other one another through mutual interests by placing them into chat rooms based on their interests.</span>
 				  </a>
 						<br>
 						<br>
+<<<<<<< HEAD
+
+						<p class="question">How does it do so?</span>
+						<p class="answer">We also facilitate bonding between our users by offering a private messaging system and an offline meeting scheduler.</span>
+=======
 					<a class="hoverable">
-						<span class="normal">Is there a way for users to be banned?</span>
-						<span class="hover">No, but users can block anyone they feel like. polyNexus accounts are also linked to school emails, which can be used to identify repeat offenders.</span>
+						<span class="normal">How does it do so?</span>
+						<span class="hover">We also facilitate bonding between our users by offering a private messaging system and an offline meeting scheduler.</span>
+>>>>>>> origin/gh-pages
+					</a>
+				</div>
+
+				<button onclick="contentshow('questionSet1')"><span>Accounts</span></button>
+
+				<div id="questionSet1">
+
+				    <p class="question">How do I create an account?</span>
+						<p class="answer">Sign up on our home page with your NYP email and set a password</span>
+				  </a>
+						<br>
+						<br>
+
+						<p class="question">Is there a way for users to be banned?</span>
+						<p class="answer">No, but users can block anyone they feel like. polyNexus accounts are also linked to school emails, which can be used to identify repeat offenders.</span>
 					</a>
 						<br>
 						<br>
-					<a class="hoverable">
-						<span class="normal">Can I change my username?</span>
-						<span class="hover">Yes, just go to the settings tab.</span>
+
+						<p class="question">Can I change my username?</span>
+						<p class="answer">Yes, just go to the settings tab.</span>
 					</a>
+					<br>
+					<br>
+
+					<p class="question">What usernames are allowed on polyNexus?</span>
+					<p class="answer">Any names that are not offensive or derogatory to any person or group of people</span>
+				</a>
 				</div>
 
 				<button onclick="contentshow('questionSet2')"><span>Chats</span></button>
 
 				<div id="questionSet2">
-					<a class="hoverable">
-						<span class="normal">How do I start a chat?</span>
-						<span class="hover">Start a chat by simply typing in your interest you would like to discuss. e.g; Football, League of Legends</span>
+
+						<p class="question">How do I start a chat?</span>
+						<p class="answer">Start a chat by simply typing in your interest you would like to discuss. e.g; Football, League of Legends</span>
 					</a>
 						<br>
 						<br>
-					<a class="hoverable">
-						<span class="normal">What is the chat labelling standard?</span>
-						<span class="hover">Use appropriate spacings and do not use abbrevations. e.g; LOL as an exclamation and LoL the game are very different.</span>
+
+						<p class="question">What is the chat labelling standard?</span>
+						<p class="answer">Use appropriate spacings and do not use abbrevations. e.g; LOL as an exclamation and LoL the game are very different.</span>
 					</a>
 						<br>
 						<br>
-					<a class="hoverable">
-						<span class="normal">Is there any way to send private messages?</span>
-						<span class="hover">Use the private messaging option instead of the group chat one.</span>
+
+						<p class="question">Is there any way to send private messages?</span>
+						<p class="answer">Use the private messaging option instead of the group chat one.</span>
 					</a>
 				</div>
 
 				<button onclick="contentshow('questionSet3')"><span>Blogs</span></button>
 
 				<div id="questionSet3">
-					<a class="hoverable">
-						<span class="normal">Is there any rules or guidelines for the blogs?</span>
-						<span class="hover">Yes, go check out our rules page</span>
+
+						<p class="question">Is there any rules or guidelines for the blogs?</span>
+						<p class="answer">Yes, go check out our rules page</span>
 					</a>
 						<br>
 						<br>
-					<a class="hoverable">
-						<span class="normal">How are blogs generated?</span>
-						<span class="hover">Blogs are generated for each chat group</span>
-					</a>
-						<br>
-						<br>
-					<a class="hoverable">
-						<span class="normal">Question3</span>
-						<span class="hover">Answer3</span>
-					</a>
-						<br>
-						<br>
-					<a class="hoverable">
-						<span class="normal">Question4</span>
-						<span class="hover">Answer4</span>
+
+						<p class="question">How are blogs generated?</span>
+						<p class="answer">Blogs are generated for each chat group</span>
 					</a>
 				</div>
 
 				<button onclick="contentshow('questionSet4')"><span>Event Planners</span></button>
 
 				<div id="questionSet4">
-					<a class="hoverable">
-						<span class="normal">Who can plan events?</span>
-						<span class="hover">Any registered user in a group</span>
+
+						<p class="question">Who can plan events?</span>
+						<p class="answer">Any registered user in a group</span>
 					</a>
 						<br>
 						<br>
-					<a class="hoverable">
-						<span class="normal">Who can plan group events?</span>
-						<span class="hover">Any user inside the group they are planning the event for</span>
-					</a>
-						<br>
-						<br>
-					<a class="hoverable">
-						<span class="normal">Question3</span>
-						<span class="hover">Answer3</span>
-					</a>
-						<br>
-						<br>
-					<a class="hoverable">
-						<span class="normal">Question4</span>
-						<span class="hover">Answer4</span>
+
+						<p class="question">Who can plan group events?</span>
+						<p class="answer">Any user inside the group they are planning the event for</span>
 					</a>
 				</div>
 				</div>

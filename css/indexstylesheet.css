@@ -241,29 +241,7 @@ hr
 	text-align: right;
 }
 
-@media screen
-and (max-width:640px)
-{
-	body{
-		width:160%;
-	}
 
-	.signup {
-		width:100%;
-	}
-
-	.signup h2 {
-		font-size:35px;
-		clear: both;
-	}
-
-	.loginfield {
-		width:50%;
-	}
-
-	.content1content {
-		width: 100%;
-	}
 
 	#howItWork {
 		font-size:25px;
@@ -273,4 +251,28 @@ and (max-width:640px)
 		margin: auto;
 		z-index: 2;
 	}
+
+  @media screen
+  and (max-width:640px)
+  {
+  	body{
+  		width:160%;
+  	}
+
+  	.signup {
+  		width:100%;
+  	}
+
+  	.signup h2 {
+  		font-size:35px;
+  		clear: both;
+  	}
+
+  	.loginfield {
+  		width:50%;
+  	}
+
+  	.content1content {
+  		width: 100%;
+  	}
 }

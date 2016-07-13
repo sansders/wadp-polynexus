@@ -31,12 +31,18 @@ h1
   padding-bottom: 15px;
   z-index: 99;
 }
+.navbar
+{
+  float:right;
+  width: 50%;
+}
 
 .navbarlist
 {
   position: fixed;
-  left: 50%;
+  width: 100%;
   z-index: 101;
+  padding-left: 0px;
 }
 
 .navbarlist li
@@ -44,14 +50,14 @@ h1
   padding: 23px 15px;
   list-style-type: none;
   display: inline-block;
-  position: relative;
-  right: 1%;
   transition: background, 0.5s;
+  position: relative;
+  left: 200px;
 }
 
 .navbarlist {
-	overflow: hidden;
-	width:100%;
+  overflow: hidden;
+  width:100%;
 }
 
 .navbarlist li a
@@ -67,6 +73,47 @@ h1
 {
   background-color: rgba(0, 76, 159, 0.7);
 }
+
+/******* Blog Button ********/
+#blogDiv
+{
+	position: fixed;
+	width: 50%;
+	height: 72px;
+	z-index: 103;
+}
+
+#blogUl
+{
+	float: right;
+}
+
+#blogUl li
+{
+	padding: 23px 15px;
+	list-style-type: none;
+	display: inline-block;
+	transition: background, 0.5s;
+	position: relative;
+	left: 200px;
+}
+
+#blogUl li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+#tab-4
+{
+	padding:0;
+	margin:0;
+	z-index: 103;
+	padding: 20px 15px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+}
+/****** End of Blog Button *******/
 
 .tabs
 {
