@@ -19,12 +19,12 @@
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
         crossorigin="anonymous"></script>
   <script src="js/language.js"></script>
-  <script src="js/main.js"></script> 
+  <script src="js/main.js"></script>
   <script>
     if (screen.width <= 800) {
       window.location = "mainmobile.html";
     } //redirect
-  </script> 
+  </script>
   <title>polyNexus</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
       <a href="#tabs-3" id="tab-3">Settings</a>
     </li>
     <li>
-      <a href="blog.html" id="tab-4">Blog</a>
+      <a onclick="goBlog()" id="tab-4">Blog</a>
     </li>
     <li>
       <a onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
@@ -103,6 +103,7 @@
     </div>
   </div>
   <div class="tabs" id="tabs-2">
+  <!-- sean manages events tab-->
 	<div id="events">
     <ul class="currentchatlist">
       <li>
@@ -195,6 +196,18 @@
           Change the language of the application.
         </p></a>
       </li>
+      <li><a href="#setting-6" onclick="goRule()">
+        <h3 id="setting6h3"><i class="fa fa-check-square-o" aria-hidden="true"></i> Rules</h3>
+        <p class="textchat">
+          Navigate to the rules page.
+        </p></a>
+      </li>
+      <li><a href="#setting-7" onclick="goFaq()">
+        <h3 id="setting6h3"><i class="fa fa-question" aria-hidden="true"></i> FAQ</h3>
+        <p class="textchat">
+          Frequently asked questions.
+        </p></a>
+      </li>
     </ul>
     <div id="setting-1" class="activetab">
       <h2>Username</h2>
@@ -251,6 +264,23 @@
     </div>
     <div id="setting-5" class="activetab">
       <h2>Language</h2>
+      <h3>Translations might not be complete/accurate, please bear with us :)</h3>
+      <ul>
+        Japanese <button class="themeclass" onclick="setLanguage('jp')"><span>Select Theme</span></button>
+        <hr id="themehr" />
+      </ul>
+      <ul>
+        Chinese <button class="themeclass" onclick="setLanguage('cn')"><span>Select Theme</span></button>
+        <hr id="themehr" />
+      </ul>
+      <ul>
+        French <button class="themeclass" onclick="setLanguage('fr')"><span>Select Theme</span></button>
+        <hr id="themehr" />
+      </ul>
+      <ul>
+        English <button class="themeclass" onclick="setLanguage('en')"><span>Select Theme</span></button>
+        <hr id="themehr" />
+      </ul>
     </div>
 
   </div>

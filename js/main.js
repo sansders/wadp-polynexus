@@ -7,7 +7,7 @@ $(document).ready(function(){
   document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
   if(user == null){
     window.location = 'index.html';
-  } 
+  }
   else{
     $(function() {
       $("#tabs").tabs();
@@ -73,4 +73,16 @@ function changetheme(n){
 
 function generateChatlist(){
   var groupchats = sessionStorage.getItem('groupchats');
+}
+
+function goBlog(){
+  window.location ="blog.html";
+}
+
+function goFaq(){
+  window.location="faq.html";
+}
+
+function goRule(){
+  window.location="rules.html";
 }
