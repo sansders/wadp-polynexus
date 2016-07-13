@@ -1,0 +1,136 @@
+<!--Matt Will Do!-->
+
+*
+{
+  margin:0;
+  padding:0;
+}
+
+html,body
+{
+  margin:0;
+  padding:0;
+  font-family: 'Exo', sans-serif;
+}
+
+body{
+  	background-image: url(../img/3.jpg);
+}
+
+h1
+{
+	margin:0px;
+	width: 100%;
+	background-color: rgba(0, 76, 159, 0.7);
+	color: white;
+	padding-left: 15%;
+	position:fixed;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	z-index: 100;
+}
+
+
+.intro
+{
+	padding-top:60px;
+	padding-left:10px;
+	padding-bottom:50px;
+	color:black;
+}
+.intro h2
+{
+  font-size: 70px;
+  text-align:center;
+  color:white;
+}
+
+.intro p
+{
+  font-size: 25px;
+  padding-top: 10px;
+  padding-left:200px;
+  width: 69%;
+  text-align:center;
+  color:white;
+}
+
+
+.content2
+{
+  margin: 0 auto;
+  clear:both;
+  padding-top:50px;
+  padding-bottom:250px;
+  color: white;
+  text-align:center;
+}
+
+.content2 h3
+{
+  text-decoration:underline;
+  font-size: 40px;
+  width:69%;
+  background-color:rgba(255,128,0,0.7);
+  border-radius:20px;
+  padding-left:4%;
+}
+
+
+.content2 p
+{
+  margin:0 auto;
+  font-size: 20px;
+  width:60%;
+  background-color:rgba(255,255,255,0.5);
+  border-radius:12.5px;
+  padding-left:1%;
+  color:black;
+}
+
+button
+{
+  font-size: 20px;
+  font-family: 'Noto Sans' ,sans-serif;
+  width: 60%;
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  transition: all, 0.5s;
+}
+
+button:hover
+{
+  background-color: rgba(30, 172, 253, 1);
+}
+
+button span
+{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after
+{
+  content: '>>';
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span
+{
+  padding-right: 25px;
+}
+
+button:hover span:after
+{
+  opacity: 1;
+  right: 0;
+}

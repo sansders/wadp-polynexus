@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+        crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+        crossorigin="anonymous"></script>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href= "css/Bootstrap/bootstrap.min.css" />
+		<!-- Page Design -->
+		<link type="text/css" rel="stylesheet" href= "css/blogstylesheet.css" />
+		<!-- Script -->
+		<script>
+			$(document).ready(function() {
+				$(".article-content").hide();
+				$(".article-preview").click(function(){
+					$(this).next(".article-content").slideToggle("slow");
+				});
+			});
+			
+			function divToggle() {
+				$(".posted-article-content").hide();
+				$(".posted-article-preview").click(function(){
+					$(this).next(".posted-article-content").slideToggle("slow");
+				});
+			}
+			
+			var medium = 0;
+			$(window).scroll(function () {
+				var lenghtFromTop = $(window).scrollTop();
+				if (lenghtFromTop > medium){
+					$(".navbar-container").hide("swing");
+				} 
+				else {
+					$(".navbar-container").show("swing");
+				}
+				medium = lenghtFromTop;
+			});
+					
+			$(document).ready(function(){
+				$("#createblog").hide();
+				$("#newblog").click(function(){
+					$("#createblog").show("fold");
+				});
+				$("#close").click(function(){
+					$("#createblog").hide("fold");
+				});
+			});
+
+			var title, article, subtitle;
+			function wordcheck(clicked_id){
+				var word = document.getElementById(clicked_id).value;
+				switch(clicked_id){
+					case "Title":
+						if (word != "") {
+							title = 1;
+						}
+						else {
+							title = 0;
+						}
+						break;
+						
+					case "Subtitle":
+						if (word != "") {
+							subtitle = 1;
+						}
+						else {
+							subtitle = 0;
+						}
+						break;
+						
+					case "Article":
+						if (word != "") {
+							article = 1;
+						}
+						else {
+							article = 0;
+						}
+						break;
+				}
+			}
+
+			function verify() {
+				if (title == 1 && article == 1 && subtitle == 1) {
+					var confirmation = confirm("Are you sure you want to continue?");
+					if (confirmation == true) {
+						document.getElementById("createblog").style.display='none';
+					}
+					else {
+						return false;
+					}
+				}
+				else if (title != 1 || subtitle != 1 || article != 1) {
+					if (title != 1 && subtitle != 1 && article != 1) {
+							var confirmation = alert("WRITE SOMETHING!");
+					}
+					else if (title != 1 && subtitle != 1) {
+						var confirmation = confirm("There is no title and subtitle. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (title != 1 && article != 1) {
+							var confirmation = confirm("There is no title and article. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (subtitle != 1 && article != 1) {
+						var confirmation = confirm("There is no subtitle and article. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (title != 1){
+						var confirmation = confirm("There is no title. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else if (subtitle != 1 ) {
+						var confirmation = confirm("There is no subtitle. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+					else {
+						var confirmation = confirm("There is no article. Are you sure you want to continue?");
+						if (confirmation == true) {
+							document.getElementById("createblog").style.display='none';
+						}
+					}
+				}
+			}
+			
+			var counter = "";
+			function creatingDiv() {
+				var Li1 = document.createElement("li");
+				var Div1 = document.createElement("div"); //class="article-container" 	id="posted-article-container"
+				var Div2 = document.createElement("div"); //class="article-preview" 	id="posted-article-preview"
+				var Div3 = document.createElement("div"); //class="article-header"
+				var Div4 = document.createElement("div"); //class="article-subheader"
+				var Div5 = document.createElement("div"); //class="article" 			id="posted-article"
+				var Div6 = document.createElement("div"); //class="written-article"
+				var Div7 = document.createElement("div"); //class="article-image"
+				var Div8 = document.createElement("div"); //class="article-content"
+				var Div9 = document.createElement("div"); //class="show-time"
+				var H3 = document.createElement("H3"); //class="article-title"			id="posted-article-title"
+				var H4 = document.createElement("H4"); //class="article-subtitle"		id="posted-article-subtitle"
+				var P1 = document.createElement("p"); //								id="posted-written-article"
+				var P2 = document.createElement("p"); //								id="posttime"
+				var IMG1 = document.createElement("img"); //							id="posted-image"
+				var Ul1 = document.getElementById("ullist");
+				
+				Div1.className = "article-container";
+				Div2.className = "article-preview";
+				Div3.className = "article-header";
+				Div4.className = "article-subheader";
+				Div5.className = "article";
+				Div6.className = "written-article";
+				Div7.className = "article-image";
+				Div8.className = "article-content";
+				Div9.className = "show-time";
+				H3.className = "article-title";
+				H4.className = "article-subtitle";
+				
+				Div1.setAttribute("id", "posted-article-container" + counter);
+				Div2.setAttribute("id", "posted-article-preview"  + counter);
+				Div5.setAttribute("id", "posted-article"  + counter);
+				H3.setAttribute("id", "posted-article-title"  + counter);
+				H4.setAttribute("id", "posted-article-subtitle"  + counter);
+				P1.setAttribute("id", "posted-written-article"  + counter);
+				P2.setAttribute("id", "posted-time"  + counter);
+				IMG1.setAttribute("id", "posted-image" + counter);
+				
+				Ul1.insertBefore(Li1, Ul1.childNodes[0]);
+				Li1.appendChild(Div1);
+				Div1.appendChild(Div2);
+				Div1.appendChild(Div8);
+				Div2.appendChild(Div3);
+				Div2.appendChild(Div4);
+				Div3.appendChild(H3);
+				$(Div9).insertAfter($(Div4));
+				Div4.appendChild(H4);
+				Div5.appendChild(Div6);
+				Div5.appendChild(Div7);
+				Div6.appendChild(P1);
+				Div7.appendChild(IMG1);
+				Div8.appendChild(Div5);
+				Div9.appendChild(P2);
+			}
+			
+			function posting() {
+				var posttitle = document.getElementById("Title").value;
+				var postsubtitle = document.getElementById("Subtitle").value;
+				var postarticle = document.getElementById("Article").value;
+				var postimage = document.getElementById("Image").value;
+				var postfile = document.getElementById("File").value
+				document.getElementById("posted-article-title" + counter).innerHTML = posttitle;
+				document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
+				document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
+				document.getElementById("posted-image" + counter).src = postimage;
+				
+				if (counter == "") {
+					$("#posted-article").hide();
+					$("#posted-article-preview").click(function(){
+						$("#posted-article").slideToggle("slow");
+					});
+				}
+				else if (counter == 1) {
+					$("#posted-article1").hide();
+					$("#posted-article-preview1").click(function(){
+						$("#posted-article1").slideToggle("slow");
+					});
+				}
+				else if (counter == 2) {
+					$("#posted-article2").hide();
+					$("#posted-article-preview2").click(function(){
+						$("#posted-article2").slideToggle("slow");
+					});
+				}
+				
+				counter++
+			}
+			
+		</script>
+	</head>
+	<body>
+		<!-- Navigation Bar -->
+		<div class="background-image">
+			<div class="navbar-container">
+				<h1>polyNexus</h1>
+				<nav class="navbar">
+					<ul class="navbarlist">
+						<li>
+							<a href="main.html#tabs-1">Chats</a>
+						</li>
+						<li>
+							<a href="main.html#tabs-2">Events</a>
+						</li>
+						<li>
+							<a href="main.html#tabs-3">Settings</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+					</ul>
+				</nav>
+				<hr>
+			</div>
+			<!-- Header -->
+			<header>
+				<div class="header-container">
+					<div class="heading">
+						<h1>Blog</h1>
+						<hr>
+						<p class="subheading">A place where polyNexus's social blogging starts</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- Row of Articles with Preview -->
+		<div class="article-container-container-container">
+			<div class="article-container-container">
+				<ul id="ullist">
+					<!-- Article with Written and Preview 1 -->
+					<li>
+						<div class="article-container">
+							<!-- Article Preview 1 -->
+							<div id="article-preview-1" class="article-preview">
+								<div class="article-header">
+									<h3 class="article-title">My Top 3 favourite Overwatch Characters.</h3>
+								</div>
+								<hr>
+								<div class="article-subheader">
+									<h4 class="article-subtitle">I play Overwatch about 6 times every year so I concluded my top 3.</h4>
+									<div class="show-time">
+										<p id="time3"></p>
+									</div>
+								</div>
+							</div>
+							<div class="article-content">
+								<!-- Written Article 1 -->
+								<div id="article-1" class="article">
+									<div class="written-article">
+										<p>
+										1. Bastion <br>
+										2. Bastion <br>
+										3. Bastion <br>
+										Thanks for reading! <3
+										</p>
+									</div>
+									<!-- Article Image -->
+									<div class="article-image">
+										<img src="http://cdn3-www.playstationlifestyle.net/assets/uploads/gallery/overwatch-info-dump/overwatch-heroes-background-blizzard-1080x623.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Article with Written and Preview 2 -->
+					<li>
+						<div class="article-container">
+							<!-- Article Preview 2 -->
+							<div id="article-preview-2" class="article-preview">
+								<div class="article-header">
+									<h3 class="article-title">Where do bananas come from? </h3>
+								</div>
+								<hr>
+								<div class="article-subheader">
+									<h4 class="article-subtitle">Due to a recent science new breakthrough, bananas are found not to growing on trees but... </h4>
+									<div class="show-time">
+										<p id="time2"></p>
+									</div>
+								</div>
+							</div>
+							<div class="article-content">
+								<!-- Written Article 2 -->
+								<div id="article-2" class="article">
+									<div class="written-article">
+										<p>
+										idk
+										</p>
+									</div>
+									<!-- Article Image -->
+									<div class="article-image">
+										<img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/3_Bananas.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Article with Written and Preview 3 -->
+					<li>
+						<div class="article-container">
+							<!-- Article Preview 3 -->
+							<div id="article-preview-3" class="article-preview">
+								<div class="article-header">
+									<h3 class="article-title">Duck or Ducks? </h3>
+								</div>
+								<hr>
+								<div class="article-subheader">
+									<h4 class="article-subtitle">Is it really yellow or green like you sees?</h4>
+									<div class="show-time">
+										<p id="time"></p>
+									</div>
+								</div>
+							</div>
+							<!-- Written Article 3 -->
+							<div class="article-content">
+								<div id="article-3" class="article">
+									<div class="written-article">
+										<p>
+										i still dk
+										</p>
+									</div>
+									<!-- Article Image -->
+									<div class="article-image">
+										<img src="http://i.telegraph.co.uk/multimedia/archive/01367/pducks1_1367221c.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Posted Article with Written and Preview -->
+				</ul>
+				<!-- Button -->
+				<div class="button-container">
+					<button type="button" class="button">More Post...</button>
+				</div>
+			</div>
+			<!-- Side Navigation -->
+			<div id="navigation-side-left">
+				<button type="button" class="button" id="newblog">Create New Blog</button>
+			</div>
+			<div id="navigation-side-right">
+			</div>
+			<!-- Create Blog Page -->
+			<div id="createblog">
+				<!-- Close Button -->
+				<div id="close">
+					<img src="http://www.ge.com/ar2012/img/close-button-large.png" />
+				</div>
+				<!-- Forms -->
+				<div id="form-container">
+					<form onsubmit="return false">
+						<p>
+						Title:
+						<input type="text" placeholder="Title" id="Title" class="forminput" onfocusout="wordcheck(this.id)"><br>
+						
+						Subtitle:
+						<input type="text" placeholder="Subtitle" id="Subtitle" class="forminput" onfocusout="wordcheck(this.id)"><br>
+						
+						Image URL: 
+						<input type="url" placeholder="http://www.google.com/" id="Image" class="forminput"><br><br>OR<br><br>
+						
+						Image file location:
+						<input type="file" name="img" accept="image/*" id="File"><br>
+						
+						Article: <br>
+						<textarea rows="2" cols="100" id="Article" placeholder="Article" class="forminput" onfocusout="wordcheck(this.id)"></textarea><br>
+						
+						<input class="sbutton" type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
+						<button class="sbutton" onclick="verify(); creatingDiv(); posting(); showtime();">Submit</button>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<ul class="footerlist">
+				<li>
+					<a href="index.html">About</a>
+				</li>
+				<li>
+					<a href="rules.html">Rules</a>
+				</li>
+				<li>
+					<a href="faq.html">FAQ</a>
+				</li>
+				<li>
+					<a href="">Contact?</a>
+				</li>
+			</ul>
+		</footer>
+		<!-- Time Script -->
+		<script type="text/javascript">
+			function addZero(i) {
+				if (i < 10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+			
+			var date = new Date("2016-06-25 20:15:43");
+			var hour = addZero(date.getHours());
+			var minute = addZero(date.getMinutes());
+			var second = addZero(date.getSeconds());
+			document.getElementById("time").innerHTML = "-" + date.toDateString() + " " + hour + ":" + minute + ":" + second;
+			
+			var date2 = new Date("2016-06-30 04:20:42");
+			var hour = addZero(date2.getHours());
+			var minute = addZero(date2.getMinutes());
+			var second = addZero(date2.getSeconds());
+			document.getElementById("time2").innerHTML = "-" + date2.toDateString() + " " + hour + ":" + minute + ":" + second;
+			
+			var date3 = new Date("2016-07-03 01:26:29");
+			var hour = addZero(date3.getHours());
+			var minute = addZero(date3.getMinutes());
+			var second = addZero(date3.getSeconds());
+			document.getElementById("time3").innerHTML = "-" + date3.toDateString() + " " + hour + ":" + minute + ":" + second;
+			
+			var press = 0
+			function showtime() {
+				switch (press){
+				case 0:	var postdate = new Date();
+						var hour = addZero(postdate.getHours());
+						var minute = addZero(postdate.getMinutes());
+						var second = addZero(postdate.getSeconds());
+						document.getElementById("posted-time").innerHTML = "-" + postdate.toDateString() + " " + hour + ":" + minute + ":" + second; 
+						break;
+				
+				case 1:	var postdate1 = new Date();
+						var hour = addZero(postdate1.getHours());
+						var minute = addZero(postdate1.getMinutes());
+						var second = addZero(postdate1.getSeconds());
+						document.getElementById("posted-time1").innerHTML = "-" + postdate1.toDateString() + " " + hour + ":" + minute + ":" + second;
+						break;
+						
+				case 2:	var postdate2 = new Date();
+						var hour = addZero(postdate2.getHours());
+						var minute = addZero(postdate2.getMinutes());
+						var second = addZero(postdate2.getSeconds());
+						document.getElementById("posted-time2").innerHTML = "-" + postdate2.toDateString() + " " + hour + ":" + minute + ":" + second;
+						break;
+				}
+				alert(press);
+				press++
+			}
+		</script>
+	</body>
+</html>

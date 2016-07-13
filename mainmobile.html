@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#004c9f">
+  <!--CSS stylesheets-->
+  <link rel="stylesheet" href="css/mainmobilestylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome-animation.min.css" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+  <script
+        src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+        crossorigin="anonymous"></script>
+  <script
+        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+        crossorigin="anonymous"></script>
+  <script src="js/language.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropit/dropit.js"></script>
+  <script src='js/mainmobile.js'></script>
+  <title>polyNexus</title>
+</head>
+<body>
+<h1><i class="fa fa-bars" aria-hidden="true" id="bars"></i> polyNexus <a onclick="logout()" id="logoutbtn"><i class="fa fa-sign-out" aria-hidden="true"></i></a></h1>
+<div id="tabs">
+
+	<div id="tabs-1" class="tabs">
+    <div class="currentchats" id="chatlist">
+      <ul class="currentchatlist">
+		<li>
+          <input id="searchbar" type="text" placeholder="Search" />
+        </li>
+        <li>
+          <h3>Alice</h3>
+          <p class="textchat">
+            Im in wonderland!
+          </p>
+          <p class="timestamp">
+            19:28
+          </p>
+        </li>
+        <li>
+          <h3>Gardening</h3>
+          <p class="textchat">
+            Matthew: Wheres the shovel?
+          </p>
+          <p class="timestamp">
+            15:11
+          </p>
+        </li>
+        <li>
+          <h3>Overwatch</h3>
+          <p class="textchat">
+            Belson1999: Who's up for a game tonight?
+          </p>
+          <p class="timestamp">
+            13:12
+          </p>
+        </li>
+        <li class="addchat" id="addchat">
+          <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add a group
+        </li>
+      </ul>
+    </div>
+
+
+</div>
+</ul>
+</nav>
+</body>
+</html>

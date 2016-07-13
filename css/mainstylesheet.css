@@ -2,92 +2,115 @@
 {
   margin: 0;
 }
+
 html,body
 {
   font-family: 'Exo', sans-serif;
 }
+
 h1
 {
   width: 100%;
   background-color: rgba(0, 76, 159, 0.7);
   color: white;
-  padding-left: 15%;
+  padding-left: 5%;
   position:fixed;
   padding-top: 15px;
   padding-bottom: 15px;
   z-index: 100;
 }
 
-.topimage
-{
- position: fixed;
- max-width: 100%;
- height: auto;
-}
-
-.opacity
-{
-  webkit-filter: opacity(50%);
-  filter: opacity(50%);
-}
-
-.signup h2
-{
-  font-size: 70px;
-}
-.signup p
-{
-  font-size: 30px;
-  padding-bottom: 10px;
-}
-.signup
-{
-  background-image: url(../img/2.jpg);
-  padding-top: 150px;
-  background-repeat: no-repeat;
-  padding-bottom: 150px;
-  background-size: auto;
-
-}
-.signup>p,.signup>h2
-{
-  text-align: center;
+/*To prevent anything from being seen under the h1 header */
+#invisibleBarrier{
+  width: 100%;
+  background-color: #FFFFFF;
   color: white;
+  padding-left: 5%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 99;
 }
 
-.loginfield>h3
+.navbarlist
 {
-  padding-top: 5px;
-  padding-bottom: 20px;
-  font-size: 30px;
+  position: fixed;
+  left: 50%;
+  z-index: 101;
 }
 
-.loginfield>p
+.navbarlist li
 {
-  font-size: 10px;
-}
-.loginfield
-{
-  font-family: 'Noto Sans',sans-serif;
-  text-align: center;
-  background-color: rgba(255,255,255,0.7);
-  margin: 50 auto;
-  width: 20%;
-  border-radius: 40px;
-}
-.loginfield ul
-{
-  padding: 0;
+  padding: 23px 15px;
   list-style-type: none;
+  display: inline-block;
+  position: relative;
+  right: 1%;
+  transition: background, 0.5s;
 }
 
-.loginfield li
-{
-  padding-top: 5px;
+.navbarlist {
+	overflow: hidden;
+	width:100%;
 }
 
-.loginfield input[type="text"]
+.navbarlist li a
 {
+  padding: 20px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+
+}
+
+.navbarlist li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+.tabs
+{
+  position: relative;
+  top: 74px;
+}
+
+.currentchatlist
+{
+  position: fixed;
+  top: 70px;
+  list-style-type: none;
+  padding: 0;
+  width: 20%;
+  height: 100%;
+  border: solid 1px #dcdcdc;
+  overflow: auto;
+  border-collapse: collapse;
+
+
+}
+
+.currentchatlist li
+{
+  padding: 10px 10px;
+  border: solid 1px #dcdcdc;
+  border-collapse: collaspe;
+}
+
+.currentchatlist li:hover
+{
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+.currentchatlist a
+{
+  width: 100%;
+  text-decoration:none;
+  color: black;
+}
+
+#searchbar input[type="text"]
+{
+  width: 90%;
   border-radius: 5px;
   padding: 8px;
   border: solid 1px #dcdcdc;
@@ -95,83 +118,277 @@ h1
   color: rgba(0,0,0,0.7);
 }
 
-.loginfield input[type="text"]:focus,
-.loginfield input[type="text"].focus
+#searchbar input[type="text"]:focus
 {
   border: solid 1px #707070;
   box-shadow: 0 0 5px 1px #969696;
 }
 
-.content1
+#forumsearchbar input[type="text"]
 {
-  margin-top: 20px;
-  text-align: center;
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: rgba(0,0,0,0.7);
 }
 
-.content1 h2
+#forumsearchbar input[type="text"]:focus
 {
-  font-size: 40px;
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
 }
 
-hr
+.textchat
 {
-
-  border: none;
-  border-radius: 3px;
-  background-color: rgba(0,76,159,0.7);
-  margin: 10px auto;
-  width: 10%;
-  height: 3px;
-  margin-bottom: 70px;
+  font-family: 'Noto Sans', sans-serif;
+  width: 80%;
+}
+.timestamp
+{
+  position: relative;
+  float: right;
+  bottom: 45px;
 }
 
-.content1content h3
+.addchat
 {
-  font-size: 30px;
-}
-.content1content p
-{
-  padding: 10px 30px;
-  font-size: 20px;
+  color: rgba(0,0,0,0.7);
+  transition: all .5s;
 }
 
-.content1content i
+.addchat a
 {
-  color: rgba(0, 173, 208, 1);
-  font-size: 7em;
+  color: rgba(0,0,0,0.7);
+  transition: all .5s;
+  display: block;
 }
 
-.content1content
+.addchat:hover
 {
-  margin-top: 20px;
-  width: 25%;
-  float: left;
-}
-
-.content2
-{
-  background-color: rgba(0, 173, 208, 1);
-  margin: 0 auto;
-  clear:both;
-  text-align: center;
-  padding: 50px 0;
+  background-color: rgba(0, 76, 159, 0.7);
   color: white;
 }
-.content2 h2
+
+.addchat:hover a
 {
-  font-size: 40px;
+  color: white;
+  display: block;
 }
 
-.content2 p
+.activetab
 {
-  font-size: 25px;
-  padding: 10px 50px;
-  width: 69%;
+  padding: 10px 10px;
+  position: relative;
+  left: 20%;
 }
-.content2 i
+
+.activetab h2
 {
-  float: left;
-  color: rgba(0, 76, 159, 1);
-  width: 30%;
-  font-size: 300px;
+  padding: 7px 6px;
+  width: 100%;
+  border-bottom: solid 1px #dcdcdc;
+}
+
+#chatinterface
+{
+  width:77.5%;
+}
+
+.chatinputbox
+{
+  top: 90%;
+  position: fixed;
+  width: 100%;
+  padding: 10px 10px;
+  border: solid 1 px #dcdcdc;
+}
+
+.chatinputbox input[type="text"]
+{
+  width: 70%;
+  border-radius: 5px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  color: rgba(0,0,0,0.7);
+  transition: all, 0.3s;
+}
+
+.chatinputbox input[type="text"]:hover, .chatinputbox input[type="text"]:focus
+{
+  border: solid 1px #707070;
+}
+
+.chatinputbox i
+{
+ padding-left: 10px;
+ font-size: 20px;
+ transition: all, 0.3s;
+}
+.chatinputbox i:hover
+{
+  color: rgba(0, 76, 159, 0.7);
+}
+
+.chatoutput
+{
+  position: fixed;
+  top: 75px;
+
+  overflow: auto;
+  padding: 10px 10px;
+  width: 77%;
+  height: 70%;
+  margin: 5px 1px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+.activetab h3, .activetab h4
+{
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px 10px
+}
+
+.settingsinput
+{
+  width: 50%;
+  border-radius: 5px;
+  padding: 8px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: rgba(0,0,0,0.7);
+}
+
+.settingsinput:hover, .settingsinput:focus
+{
+  border: solid 1px #707070;
+}
+
+button
+{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  padding: 10px 30px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  transition: all, 0.5s;
+}
+
+button:hover
+{
+  background-color: rgba(30, 172, 253, 1);
+}
+
+button span
+{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after
+{
+  content: '>>';
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span
+{
+  padding-right: 25px;
+}
+
+button:hover span:after
+{
+  opacity: 1;
+  right: 0;
+}
+
+.unblockbutton
+{
+  font-size: 13px;
+  padding: 5px 15px;
+}
+
+#blockedusers
+{
+  font-family: 'Noto Sans',sans-serif;
+  padding-left: 0px;
+  margin: 20px 10px;
+  overflow: hidden;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+#blockedusers li
+{
+  border-bottom: 1px solid #999;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 10px 10px;
+  list-style-position: inside;
+}
+
+.eventdetails{
+	border: 1px solid black;
+	width: 20%;
+	border-radius: 10px;
+}
+
+.eventdescription{
+	padding: 10px 10px;
+	width: 40%;
+}
+
+.inputeventdetails{
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	width: 500px;
+	margin-top: -20px;
+}
+
+.inputeventdetails input, textarea{
+	padding: 8px 5px;
+	border: solid 1px #dcdcdc;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-bottom: 13px;
+	resize: none;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+.inputeventdetails input:hover,textarea:hover, .inputeventdetails input:focus ,textarea:focus
+{
+  border: solid 1px #707070;
+}
+
+<<<<<<< HEAD
+
+
+=======
+#invisibleBarrier{
+  width: 100%;
+  background-color: #FFFFFF;
+  color: white;
+  padding-left: 5%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 99;
+>>>>>>> origin/gh-pages
+
+}
+#themehr
+{
+  width: 50%;
 }

@@ -3,81 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#004c9f">
   <!--CSS stylesheets-->
-  <link rel="stylesheet" href="css/mainstylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="css/indexstylesheet.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome-animation.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/PolyNexusIndexMobileView.css" type="text/css" />
   <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
   <title>polyNexus</title>
+  <script   src="https://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+  <script
+        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+        crossorigin="anonymous"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/login.js"></script>
+  <script>
+  $(function(){
+    $('#movedown a').smoothScroll();
+  });
+  </script>
 </head>
 <body>
 <h1>polyNexus</h1>
 <div class="signup">
-  <h2>A network to find friends</h2>
+  <h2>The network to find friends</h2>
   <p>
-    Sign up today! and this is some placeholder text!
+    Get started, Sign up today!
   </p>
-  <form class="loginfield" id="loginform">
+  <div class="loginfield" id="loginform">
     <h3>Login</h3>
     <ul>
       <li>
-        <input type="text" placeholder="Username"/>
+        <input type="text" id="usernameinput" placeholder="Username"/>
       </li>
       <li>
-        <input type="text" placeholder="Password"/>
+        <input type="password" placeholder="Password"/>
+      </li>
+      <li>
+        <button class="button" value="submit" onclick="login()"><span>Login</span></button>
       </li>
     </ul>
-    <p>
-      <a href="#signup">click here to sign up</a>
-    </p>
-  </form>
+    <div class="newaccount" id="newacc">
+      <form class="signupfield" id="signupfield">
+        <h3>Sign Up</h3>
+        <ul>
+          <li>
+            <input type="text" placeholder="NYP email" />
+          </li>
+          <li>
+            <input type="password" placeholder="Password" />
+          </li>
+          <li>
+            <input type="password" placeholder="Retype Password" />
+          </li>
+          <li>
+            <button class="button"><span>Create Account</span></button>
+          </li>
+        </ul>
+
+      </form>
+    </div>
+  </div>
+  <div id="movedown">
+    <a href="#content1"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+  </div>
+
 </div>
+
 <div class="content1" id="content1">
   <h2>Why should I sign up?</h2>
   <hr>
   <div class="content1content">
-    <i class="fa fa-heart" aria-hidden="true"></i>
-    <h3>Find true love</h3>
+    <i class="fa fa-rocket" aria-hidden="true"></i>
+    <h3>Explore your passion<br/> &nbsp;</h3>
     <p>
-      Search for your soulmates with this social application! placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text
+       Discuss and grow your passion with like minded people, spread the joy
     </p>
   </div>
   <div class="content1content">
     <i class="fa fa-group" aria-hidden="true"></i>
-    <h3>Find new cliques</h3>
+    <h3>Make new friends<br/>&nbsp; </h3>
     <p>
-      With this application, placeholder text is placed because i am lazy af placeholder text placeholder text placeholder text placeholder text
+      Mingling with a new group of people has never been so easy
     </p>
   </div>
   <div class="content1content">
     <i class="fa fa-calendar" aria-hidden="true"></i>
-    <h3>Plan for offline meets</h3>
+    <h3>Plan for offline meetings <br/></h3>
     <p>
-      meet up with your new found friends with this placeholder!
+      See your new friends without a screen in between
     </p>
   </div>
   <div class="content1content">
     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-    <h3>Within NYP</h3>
+    <h3>Explore while you study</h3>
     <p>
-      all within your school!
+      Do everything with everyone you want to within your polytechnic!
     </p>
   </div>
 </div>
-<div class="content2">
+<div id="movedown">
+  <a href="#content2"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+</div>
+<div class="content2" id="content2">
   <h2>How does it work?</h2>
   <hr />
   <i class="fa fa-cogs" aria-hidden="true"></i>
-  <p>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
-     placeholder text placeholder text placeholder text placeholder text</br>
+  <p id="howItWork">
+     polyNexus provides a platform for polytechnic students to share and interact
+     with other one another through
+	 mutual interests by placing them
+	 into chat rooms based on their interests.</br>
+	 </br>
+	 We also facilitate bonding between our users
+     by offering a private messaging system and an offline meeting scheduler.</br>
+     </br>
+     To make things easier,
+     we have a search engine, notification system and the option to remain anonymous.
+	 <br/> <br/>
+     What are you waiting for? <b>Sign up today!</b>
   </p>
 </div>
 </body>

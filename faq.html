@@ -1,0 +1,150 @@
+<!--Matt Will Do-->
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>polyNexus FAQ</title>
+			<link rel="stylesheet" href="css/faqstylesheet.css" type="text/css" />
+			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+			<script>
+			function hidecontent(){
+
+				div1a = document.getElementById('questionSet1');
+				div1a.style.display = "none";
+				div2a = document.getElementById('questionSet2');
+				div2a.style.display = "none";
+				div3a = document.getElementById('questionSet3');
+				div3a.style.display = "none";
+				div4a = document.getElementById('questionSet4');
+				div4a.style.display = "none";
+				div4a = document.getElementById('questionSet5');
+				div4a.style.display = "none";
+			}
+			function contentshow(content)
+		{
+			div = document.getElementById(content);
+			if(div.style.display == "block")
+			{
+				div.style.display = "none";
+			}
+			else{
+				div.style.display = "block";
+			}
+		}
+			</script>
+		</head>
+		<body onload="hidecontent()">
+			<h1>polyNexus</h1>
+			<div class="intro">
+				<h2>FAQ</h2>
+					<p>
+						polyNexus has a lot of functionality and fun available</br>
+            for its users! Read up here to see if others commonly </br>
+            experience the difficulties you are having to unlock </br>
+            as much potential as you can from polyNexus.
+					</p>
+			</div>
+
+			<div class="content2">
+
+				<button onclick="contentshow('questionSet1')"><span>Accounts</span></button>
+
+				<div id="questionSet1">
+					<a class="hoverable">
+				    <span class="normal">How do I create an account?</span>
+						<span class="hover">Sign up on our home page with your NYP email and set a password</span>
+				  </a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Is there a way for users to be banned?</span>
+						<span class="hover">No, but users can block anyone they feel like. polyNexus accounts are also linked to school emails, which can be used to identify repeat offenders.</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Can I change my username?</span>
+						<span class="hover">Yes, just go to the settings tab.</span>
+					</a>
+				</div>
+
+				<button onclick="contentshow('questionSet2')"><span>Chats</span></button>
+
+				<div id="questionSet2">
+					<a class="hoverable">
+						<span class="normal">How do I start a chat?</span>
+						<span class="hover">Start a chat by simply typing in your interest you would like to discuss. e.g; Football, League of Legends</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">What is the chat labelling standard?</span>
+						<span class="hover">Use appropriate spacings and do not use abbrevations. e.g; LOL as an exclamation and LoL the game are very different.</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Is there any way to send private messages?</span>
+						<span class="hover">Use the private messaging option instead of the group chat one.</span>
+					</a>
+				</div>
+
+				<button onclick="contentshow('questionSet3')"><span>Blogs</span></button>
+
+				<div id="questionSet3">
+					<a class="hoverable">
+						<span class="normal">Is there any rules or guidelines for the blogs?</span>
+						<span class="hover">Yes, go check out our rules page</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">How are blogs generated?</span>
+						<span class="hover">Blogs are generated for each chat group</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Question3</span>
+						<span class="hover">Answer3</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Question4</span>
+						<span class="hover">Answer4</span>
+					</a>
+				</div>
+
+				<button onclick="contentshow('questionSet4')"><span>Event Planners</span></button>
+
+				<div id="questionSet4">
+					<a class="hoverable">
+						<span class="normal">Who can plan events?</span>
+						<span class="hover">Any registered user in a group</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Who can plan group events?</span>
+						<span class="hover">Any user inside the group they are planning the event for</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Question3</span>
+						<span class="hover">Answer3</span>
+					</a>
+						<br>
+						<br>
+					<a class="hoverable">
+						<span class="normal">Question4</span>
+						<span class="hover">Answer4</span>
+					</a>
+				</div>
+				</div>
+
+			</div>
+		</body>
+	</html>

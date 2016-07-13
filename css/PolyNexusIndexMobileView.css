@@ -1,0 +1,63 @@
+@media screen and (max-width: 400px){
+
+
+form {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+input[type="text"] {
+	width: 80px;
+
+}
+
+input[type="password"]{
+	width:80px;
+
+}
+
+.loginfield{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+.loginfield li>button
+{
+  width: 80px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right:20px;
+}
+
+.button span{
+	text-align: center;
+	position: relative;
+	right: 15px;
+}
+
+#newacc h3{
+	padding-top: 20px;
+}
+
+.content1content{
+	clear: both;
+	margin:auto;
+	text-align:center;
+}
+
+.content2{
+	text-align:center;
+}
+
+#howItWork{
+	background-color: rgba(77,77,77,0.87);
+	border-radius: 25px;
+	
+}
+
+
+
+}
