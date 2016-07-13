@@ -29,17 +29,12 @@
 
 .navbarlist li
 {
-  padding: 20px 15px;
+  padding: 23px 15px;
   list-style-type: none;
   display: inline-block;
   position: relative;
   right: 40px;
   transition: background, 0.5s;
-}
-
-.navbarlist li:hover
-{
-  background-color: rgba(0, 76, 159, 0.7);
 }
 
 .navbarlist {
@@ -331,8 +326,6 @@ header
 	background-size: ;
 	color: white;
 }
-
-/* Form */
 
 form
 {

@@ -170,8 +170,6 @@
 				Div1.setAttribute("id", "posted-article-container" + counter);
 				Div2.setAttribute("id", "posted-article-preview"  + counter);
 				Div5.setAttribute("id", "posted-article"  + counter);
-				Div7.setAttribute("id", "posted-image-div");
-				Div7.style.backgroundImage = "url('')";
 				H3.setAttribute("id", "posted-article-title"  + counter);
 				H4.setAttribute("id", "posted-article-subtitle"  + counter);
 				P1.setAttribute("id", "posted-written-article"  + counter);
@@ -238,9 +236,6 @@
 				<nav class="navbar">
 					<ul class="navbarlist">
 						<li>
-							<a href="#">Blog</a>
-						</li>
-						<li>
 							<a href="main.html#tabs-1">Chats</a>
 						</li>
 						<li>
@@ -248,6 +243,9 @@
 						</li>
 						<li>
 							<a href="main.html#tabs-3">Settings</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
 						</li>
 					</ul>
 				</nav>
@@ -480,6 +478,7 @@
 						document.getElementById("posted-time2").innerHTML = "-" + postdate2.toDateString() + " " + hour + ":" + minute + ":" + second;
 						break;
 				}
+				alert(press);
 				press++
 			}
 		</script>

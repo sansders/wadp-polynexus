@@ -59,11 +59,9 @@ h1
   clear:both;
   padding-top:50px;
   padding-bottom:300px;
-  color: black;
+  color: white;
   background-color: rgba(255,255,255,0.2);
-  width:69%;
   text-align:center;
-  border-radius:12px;
 }
 
 .content2 h3
@@ -74,19 +72,20 @@ h1
   font-size: 40px;
   width:69%;
   background-color:rgba(255,128,0,0.7);
-  border-radius:50px;
+  border-radius:20px;
   text-align:center;
 }
 
+
 .content2 p
 {
-  text-align:left;
-  padding-left:40px;
-  padding-right:40px;
-  font-size:20px;
-}
-.question{
-  text-decoration:underline;
+  margin:15px auto;
+  font-size: 25px;
+  width:15%;
+  padding-top:75px;
+  padding-bottom:75px;
+  background-color:rgba(128,0,128,0.7);
+  border-radius:12.5px;
 }
 
 button
@@ -126,17 +125,11 @@ button:hover
   background-color: rgba(0, 76, 159, 0.4);
 }
 
-button:hover span
-{
-  padding-right: 25px;
-}
-
 button span
 {
   display: inline-block;
   position: relative;
   transition: 0.5s;
-  text-align:left;
 }
 
 button span:after
@@ -149,6 +142,11 @@ button span:after
   transition: 0.5s;
 }
 
+button:hover span
+{
+  padding-right: 25px;
+}
+
 button:hover span:after
 {
   opacity: 1;
@@ -156,18 +154,23 @@ button:hover span:after
 }
 
 .hoverable {
+  cursor:default;
   color:#000;
   text-decoration:none;
   font-size: 20px;
   font-family: 'Noto Sans' ,sans-serif;
   width: 40%;
+  margin-left:50px;
+  margin-right:50px;
+  margin-top:50px;
   cursor: pointer;
   outline: none;
   border: none;
+  border-radius: 50px;
   transition: all, 0.5s;
   background-color:rgba(255,255,255,0.3);
   padding:10px;
-  text-align:left;
+  text-align:center;
 }
 .hoverable .hover {
   display:none;
