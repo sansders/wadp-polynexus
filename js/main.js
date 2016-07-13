@@ -5,7 +5,7 @@ $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
   document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
-  if(user == null){
+  if(user === null){
     window.location = 'index.html';
   }
   else{
@@ -19,8 +19,9 @@ $(document).ready(function(){
       $("#events").tabs();
     });
     var theme = sessionStorage.getItem('theme');
+    var language = sessionStorage.getItem('language');
     changetheme(theme);
-    setLanguage();
+    setLanguage(language);
 
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
