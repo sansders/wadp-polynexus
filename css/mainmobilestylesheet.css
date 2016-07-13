@@ -17,9 +17,10 @@ h1
   position:fixed;
   padding-top: 10px;
   padding-bottom: 10px;
-  z-index: 100;
+  z-index: 1001;
   font-size: 25px;
 }
+
 
 #logoutbtn
 {
@@ -79,3 +80,140 @@ h1
   border-collapse: collaspe;
 }
 
+.dropit
+{
+  float:right;
+  width: 100%;
+}
+
+.dropit-trigger
+{
+  position: fixed;
+  top: 53px;
+  width: 100%;
+  z-index: 101;
+  padding-left: 0px;
+  /* Delete Later!!!!! */
+
+}
+
+.dropit-trigger li
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  list-style-type: none;
+  border: solid 1px #dcdcdc;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.dropit-trigger li:nth-child(3)
+{
+	margin-bottom: 40%; 
+	/* Logout button appears below the settings tab for some reason, so the margin makes it disappear */
+}
+
+.dropit-trigger li a
+{
+  padding: 10px;
+  text-decoration: none;
+  font-size: 35px;
+  color: black;
+}
+
+#events-1
+{
+	position: fixed;
+	top: 53px;
+}
+
+#events-1 h2
+{
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.eventdetails{
+	border: 1px solid black;
+	width: 90%;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.eventdescription{
+	padding: 10px 10px;
+	width: 90%;
+}
+
+#events-2{
+	position: fixed;
+	top: 75px;
+}
+
+.inputeventdetails{
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	width: 500px;
+	margin-top: -20px;
+	height: 100%;
+	padding-bottom: 1000px;
+	padding-top: 10px;
+}
+
+.inputeventdetails input, textarea{
+	padding: 8px 5px;
+	border: solid 1px #dcdcdc;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-bottom: 13px;
+	resize: none;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+#setting-1 , #setting-2, #setting-3, #setting-4, #setting-5
+{
+	position: fixed;
+	top: 53px;
+}
+
+.settingsinput
+{
+  width: 50%;
+  border-radius: 5px;
+  padding: 8px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: rgba(0,0,0,0.7);
+}
+
+button
+{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  padding: 10px 30px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  transition: all, 0.5s;
+}
+
+.unblockbutton
+{
+  font-size: 13px;
+  padding: 5px 15px;
+}
+
+#setting-4 ul
+{
+	width: 100%;
+	padding-left: 20px ;
+
+}
+
+#themehr
+{
+	width: 300%;
+}
