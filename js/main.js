@@ -1,4 +1,4 @@
-var user;
+var user = '111111a';
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){
@@ -8,7 +8,7 @@ $(document).ready(function(){
   if(user === null){
     window.location = 'index.html';
   }
-  else{
+  else{ 
     $(function() {
       $("#tabs").tabs();
     });
@@ -26,9 +26,11 @@ $(document).ready(function(){
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
+	
+	events1();
   }
 
-});
+}); 
 
 function changeUsername(){
   //will contain two parts.
