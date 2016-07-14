@@ -22,8 +22,9 @@
 
 .navbarlist
 {
+  font-family: 'Exo', sans-serif;
   position: fixed;
-  left: 60%;
+  left: 50%;
   z-index: 101;
 }
 
@@ -48,7 +49,7 @@
   text-decoration: none;
   font-size: 20px;
   color: white;
- 
+
 }
 
 .navbarlist li a:hover
@@ -373,7 +374,7 @@ footer
 {
 	border-top: 1px white solid;
 	padding: 10px;
-	background-color: rgba(0, 76, 159, 0.8); 
+	background-color: rgba(0, 76, 159, 0.8);
 	margin: 0 auto;
 	height: 100%;
 	width: 100%;
