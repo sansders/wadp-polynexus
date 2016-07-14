@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href= "css/Bootstrap/bootstrap.min.css" />
 		<!-- Page Design -->
 		<link type="text/css" rel="stylesheet" href= "css/blogstylesheet.css" />
+		<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 		<!-- Script -->
 		<script>
 			$(document).ready(function() {
@@ -20,26 +22,26 @@
 					$(this).next(".article-content").slideToggle("slow");
 				});
 			});
-			
+
 			function divToggle() {
 				$(".posted-article-content").hide();
 				$(".posted-article-preview").click(function(){
 					$(this).next(".posted-article-content").slideToggle("slow");
 				});
 			}
-			
+
 			var medium = 0;
 			$(window).scroll(function () {
 				var lenghtFromTop = $(window).scrollTop();
 				if (lenghtFromTop > medium){
 					$(".navbar-container").hide("swing");
-				} 
+				}
 				else {
 					$(".navbar-container").show("swing");
 				}
 				medium = lenghtFromTop;
 			});
-					
+
 			$(document).ready(function(){
 				$("#createblog").hide();
 				$("#newblog").click(function(){
@@ -62,7 +64,7 @@
 							title = 0;
 						}
 						break;
-						
+
 					case "Subtitle":
 						if (word != "") {
 							subtitle = 1;
@@ -71,7 +73,7 @@
 							subtitle = 0;
 						}
 						break;
-						
+
 					case "Article":
 						if (word != "") {
 							article = 1;
@@ -135,7 +137,7 @@
 					}
 				}
 			}
-			
+
 			var counter = "";
 			function creatingDiv() {
 				var Li1 = document.createElement("li");
@@ -154,7 +156,7 @@
 				var P2 = document.createElement("p"); //								id="posttime"
 				var IMG1 = document.createElement("img"); //							id="posted-image"
 				var Ul1 = document.getElementById("ullist");
-				
+
 				Div1.className = "article-container";
 				Div2.className = "article-preview";
 				Div3.className = "article-header";
@@ -166,7 +168,7 @@
 				Div9.className = "show-time";
 				H3.className = "article-title";
 				H4.className = "article-subtitle";
-				
+
 				Div1.setAttribute("id", "posted-article-container" + counter);
 				Div2.setAttribute("id", "posted-article-preview"  + counter);
 				Div5.setAttribute("id", "posted-article"  + counter);
@@ -175,7 +177,7 @@
 				P1.setAttribute("id", "posted-written-article"  + counter);
 				P2.setAttribute("id", "posted-time"  + counter);
 				IMG1.setAttribute("id", "posted-image" + counter);
-				
+
 				Ul1.insertBefore(Li1, Ul1.childNodes[0]);
 				Li1.appendChild(Div1);
 				Div1.appendChild(Div2);
@@ -192,7 +194,7 @@
 				Div8.appendChild(Div5);
 				Div9.appendChild(P2);
 			}
-			
+
 			function posting() {
 				var posttitle = document.getElementById("Title").value;
 				var postsubtitle = document.getElementById("Subtitle").value;
@@ -203,7 +205,7 @@
 				document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
 				document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
 				document.getElementById("posted-image" + counter).src = postimage;
-				
+
 				if (counter == "") {
 					$("#posted-article").hide();
 					$("#posted-article-preview").click(function(){
@@ -222,10 +224,10 @@
 						$("#posted-article2").slideToggle("slow");
 					});
 				}
-				
+
 				counter++
 			}
-			
+
 		</script>
 	</head>
 	<body>
@@ -390,19 +392,19 @@
 						<p>
 						Title:
 						<input type="text" placeholder="Title" id="Title" class="forminput" onfocusout="wordcheck(this.id)"><br>
-						
+
 						Subtitle:
 						<input type="text" placeholder="Subtitle" id="Subtitle" class="forminput" onfocusout="wordcheck(this.id)"><br>
-						
-						Image URL: 
+
+						Image URL:
 						<input type="url" placeholder="http://www.google.com/" id="Image" class="forminput"><br><br>OR<br><br>
-						
+
 						Image file location:
 						<input type="file" name="img" accept="image/*" id="File"><br>
-						
+
 						Article: <br>
 						<textarea rows="2" cols="100" id="Article" placeholder="Article" class="forminput" onfocusout="wordcheck(this.id)"></textarea><br>
-						
+
 						<input class="sbutton" type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
 						<button class="sbutton" onclick="verify(); creatingDiv(); posting(); showtime();">Submit</button>
 						</p>
@@ -435,25 +437,25 @@
 				}
 				return i;
 			}
-			
+
 			var date = new Date("2016-06-25 20:15:43");
 			var hour = addZero(date.getHours());
 			var minute = addZero(date.getMinutes());
 			var second = addZero(date.getSeconds());
 			document.getElementById("time").innerHTML = "-" + date.toDateString() + " " + hour + ":" + minute + ":" + second;
-			
+
 			var date2 = new Date("2016-06-30 04:20:42");
 			var hour = addZero(date2.getHours());
 			var minute = addZero(date2.getMinutes());
 			var second = addZero(date2.getSeconds());
 			document.getElementById("time2").innerHTML = "-" + date2.toDateString() + " " + hour + ":" + minute + ":" + second;
-			
+
 			var date3 = new Date("2016-07-03 01:26:29");
 			var hour = addZero(date3.getHours());
 			var minute = addZero(date3.getMinutes());
 			var second = addZero(date3.getSeconds());
 			document.getElementById("time3").innerHTML = "-" + date3.toDateString() + " " + hour + ":" + minute + ":" + second;
-			
+
 			var press = 0
 			function showtime() {
 				switch (press){
@@ -461,16 +463,16 @@
 						var hour = addZero(postdate.getHours());
 						var minute = addZero(postdate.getMinutes());
 						var second = addZero(postdate.getSeconds());
-						document.getElementById("posted-time").innerHTML = "-" + postdate.toDateString() + " " + hour + ":" + minute + ":" + second; 
+						document.getElementById("posted-time").innerHTML = "-" + postdate.toDateString() + " " + hour + ":" + minute + ":" + second;
 						break;
-				
+
 				case 1:	var postdate1 = new Date();
 						var hour = addZero(postdate1.getHours());
 						var minute = addZero(postdate1.getMinutes());
 						var second = addZero(postdate1.getSeconds());
 						document.getElementById("posted-time1").innerHTML = "-" + postdate1.toDateString() + " " + hour + ":" + minute + ":" + second;
 						break;
-						
+
 				case 2:	var postdate2 = new Date();
 						var hour = addZero(postdate2.getHours());
 						var minute = addZero(postdate2.getMinutes());
