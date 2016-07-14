@@ -21,6 +21,7 @@ function setLanguage(language){
     document.getElementById('tab-2').innerHTML="活动";
     document.getElementById('tab-3').innerHTML="设定";
     document.getElementById('tab-4').innerHTML="博客";
+    document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> Add a group";
     document.getElementById('chatinputbox').placeholder="Type a message";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
     document.getElementById('settingsdesc').innerHTML="Change how the application works.";
@@ -57,5 +58,6 @@ function setLanguage(language){
     document.getElementById('settingsblockedesc').innerHTML="Displays a list of blocked users.";
     document.getElementById('settingsthemedesc').innerHTML="Change the look and feel of the application.";
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> Create an event.";
+    document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> Add a group";
   }
 }
