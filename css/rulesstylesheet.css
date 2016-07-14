@@ -15,6 +15,7 @@ html,body
 
 body{
   	background-image: url(../img/3.jpg);
+    padding-bottom:25px;
 }
 
 h1
@@ -61,24 +62,13 @@ h1
   margin: 0 auto;
   clear:both;
   padding-top:50px;
-  padding-bottom:250px;
+  padding-bottom:25px;
   color: white;
   text-align:center;
   background-color:rgba(255,255,255,0.3);
   border-radius:15px;
   width:65%;
 }
-
-.content2 h3
-{
-  text-decoration:underline;
-  font-size: 40px;
-  width:69%;
-  background-color:rgba(255,128,0,0.7);
-  border-radius:20px;
-  padding-left:4%;
-}
-
 
 .content2 p
 {
@@ -135,4 +125,44 @@ button:hover span:after
 {
   opacity: 1;
   right: 0;
+}
+
+@media screen
+and (max-width: 640px) {
+  body {
+    width:100%;
+  }
+  .intro h2 {
+    font-size:69px;
+    width:100%;
+    text-align:center;
+  }
+
+  .intro {
+    width:95%;
+    text-align:center;
+  }
+
+  .intro p {
+    padding-left:0px;
+    text-align:center;
+    width:100%;
+    font-size:18px;
+  }
+
+  .content2 {
+    text-align:center;
+    padding-top:10px;
+    border-radius:5px;
+    width:80%;
+  }
+
+  .content2 p {
+    width:85%;
+    font-size:14px;
+  }
+
+  button {
+    border-radius:10px;
+  }
 }
