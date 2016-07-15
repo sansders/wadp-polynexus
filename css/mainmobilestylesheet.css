@@ -221,10 +221,14 @@ a:active {
 	transition: box-shadow 0.3s, border 0.3s;
 }
 
-#setting-1 , #setting-2, #setting-3, #setting-4, #setting-5
+#setting-1 , #setting-2, #setting-3, #setting-4, #setting-5 
 {
 	position: fixed;
 	top: 53px;
+}
+
+#setting{
+	display: block;
 }
 
 .settingsinput
@@ -276,6 +280,25 @@ button
 #eventlist{
 	background-color:rgba(255,255,255,1);
 	z-index:0;
-	display: 0;
+}
+
+.activetab h3, .activetab h4
+{
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px 10px
+}
+
+.activetab
+{
+  padding: 10px 10px;
+  position: relative;
+  left: 20%;
+}
+
+.activetab h2
+{
+  padding: 7px 6px;
+  width: 100%;
+  border-bottom: solid 1px #dcdcdc;
 }
 

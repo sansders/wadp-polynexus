@@ -29,27 +29,160 @@
   <script>
     function nextPageIsChats(){
 	$('#eventlist').hide();
+	$('#events-1').hide();
+	$('#events-2').hide();
+			
 	$('#setting').hide();
+	$('#setting-1').hide();
+	$('#setting-2').hide();
+	$('#setting-3').hide();
+	$('#setting-4').hide();
+	$('#setting-5').hide();
+
 	$('#chatlist').show();
 }	
 
+
 	function nextPageIsEvents(){
 	$('#chatlist').hide();
+		
 	$('#setting').hide();
+	$('#setting-1').hide();
+	$('#setting-2').hide();
+	$('#setting-3').hide();
+	$('#setting-4').hide();
+	$('#setting-5').hide();
+	
 	$('#eventlist').show();
+	$('#events-1').hide();
+	$('#events-2').hide();
 }	
+
+		function nextPageIsEvents1(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').hide();
+		$('#setting-2').hide();
+		$('#setting-3').hide();
+		$('#setting-4').hide();
+		$('#setting-5').hide();
+	
+		$('#eventlist').hide();
+		$('#events-1').show();
+		$('#events-2').hide();
+		}
+		
+		function nextPageIsEvents2(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').hide();
+		$('#setting-2').hide();
+		$('#setting-3').hide();
+		$('#setting-4').hide();
+		$('#setting-5').hide();
+	
+		$('#eventlist').hide();
+		$('#events-1').hide();
+		$('#events-2').show();
+		}
 
 	function nextPageIsSettings(){
 	$('#chatlist').hide();
+	
 	$('#setting').show();
+	$('#setting-1').hide();
+	$('#setting-2').hide();
+	$('#setting-3').hide();
+	$('#setting-4').hide();
+	$('#setting-5').hide();
+	
 	$('#eventlist').hide();
+	$('#events-1').hide();
+	$('#events-2').hide();
 }	
+		
+		function nextPageIsSettings1(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').show();
+		$('#setting-2').hide();
+		$('#setting-3').hide();
+		$('#setting-4').hide();
+		$('#setting-5').hide();
+		
+		$('#eventlist').hide();
+		$('#events-1').hide();
+		$('#events-2').hide();
+		}
+		
+		function nextPageIsSettings2(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').hide();
+		$('#setting-2').show();
+		$('#setting-3').hide();
+		$('#setting-4').hide();
+		$('#setting-5').hide();
+		
+		$('#eventlist').hide();
+		$('#events-1').hide();
+		$('#events-2').hide();
+		}
+		
+		function nextPageIsSettings3(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').hide();
+		$('#setting-2').hide();
+		$('#setting-3').show();
+		$('#setting-4').hide();
+		$('#setting-5').hide();
+		
+		$('#eventlist').hide();
+		$('#events-1').hide();
+		$('#events-2').hide();
+		}
+		
+		function nextPageIsSettings4(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').hide();
+		$('#setting-2').hide();
+		$('#setting-3').hide();
+		$('#setting-4').show();
+		$('#setting-5').hide();
+		
+		$('#eventlist').hide();
+		$('#events-1').hide();
+		$('#events-2').hide();
+		}
+		
+		function nextPageIsSettings5(){
+		$('#chatlist').hide();
+		
+		$('#setting').hide();
+		$('#setting-1').hide();
+		$('#setting-2').hide();
+		$('#setting-3').hide();
+		$('#setting-4').hide();
+		$('#setting-5').show();
+		
+		$('#eventlist').hide();
+		$('#events-1').hide();
+		$('#events-2').hide();
+		}
 	</script>
   
 
   <title>polyNexus</title>
 </head>
-<body onload="nextPageIsChats()">
+<body onload="nextPageIsChats()"> 
 
 <h1><a class="fa fa-bars" aria-hidden="true" id="bars" href="#menu"></a> polyNexus <a onclick="logout()" id="logoutbtn"><i class="fa fa-sign-out" aria-hidden="true"></i></a></h1>
 
@@ -119,19 +252,19 @@
           You can only join events if you are in the specified chat group.
         </p>
       </li>
-      <li><a href="#events-1" >
+      <li><a href="#events-1" onclick="nextPageIsEvents1()">
         <h3>Gardening</h3>
         <h4>making pot brownies</h4>
         <p class="textchat">
           19:00 at jz's house
         </p>
       </a></li>
-      <li class="addchat" id="addevent"><a href="#events-2" >
+      <li class="addchat" id="addevent"><a href="#events-2" onclick="nextPageIsEvents2()">
         <i class="fa fa-plus-square-o" aria-hidden="true"></i> Create an event
       </li></a>
     </ul>
 	</div> 
-		<!-- <div id="events-1" class="activetab">
+		<div id="events-1" class="activetab">
 		<h2><i class="eventtitle" aria-hidden="true"></i> Making pot brownies </h2>
 		<br/>
 		<br/>
@@ -142,9 +275,9 @@
 		<br/>
 		<br/>
 		Join me in my flowery adventures as I attempt to make hashbrowns with my home-grown, organic, cannabis! </p>
-		</div> -->
+		</div> 
 
-		<!-- <div id="events-2" class="activetab">
+		<div id="events-2" class="activetab">
 		<form method="post" action="">
 			<h4 class="inputeventdetails">
 			&nbsp;&nbsp;Event Name:	<br/><input type="text" id="inputeventname" /> <br/>
@@ -156,49 +289,49 @@
 			&nbsp;<input type="submit" id="submiteventButton" value="Submit!" />
 			</h4>
 		</form>
-		</div> -->
+		</div> 
 
 	</div>
 	
 	
 	</div>
 
-	
+
  <div class="tabs" id="tabs-3">
-  <div id="setting">
-    <ul class="currentchatlist">
+
+    <ul class="currentchatlist" id="setting">
       <li>
         <h2>Settings</h2>
         <p class="textchat" id="settingsdesc">
           Change how the application works.
         </p>
       </li>
-      <li><a href="#setting-1">
+      <li><a href="#setting-1" onclick="nextPageIsSettings1()">
         <h3 id="setting1h3"><i class="fa fa-user" aria-hidden="true"></i> Username</h3>
         <p class="textchat" id="settingsusernamedesc">
           Change your username
         </p></a>
       </li>
-      <li><a href="#setting-2">
+      <li><a href="#setting-2" onclick="nextPageIsSettings2()">
         <h3 id="setting2h3"><i class="fa fa-lock" aria-hidden="true"></i> Password</h3>
         <p class="textchat" id="settingspassworddesc">
           Change your password
         </p></a>
       </li>
-      <li><a href="#setting-3">
+      <li><a href="#setting-3" onclick="nextPageIsSettings3()">
         <h3 id="setting3h3"><i class="fa fa-user-times" aria-hidden="true"></i> Blocked Users
         </h3>
         <p class="textchat" id="settingsblockedesc">
           Displays a list of blocked users.
         </p></a>
       </li>
-      <li><a href="#setting-4">
+      <li><a href="#setting-4" onclick="nextPageIsSettings4()">
         <h3 id="setting4h3"><i class="fa fa-paint-brush" aria-hidden="true"></i> Theme</h3>
         <p class="textchat" id="settingsthemedesc">
           Change the look and feel of the application.
         </p></a>
       </li>
-      <li><a href="#setting-5">
+      <li><a href="#setting-5" onclick="nextPageIsSettings5()">
         <h3 id="setting5h3"><i class="fa fa-globe" aria-hidden="true"></i> Language</h3>
         <p class="textchat">
           Change the language of the application.
@@ -216,8 +349,8 @@
           Frequently asked questions.
         </p></a>
       </li>
-    </ul>
-    <!--<div id="setting-1" class="activetab">
+    </ul> 
+    <div id="setting-1" class="activetab" style="display: block !important;">
       <h2>Username</h2> 
 	  <br />
       <h3>Please select a username of your liking.</h3>
@@ -229,8 +362,8 @@
 	  <br/>
     <br />
     <button class="button" onclick="changeUsername()"><span>Change Username</span></button>
-    </div> -->
-   <!-- <div id="setting-2" class="activetab">
+    </div> 
+   <div id="setting-2" class="activetab">
       <h2>Password</h2>
 	  <br />
       <h3>Please choose a secure password.</h3>
@@ -245,8 +378,8 @@
       <input id="changepasswordcheck" class="settingsinput" type="password" placeholder="Re-enter Password"/>
       <br /><br/>
       <button><span>Change Password</span></button>
-    </div> -->
-    <!--<div id="setting-3" class="activetab">
+    </div> 
+    <div id="setting-3" class="activetab">
       <h2>Blocked Users</h2>
 	  <br/>
       <h3>Manage blocked users.</h3>
@@ -263,8 +396,8 @@
         </li>
       </ol>
       <button><span>Unblock All</span></button>
-    </div> --> 
-	<!-- <div id="setting-4" class="activetab">
+    </div> 
+	<div id="setting-4" class="activetab">
       <h2>Theme</h2>
 	  <br/>
       <h3>Please select a new look:</h3>
@@ -283,12 +416,12 @@
         Classic <button class="themeclass" onclick="changetheme('classic')"><span>Select Theme</span></button>
       </ul>  
 		<hr id="themehr" />
-    </div> -->
-    <!-- <div id="setting-5" class="activetab">
+    </div> 
+    <div id="setting-5" class="activetab">
       <h2>Language</h2>
-    </div> -->
+    </div> 
 
-  </div>
+ 
 
 </div> 
 
