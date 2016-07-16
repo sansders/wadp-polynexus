@@ -17,9 +17,19 @@
 		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome-animation.min.css" type="text/css" />
 		<!-- Script -->
-		<script src="js/main.js"></script>
 		<script>
+			function logout(){
+			  window.location.replace('index.html');
+			  sessionStorage.removeItem('username');
+			  sessionStorage.removeItem('language');
+			  sessionStorage.removeItem('userid');
+			  sessionStorage.removeItem('groupchats');
+			  sessionStorage.removeItem('privatechats');
+			  sessionStorage.removeItem('theme');
+			}
+			
 			$(document).ready(function() {
+				user = sessionStorage.getItem('username');
 				var theme = sessionStorage.getItem("theme");
 				switch(theme){
 					case "mono":
@@ -40,6 +50,7 @@
 								
 				}
 			});
+			
 			$(document).ready(function() {
 				$(".article-content").hide();
 				$(".article-preview").click(function(){
