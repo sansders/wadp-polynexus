@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="js/main.js"></script>
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-1.12.4.js"
         integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
@@ -18,7 +17,30 @@
 		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome-animation.min.css" type="text/css" />
 		<!-- Script -->
+		<script src="js/main.js"></script>
+		<script src="js/language.js"></script>
 		<script>
+			$(document).ready(function() {
+				var theme = sessionStorage.getItem("theme");
+				switch(theme){
+					case "mono":
+								var sheet = document.createElement('style');
+								sheet.innerHTML = ".navbarlist li:hover {background-color: #ebebeb;} .navbar-container h1{background-color: white; color: black; border-bottom:2px solid #dcdcdc;} .navbarlist li a{color: black} .navbarlist li a:hover{color: black} .footerlist li:hover {background-color: #ebebeb;} footer{background-color: white; color: black; border-bottom:2px solid #dcdcdc;} .footerlist li a{color: black} .footerlist li a:hover{color: black}";
+								document.body.appendChild(sheet);
+								break;
+					case "pink":
+								var sheet = document.createElement('style');
+								sheet.innerHTML = ".navbarlist li:hover {background-color: rgb(219,112,147);} .navbar-container h1{  background-color: rgb(255,182,193); color: white; border-bottom: none;} .navbarlist li a{color: white} .footerlist li:hover {background-color: rgb(219,112,147);} footer{  background-color: rgb(255,182,193); color: white; border-bottom: none;} .footerlist li a{color: white}";
+								document.body.appendChild(sheet);
+								break;
+					case "classic":
+								var sheet = document.createElement('style');
+								sheet.innerHTML = ".navbarlist li:hover {background-color: rgba(0, 76, 159, 0.7);} .navbar-container h1{  background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .navbarlist li a{color: white} .footerlist li:hover {background-color: rgba(0, 76, 159, 0.7);} footer{background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .footerlist li a{color: white}" ;
+								document.body.appendChild(sheet);
+								break;
+								
+				}
+			});
 			$(document).ready(function() {
 				$(".article-content").hide();
 				$(".article-preview").click(function(){
@@ -87,10 +109,11 @@
 						break;
 				}
 			}
-
+			
+			var confirmation;
 			function verify() {
 				if (title == 1 && article == 1 && subtitle == 1) {
-					var confirmation = confirm("Are you sure you want to continue?");
+					confirmation = confirm("Are you sure you want to continue?");
 					if (confirmation == true) {
 						document.getElementById("createblog").style.display='none';
 					}
@@ -100,40 +123,40 @@
 				}
 				else if (title != 1 || subtitle != 1 || article != 1) {
 					if (title != 1 && subtitle != 1 && article != 1) {
-							var confirmation = alert("WRITE SOMETHING!");
+							alert("WRITE SOMETHING!");
 					}
 					else if (title != 1 && subtitle != 1) {
-						var confirmation = confirm("There is no title and subtitle. Are you sure you want to continue?");
+						confirmation = confirm("There is no title and subtitle. Are you sure you want to continue?");
 						if (confirmation == true) {
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (title != 1 && article != 1) {
-							var confirmation = confirm("There is no title and article. Are you sure you want to continue?");
+						confirmation = confirm("There is no title and article. Are you sure you want to continue?");
 						if (confirmation == true) {
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (subtitle != 1 && article != 1) {
-						var confirmation = confirm("There is no subtitle and article. Are you sure you want to continue?");
+						confirmation = confirm("There is no subtitle and article. Are you sure you want to continue?");
 						if (confirmation == true) {
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (title != 1){
-						var confirmation = confirm("There is no title. Are you sure you want to continue?");
+						confirmation = confirm("There is no title. Are you sure you want to continue?");
 						if (confirmation == true) {
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else if (subtitle != 1 ) {
-						var confirmation = confirm("There is no subtitle. Are you sure you want to continue?");
+						confirmation = confirm("There is no subtitle. Are you sure you want to continue?");
 						if (confirmation == true) {
 							document.getElementById("createblog").style.display='none';
 						}
 					}
 					else {
-						var confirmation = confirm("There is no article. Are you sure you want to continue?");
+						confirmation = confirm("There is no article. Are you sure you want to continue?");
 						if (confirmation == true) {
 							document.getElementById("createblog").style.display='none';
 						}
@@ -143,94 +166,125 @@
 
 			var counter = "";
 			function creatingDiv() {
-				var Li1 = document.createElement("li");
-				var Div1 = document.createElement("div"); //class="article-container" 	id="posted-article-container"
-				var Div2 = document.createElement("div"); //class="article-preview" 	id="posted-article-preview"
-				var Div3 = document.createElement("div"); //class="article-header"
-				var Div4 = document.createElement("div"); //class="article-subheader"
-				var Div5 = document.createElement("div"); //class="article" 			id="posted-article"
-				var Div6 = document.createElement("div"); //class="written-article"
-				var Div7 = document.createElement("div"); //class="article-image"
-				var Div8 = document.createElement("div"); //class="article-content"
-				var Div9 = document.createElement("div"); //class="show-time"
-				var H3 = document.createElement("H3"); //class="article-title"			id="posted-article-title"
-				var H4 = document.createElement("H4"); //class="article-subtitle"		id="posted-article-subtitle"
-				var P1 = document.createElement("p"); //								id="posted-written-article"
-				var P2 = document.createElement("p"); //								id="posttime"
-				var IMG1 = document.createElement("img"); //							id="posted-image"
-				var Ul1 = document.getElementById("ullist");
+				if (confirmation == true) {
+					var Li1 = document.createElement("li");
+					var Div1 = document.createElement("div"); //class="article-container" 	id="posted-article-container"
+					var Div2 = document.createElement("div"); //class="article-preview" 	id="posted-article-preview"
+					var Div3 = document.createElement("div"); //class="article-header"
+					var Div4 = document.createElement("div"); //class="article-subheader"
+					var Div5 = document.createElement("div"); //class="article" 			id="posted-article"
+					var Div6 = document.createElement("div"); //class="written-article"
+					var Div7 = document.createElement("div"); //class="article-image"
+					var Div8 = document.createElement("div"); //class="article-content"
+					var Div9 = document.createElement("div"); //class="show-time"
+					var Div10 = document.createElement("div"); //class="info"
+					var Div11 = document.createElement("div"); //class="written"
+					var H3 = document.createElement("H3"); //class="article-title"			id="posted-article-title"
+					var H4 = document.createElement("H4"); //class="article-subtitle"		id="posted-article-subtitle"
+					var P1 = document.createElement("p"); //								id="posted-written-article"
+					var P2 = document.createElement("p"); //								id="posttime"
+					var P3 = document.createElement("p");
+					var P3Text = document.createTextNode("Posted By: " + user);
+					var SPAN1 = document.createElement("span");
+					var IMG1 = document.createElement("img"); //							id="posted-image"
+					var IMG2 = document.createElement("img");
+					var Ul1 = document.getElementById("ullist");
 
-				Div1.className = "article-container";
-				Div2.className = "article-preview";
-				Div3.className = "article-header";
-				Div4.className = "article-subheader";
-				Div5.className = "article";
-				Div6.className = "written-article";
-				Div7.className = "article-image";
-				Div8.className = "article-content";
-				Div9.className = "show-time";
-				H3.className = "article-title";
-				H4.className = "article-subtitle";
+					Div1.className = "article-container";
+					Div2.className = "article-preview";
+					Div3.className = "article-header";
+					Div4.className = "article-subheader";
+					Div5.className = "article";
+					Div6.className = "written-article";
+					Div7.className = "article-image";
+					Div8.className = "article-content";
+					Div9.className = "show-time";
+					Div10.className = "info";
+					Div11.className = "written";
+					H3.className = "article-title";
+					H4.className = "article-subtitle";
+					IMG2.className = "blackLike";
 
-				Div1.setAttribute("id", "posted-article-container" + counter);
-				Div2.setAttribute("id", "posted-article-preview"  + counter);
-				Div5.setAttribute("id", "posted-article"  + counter);
-				H3.setAttribute("id", "posted-article-title"  + counter);
-				H4.setAttribute("id", "posted-article-subtitle"  + counter);
-				P1.setAttribute("id", "posted-written-article"  + counter);
-				P2.setAttribute("id", "posted-time"  + counter);
-				IMG1.setAttribute("id", "posted-image" + counter);
+					Div1.setAttribute("id", "posted-article-container" + counter);
+					Div2.setAttribute("id", "posted-article-preview"  + counter);
+					Div5.setAttribute("id", "posted-article"  + counter);
+					H3.setAttribute("id", "posted-article-title"  + counter);
+					H4.setAttribute("id", "posted-article-subtitle"  + counter);
+					P1.setAttribute("id", "posted-written-article"  + counter);
+					P2.setAttribute("id", "posted-time"  + counter);
+					IMG1.setAttribute("id", "posted-image" + counter);
+					IMG2.setAttribute("src", "http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png");
+					IMG2.setAttribute("id", "blackLike-" + eval(counter + 4));
+					IMG2.setAttribute("onclick", "changeImg(this.id)");
+					SPAN1.setAttribute("id", "user");
 
-				Ul1.insertBefore(Li1, Ul1.childNodes[0]);
-				Li1.appendChild(Div1);
-				Div1.appendChild(Div2);
-				Div1.appendChild(Div8);
-				Div2.appendChild(Div3);
-				Div2.appendChild(Div4);
-				Div3.appendChild(H3);
-				$(Div9).insertAfter($(Div4));
-				Div4.appendChild(H4);
-				Div5.appendChild(Div6);
-				Div5.appendChild(Div7);
-				Div6.appendChild(P1);
-				Div7.appendChild(IMG1);
-				Div8.appendChild(Div5);
-				Div9.appendChild(P2);
+					Ul1.insertBefore(Li1, Ul1.childNodes[0]);
+					Li1.appendChild(Div1);
+					Div1.appendChild(Div2);
+					Div1.appendChild(Div8);
+					Div2.appendChild(Div3);
+					Div2.appendChild(Div4);
+					Div3.appendChild(H3);
+					$(Div9).insertAfter($(Div4));
+					Div4.appendChild(H4);
+					Div5.appendChild(Div6);
+					Div5.appendChild(Div7);
+					Div6.appendChild(Div11);
+					Div6.appendChild(Div10);
+					Div7.appendChild(IMG1);
+					Div8.appendChild(Div5);
+					Div9.appendChild(P2);
+					Div10.appendChild(P3);
+					Div11.appendChild(P1);
+					P3.appendChild(P3Text);
+					P3.appendChild(SPAN1);
+					P3.appendChild(IMG2);
+				}
 			}
 
 			function posting() {
-				var posttitle = document.getElementById("Title").value;
-				var postsubtitle = document.getElementById("Subtitle").value;
-				var postarticle = document.getElementById("Article").value;
-				var postimage = document.getElementById("Image").value;
-				var postfile = document.getElementById("File").value
-				document.getElementById("posted-article-title" + counter).innerHTML = posttitle;
-				document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
-				document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
-				document.getElementById("posted-image" + counter).src = postimage;
+				if (confirmation == true) {
+					var posttitle = document.getElementById("Title").value;
+					var postsubtitle = document.getElementById("Subtitle").value;
+					var postarticle = document.getElementById("Article").value;
+					var postimage = document.getElementById("Image").value;
+					var postfile = document.getElementById("File").value
+					document.getElementById("posted-article-title" + counter).innerHTML = posttitle;
+					document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
+					document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
+					document.getElementById("posted-image" + counter).src = postimage;
 
-				if (counter == "") {
-					$("#posted-article").hide();
-					$("#posted-article-preview").click(function(){
-						$("#posted-article").slideToggle("slow");
-					});
+					if (counter == "") {
+						$("#posted-article").hide();
+						$("#posted-article-preview").click(function(){
+							$("#posted-article").slideToggle("slow");
+						});
+					}
+					else if (counter == 1) {
+						$("#posted-article1").hide();
+						$("#posted-article-preview1").click(function(){
+							$("#posted-article1").slideToggle("slow");
+						});
+					}
+					else if (counter == 2) {
+						$("#posted-article2").hide();
+						$("#posted-article-preview2").click(function(){
+							$("#posted-article2").slideToggle("slow");
+						});
+					}
+					counter++
 				}
-				else if (counter == 1) {
-					$("#posted-article1").hide();
-					$("#posted-article-preview1").click(function(){
-						$("#posted-article1").slideToggle("slow");
-					});
-				}
-				else if (counter == 2) {
-					$("#posted-article2").hide();
-					$("#posted-article-preview2").click(function(){
-						$("#posted-article2").slideToggle("slow");
-					});
-				}
-
-				counter++
 			}
-
+			
+			function changeImg(clicked_id) {
+				var image = document.getElementById(clicked_id).src;
+				if (image == "http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png"){
+					document.getElementById(clicked_id).src = "http://bsccongress.com/im16/green-thumbs-up-clip-art_2.png";
+				}
+				else{
+					document.getElementById(clicked_id).src = "http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png";
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -241,16 +295,16 @@
 				<nav class="navbar">
 					<ul class="navbarlist">
 						<li>
-							<a href="main.html#tabs-1">Chats</a>
+							<a href="main.html#tabs-1" id="tab-1">Chats</a>
 						</li>
 						<li>
-							<a href="main.html#tabs-2">Events</a>
+							<a href="main.html#tabs-2" id="tab-2">Events</a>
 						</li>
 						<li>
-							<a href="main.html#tabs-3">Settings</a>
+							<a href="main.html#tabs-3" id="tab-3">Settings</a>
 						</li>
 						<li>
-							<a href="#">Blog</a>
+							<a href="#" id="tab-4">Blog</a>
 						</li>
 						<li>
 							<a href="" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
@@ -263,7 +317,7 @@
 			<header>
 				<div class="header-container">
 					<div class="heading">
-						<h1>Blog</h1>
+						<h2>Blog</h2>
 						<hr>
 						<p class="subheading">A place where polyNexus's social blogging starts</p>
 					</div>
@@ -294,12 +348,17 @@
 								<!-- Written Article 1 -->
 								<div id="article-1" class="article">
 									<div class="written-article">
-										<p>
-										1. Bastion <br>
-										2. Bastion <br>
-										3. Bastion <br>
-										Thanks for reading! <3
-										</p>
+										<div class="written">
+											<p>
+											1. Bastion <br>
+											2. Bastion <br>
+											3. Bastion <br>
+											Thanks for reading! <3
+											</p>
+										</div>
+										<div class="info">
+											<p>Posted by: <span>Sean </span><img class="blackLike" id="blackLike-1" src="http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png" onclick="changeImg(this.id)"/></p>
+										</div>
 									</div>
 									<!-- Article Image -->
 									<div class="article-image">
@@ -329,9 +388,14 @@
 								<!-- Written Article 2 -->
 								<div id="article-2" class="article">
 									<div class="written-article">
-										<p>
-										idk
-										</p>
+										<div class="written">
+											<p>
+											idk
+											</p>
+										</div>
+										<div class="info">
+											<p>Posted by: <span>Sant </span><img class="blackLike" id="blackLike-2" src="http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png" onclick="changeImg(this.id)"/></p>
+										</div>
 									</div>
 									<!-- Article Image -->
 									<div class="article-image">
@@ -361,9 +425,14 @@
 							<div class="article-content">
 								<div id="article-3" class="article">
 									<div class="written-article">
-										<p>
-										i still dk
-										</p>
+										<div class="written">
+											<p>
+											i still dk
+											</p>
+										</div>
+										<div class="info">
+											<p>Posted by: <span>Shawn </span><img class="blackLike" id="blackLike-3" src="http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png" onclick="changeImg(this.id)"/></p>
+										</div>
 									</div>
 									<!-- Article Image -->
 									<div class="article-image">
@@ -483,7 +552,6 @@
 						document.getElementById("posted-time2").innerHTML = "-" + postdate2.toDateString() + " " + hour + ":" + minute + ":" + second;
 						break;
 				}
-				alert(press);
 				press++
 			}
 		</script>

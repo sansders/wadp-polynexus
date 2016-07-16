@@ -30,7 +30,7 @@
 
 .navbarlist li
 {
-  padding: 23px 15px;
+  padding: 20px 15px;
   list-style-type: none;
   display: inline-block;
   position: relative;
@@ -52,9 +52,9 @@
 
 }
 
-.navbarlist li a:hover
+.navbarlist li:hover
 {
-  color: rgba(234,234,234,0.9);
+  background-color: rgba(0, 76, 159, 0.7);
 }
 
 .navbar-container hr
@@ -74,12 +74,12 @@ header
 	color: white;
 }
 
-.heading h1
+.heading h2
 {
 	font-family: Helvetica Neue;
 	font-weight: bold;
 	text-align: center;
-	font-size: 5em;
+	font-size: 80px;
 }
 
 .subheading
@@ -206,6 +206,12 @@ header
 	float: left;
 }
 
+.written
+{
+	height: 90%;
+	width: 50%;
+}
+
 .article-container p
 {
 	padding-left: 50px;
@@ -214,7 +220,7 @@ header
 .article-image
 {
 	width: 50%;
-	max-height: 100%;
+	height: 100%;
 	text-align: center;
 	float: right;
 }
@@ -223,16 +229,9 @@ header
 {
 	max-width: 100%;
 	max-height: 500px;
-	padding: 10px;
+	padding: 0px 10px;
 }
 
-.show-time
-{
-	height: 10%;
-	width: 100%;
-	text-align: right;
-	padding-right: 10px;
-}
 /* Article Side Navigation */
 
 #navigation-side-left
@@ -264,6 +263,34 @@ header
 	width: 10%;
 }
 
+/* Time */
+
+.show-time
+{
+	height: 10%;
+	width: 100%;
+	padding-right: 10px;
+}
+
+.show-time p
+{
+	text-align: right;
+}
+
+/* Like button */
+
+.blackLike
+{
+	text-align: left;
+	width: 20px;
+	height: 20px;
+}
+
+.info
+{
+	height: 10%;
+	width: 50%;
+}
 /* Button */
 
 .button {
@@ -383,6 +410,8 @@ footer
 
 .footerlist li
 {
+	position: relative;
+	right: 25px;
 	list-style-type: none;
 	display: inline-block;
 }
@@ -394,7 +423,7 @@ footer
 	padding: 0px 30px;
 }
 
-.footerlist li a:hover
+.footerlist li:hover
 {
-  color: rgba(234,234,234,0.9);
+  background-color: rgba(0, 76, 159, 0.7);
 }
