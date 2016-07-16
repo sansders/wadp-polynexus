@@ -21,15 +21,15 @@ function setLanguage(language){
     document.getElementById('tab-2').innerHTML="活动";
     document.getElementById('tab-3').innerHTML="设定";
     document.getElementById('tab-4').innerHTML="博客";
-    document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> Add a group";
-    document.getElementById('chatinputbox').placeholder="Type a message";
+    document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建小组";
+    document.getElementById('chatinputbox').placeholder="输入信息";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
-    document.getElementById('settingsdesc').innerHTML="Change how the application works.";
-    document.getElementById('settingsusernamedesc').innerHTML="Change your username.";
-    document.getElementById('settingspassworddesc').innerHTML="Change your password.";
-    document.getElementById('settingsblockedesc').innerHTML="Displays a list of blocked users.";
-    document.getElementById('settingsthemedesc').innerHTML="Change the look and feel of the application.";
-    document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> Create an event.";
+    document.getElementById('settingsdesc').innerHTML="更改应用程序的功能";
+    document.getElementById('settingsusernamedesc').innerHTML="更改用户名";
+    document.getElementById('settingspassworddesc').innerHTML="更改密码";
+    document.getElementById('settingsblockedesc').innerHTML="被查封的用户的名单";
+    document.getElementById('settingsthemedesc').innerHTML="改变应用的外表和感觉";
+    document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建活动";
   }
   else if(language === 'fr'){
       document.getElementById('tab-1').innerHTML="Chats";
