@@ -3,13 +3,24 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<script src="js/main.js"></script>
 			<title>polyNexus FAQ</title>
 			<link rel="stylesheet" href="css/faqstylesheet.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 			<meta name="viewport" content="width=device-width" />
+			<script
+		        src="https://code.jquery.com/jquery-1.12.4.js"
+		        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+		        crossorigin="anonymous"></script>
+		  <script
+		        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+		        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+		        crossorigin="anonymous"></script>
+						<script src="js/rulesFAQ.js"></script>
 			<script>
+			var theme = sessionStorage.getItem('theme');
+				changeTheTheme(theme);
+
 			function hidecontent(){
 
 				div1a = document.getElementById('questionSet1');
