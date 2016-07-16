@@ -8,6 +8,7 @@ function changeTheTheme(n){
     console.log("Theme changed to mono");
   }
   else if(n === 'pink'){
+    console.log("Attempting to change theme to pink")
     $("button").css("background-color", "rgba(255,105,180,1);");
     $("button:hover").css("background-color", "rgba(255,150,180,0.4);");
     $("h1").css("background-color", "rgba(255,255,255,0.7)");
@@ -15,6 +16,7 @@ function changeTheTheme(n){
     $("body").css("background-image", "url(img/3pink.jpg)");
     $(".intro h2").css("color","rgba(0,0,0,0.8)");
     $(".intro p").css("color","rgba(0,0,0,0.8)");
+    console.log("Finished changing theme to pink")
   }
   else if(n === 'classic'){
     var sheet = document.createElement('style');
