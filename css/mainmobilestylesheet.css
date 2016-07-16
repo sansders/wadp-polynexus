@@ -236,6 +236,7 @@ a:active {
   width: 50%;
   border-radius: 5px;
   padding: 8px;
+  margin-left: 2.5%;
   border: solid 1px #dcdcdc;
   transition: box-shadow 0.3s, border 0.3s;
   color: rgba(0,0,0,0.7);
@@ -291,8 +292,6 @@ button
 .activetab
 {
   padding: 10px 10px;
-  position: relative;
-  left: 20%;
 }
 
 .activetab h2
@@ -302,3 +301,24 @@ button
   border-bottom: solid 1px #dcdcdc;
 }
 
+#blockedusers
+{
+  font-family: 'Noto Sans',sans-serif;
+  padding-left: 0px;
+  margin: 20px 10px;
+  margin-top: -20px;
+  overflow: hidden;
+  border: 1px solid #999;
+  width: 100%;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+#blockedusers li
+{
+  border-bottom: 1px solid #999;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 10px 10px;
+  list-style-position: inside;
+}
