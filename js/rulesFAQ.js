@@ -9,7 +9,7 @@ function changeTheTheme(n){
   else if(n === 'pink'){
     var sheet = document.createElement('style');
     sheet.innerHTML = "button {background-color:rgba(255,105,180,1);} button:hover{background-color: rgba(255,150,180,0.4);} h1 {background-color: rgba(255,255,255,0.7); color:black;} body {background-image: url(img/3pink.jpg);} .intro h2{color:rgba(0,0,0,0.8);} .intro p{color:rgba(0,0,0,0.8)}";
-    document.body.appendChild(sheet);
+    document.getElementsByTagName("body").appendChild(sheet);
     console.log("Theme changed to pink");
   }
   else if(n === 'classic'){
