@@ -322,3 +322,7 @@ button
   padding: 10px 10px;
   list-style-position: inside;
 }
+
+#setting-5 ul{
+	padding-left: 2.5%;
+}
