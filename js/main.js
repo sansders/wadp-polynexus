@@ -8,7 +8,7 @@ $(document).ready(function(){
   if(user === null){
     window.location = 'index.html';
   }
-  else{ 
+  else{
     $(function() {
       $("#tabs").tabs();
     });
@@ -26,11 +26,11 @@ $(document).ready(function(){
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
-	
+
 	events1();
   }
 
-}); 
+});
 
 function changeUsername(){
   //will contain two parts.
@@ -97,9 +97,9 @@ function goRule(){
  function events1(){
 	$('#events-2').hide();
 	$('#events-1').show();
-}	
+}
 
  function events2(){
 	$('#events-1').hide();
 	$('#events-2').show();
-}	
+}

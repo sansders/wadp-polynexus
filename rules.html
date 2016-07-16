@@ -9,7 +9,19 @@
 			<link rel="stylesheet" href="css/rulesstylesheet.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+			<script src="js/rulesFAQ.js"></script>
+			<script
+		        src="https://code.jquery.com/jquery-1.12.4.js"
+		        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+		        crossorigin="anonymous"></script>
+		  <script
+		        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+		        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+		        crossorigin="anonymous"></script>
 			<script>
+			var theme = sessionStorage.getItem('theme');
+				changeTheTheme(theme);
+
 			function hidecontent(){
 				div1 = document.getElementById('rules1');
 				div1.style.display = "none";
@@ -102,5 +114,6 @@
 						<p>Do not create misleading events or mislabel an event. This includes announcing events that you have no intention to host or do not exist.</p>
 				</div>
 			</div>
+
 		</body>
 	</html>

@@ -14,8 +14,8 @@ html,body
 }
 
 body{
-  	background-image: url(../img/3.jpg);
-    padding-bottom:25px;
+  	background-image: url(../img/3classic.jpg);
+    padding-bottom:10px;
 }
 
 h1
@@ -61,8 +61,7 @@ h1
 {
   margin: 0 auto;
   clear:both;
-  padding-top:50px;
-  padding-bottom:25px;
+  padding:25px;
   color: white;
   text-align:center;
   background-color:rgba(255,255,255,0.3);
@@ -80,7 +79,7 @@ h1
   text-align:left;
 }
 
-button
+.content2 button
 {
   font-size: 20px;
   font-family: 'Noto Sans' ,sans-serif;
@@ -94,19 +93,19 @@ button
   transition: all, 0.5s;
 }
 
-button:hover
+.content2 button:hover
 {
   background-color: rgba(30, 172, 253, 1);
 }
 
-button span
+.content2 button span
 {
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-button span:after
+.content2 button span:after
 {
   content: '>>';
   position:absolute;
@@ -116,16 +115,17 @@ button span:after
   transition: 0.5s;
 }
 
-button:hover span
+.content2 button:hover span
 {
   padding-right: 25px;
 }
 
-button:hover span:after
+.content2 button:hover span:after
 {
   opacity: 1;
   right: 0;
 }
+
 
 @media screen
 and (max-width: 640px) {
