@@ -30,3 +30,5 @@ function changeTheTheme(n){
   }
 
 }
+
+changetheme(theme);
