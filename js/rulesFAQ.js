@@ -31,4 +31,4 @@ function changeTheTheme(n){
 
 }
 
-changetheme(theme);
+changeTheTheme(theme);
