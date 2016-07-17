@@ -30,5 +30,5 @@ function changeTheTheme(n){
   }
 
 }
-
+var theme = sessionStorage.getItem('theme');
 changeTheTheme(theme);
