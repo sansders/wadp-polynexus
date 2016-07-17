@@ -21,7 +21,6 @@
 		        crossorigin="anonymous"></script>
 			<script>
 			var theme = sessionStorage.getItem('theme');
-				changeTheTheme(theme);
 
 			function hidecontent(){
 				div1 = document.getElementById('rules1');
@@ -46,7 +45,7 @@
     }
 			</script>
 		</head>
-		<body onload="hidecontent()">
+		<body onload="hidecontent(); changeTheTheme(theme);">
 			<h1>polyNexus</h1>
 			<div class="intro">
 				<h2>Rules of polyNexus</h2>
