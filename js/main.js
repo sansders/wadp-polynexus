@@ -1,4 +1,4 @@
-var user = '111111a';
+var user;
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){

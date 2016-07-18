@@ -4,25 +4,27 @@
       "username":"タンさん",
       "lang": "jp",
       "groupchats": ["anime" , "basketballers"],
-      "privatechats":["123456a"],
+      "privatechats":["123456a", "111111a"],
       "theme": "mono"
     },
     "123456a":{
       "username":"john lim",
       "lang": "en",
       "groupchats": ["CSIT scholarship","Gardening"],
-      "privatechats": ["161714f"]
+      "privatechats": ["161714f","111111a"]
     },
     "111111a":{
       "username":"小明",
+      "lang":"cn",
       "groupchats": ["Chinese Club","Gardening"],
-      "lang":"cn"
+      "privatechats": ["161714f", "123456a"]
     },
     "160280x":{
       "username": "baguette matte",
       "lang": "fr",
       "groupchats": ["French Midgets","Lolicons","Crossdressing"],
-      "theme": "pink"
+      "theme": "pink",
+      "privatechats": ["161714f"]
     }
   }
 }
