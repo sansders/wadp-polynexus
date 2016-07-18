@@ -1,8 +1,7 @@
 var xmlhttp= new XMLHttpRequest();
 xmlhttp.open("GET", "data/data.json", false);
 xmlhttp.send();
-var xmlDoc = JSON.parse(xmlhttp.responseText);
-
+var xmlDoc = JSON.parse(xmlhttp.responseText)
 function login(){
   var input = document.getElementById('usernameinput').value;
   input = input.toLowerCase();
@@ -16,8 +15,8 @@ function login(){
     sessionStorage.setItem('username' , username);
     sessionStorage.setItem('language' , language);
     sessionStorage.setItem('userid', input);
-    sessionStorage.setItem('groupchats', groupchats);
-    sessionStorage.setItem('privatechats', privatechats);
+    sessionStorage.setItem('groupchats', JSON.stringify(groupchats));
+    sessionStorage.setItem('privatechats', JSON.stringify(privatechats));
     sessionStorage.setItem('theme', theme);
     document.location = "main.html"
   }

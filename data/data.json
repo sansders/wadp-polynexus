@@ -10,16 +10,18 @@
     "123456a":{
       "username":"john lim",
       "lang": "en",
-      "groupchats": ["CSIT scholarship", "Gardening"],
+      "groupchats": ["CSIT scholarship","Gardening"],
       "privatechats": ["161714f"]
     },
     "111111a":{
       "username":"小明",
+      "groupchats": ["Chinese Club","Gardening"],
       "lang":"cn"
     },
     "160280x":{
       "username": "baguette matte",
       "lang": "fr",
+      "groupchats": ["French Midgets","Lolicons","Crossdressing"],
       "theme": "pink"
     }
   }

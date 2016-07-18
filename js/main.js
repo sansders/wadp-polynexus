@@ -26,8 +26,8 @@ $(document).ready(function(){
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
-
-	events1();
+    loadChats();
+	  events1();
   }
 
 });
@@ -102,4 +102,29 @@ function goRule(){
  function events2(){
 	$('#events-1').hide();
 	$('#events-2').show();
+}
+
+
+
+function loadChats(){
+  //function will load chats from json file.
+  var grpchat = JSON.parse(sessionStorage.getItem('groupchats'));
+  var privchat = JSON.parse(sessionStorage.getItem('privatechats'));
+
+  for(var i=0; i<grpchat.length; i++){
+      var li = document.createElement('LI');
+      var h3 = document.createElement('H3');
+      var p = document.createElement('P');
+      var time = document.createElement('P');
+      p.className = "textchat";
+      time.className = "timestamp";
+      p.innerHTML = "placeholder: i am a placeholder";
+      time.innerHTML = "13:13";
+
+      h3.innerHTML = grpchat[i];
+      li.appendChild(h3);
+      li.appendChild(p);
+      li.appendChild(time);
+      document.getElementById('chatul').insertBefore(li, addchat);
+  }
 }
