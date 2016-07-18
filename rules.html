@@ -9,7 +9,6 @@
 			<link rel="stylesheet" href="css/rulesstylesheet.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-			<script src="js/rulesFAQ.js"></script>
 			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 			<script
 		        src="https://code.jquery.com/jquery-1.12.4.js"
@@ -43,9 +42,33 @@
         div.style.display = "block";
       }
     }
+	
+	
+	
+	<!-- Sean look here 18/7 Monday -->
+	function themechanger(){
+    if (theme == "pink") {
+	var sheet = document.createElement('style');
+    console.log("Attempting to change theme to pink");
+	sessionStorage.setItem("theme","pink");
+    sheet.innerHTML = "button {background-color:rgba(255,105,180,1);} button:hover{background-color: rgba(255,150,180,0.4);} h1 {background-color: rgba(255,255,255,0.7); color:black;} body {background-image: url(img/3pink.jpg);} .intro h2{color:rgba(0,0,0,0.8);} .intro p{color:rgba(0,0,0,0.8)}";
+    document.body.appendChild(sheet);
+    console.log("Theme changed to pink");
+	}
+	else if (theme == "classic"){
+	var sheet = document.createElement('style');
+    console.log("Attempting to change theme to classic");
+	sessionStorage.setItem("theme","classic");
+    sheet.innerHTML = "button{background-color: rgba(0, 76, 159, 0.7);} button:hover{background-color: rgba(0, 76, 159, 0.4);} h1 {background-color: rgba(0, 76, 159, 0.7);} body {background-image: url(img/3classic.jpg);} .intro h2{color:rgba(255,255,255,1);} .intro p{color:rgba(255,255,255,1)}";
+    document.body.appendChild(sheet);
+    console.log("Theme changed to classic");
+	}
+  }
+  
+  
 			</script>
 		</head>
-		<body onload="hidecontent();">
+		<body onload="hidecontent(); themechanger()"> <!-- Sean look here 18/7 Monday -->
 			<h1>polyNexus</h1>
 			<div class="intro">
 				<h2>Rules of polyNexus</h2>
