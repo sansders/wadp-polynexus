@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/adminportalstylesheet.css" type="text/css" />
+		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome-animation.min.css" type="text/css" />
+		<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+		<script
+			src="https://code.jquery.com/jquery-1.12.4.js"
+			integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+			crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+			integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+			crossorigin="anonymous"></script>
+		<script src="js/smoothscroll.js"></script>
+	</head>
+	<body>
+		<div id="nav">
+			<h1 id="titlebar">polyNexus</h1>
+			<nav class="navbar">
+				<ul class="navbarlist">
+					<li>
+						<a href="#tabs-1"  id="tab-1">Users</a>
+					</li>
+					<li>
+						<a href="#tabs-2" id="tab-2">Filter</a>
+					</li>
+					<li>
+						<a href="#tabs-3" id="tab-3">Stats</a>
+					</li>
+					<li>
+						<a onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="content-container-container">
+			<div class="content-container" id="users">
+				<div class="content-left">
+					<div class="label">
+						<p>Users</p>
+					</div>
+				</div>
+				<div class="content-right">
+					<div class="content">
+						<div class="content-title">
+							<p>Banned List</p>
+						</div>
+						<div class="content-content">
+							<p>Matt <button>Remove</button></p>
+						</div>
+					</div>
+					<div class="content">
+						<div class="content-title">
+							<p>Users info</p>
+						</div>
+						<div class="content-content">
+							<p>JZ</p><button>Ban</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-container" id="filter">
+				<div class="content-left">
+					<div class="label">
+						<p>Filter</p>
+					</div>
+				</div>
+				<div class="content-right">
+					<div class="content">
+						<div class="content-title">
+							<p>Add Word</p>
+						</div>
+						<div class="content-content">
+							<input type="text">
+						</div>
+					</div>
+					<div class="content">
+						<div class="content-title">
+							<p>Filter List (Banned words)</p>
+						</div>
+						<div class="content-content">
+							<ul>
+								<li>Fuck</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-container" id="stats">
+				<div class="content-left">
+					<div class="label">
+						<p>Stats</p>
+					</div>
+				</div>
+				<div class="content-right">
+					<div class="content">
+						<div class="content-title">
+							<p>Users info</p>
+						</div>
+						<div class="content-content">
+							<p>JZ</p><button>Ban</button>
+						</div>
+					</div>
+					<div class="content">
+						<div class="content-title">
+							<p>Users info</p>
+						</div>
+						<div class="content-content">
+							<p>JZ</p><button>Ban</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html

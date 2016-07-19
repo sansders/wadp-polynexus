@@ -1,0 +1,123 @@
+*
+{
+  margin: 0;
+}
+
+html,body
+{
+  font-family: 'Exo', sans-serif;
+}
+
+/* Navigation Bar */
+
+h1
+{
+  width: 100%;
+  background-color: rgba(0, 76, 159, 0.7);
+  color: white;
+  padding-left: 5%;
+  position:fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 100;
+  top: 0;
+}
+
+.navbarlist
+{
+  position: fixed;
+  top: 0;
+  left: 45%;
+  z-index: 101;
+}
+
+.navbarlist li
+{
+  padding: 23px 15px;
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  right: 1%;
+  transition: background, 0.5s;
+}
+
+.navbarlist 
+{
+	overflow: hidden;
+	width:100%;
+}
+
+.navbarlist li a
+{
+  padding: 20px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+
+}
+
+.navbarlist li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+/* Content Container */
+
+.content-container-container
+{
+	position: relative;
+	top: 52px;
+	width: 100%;
+	background-color: green;
+}
+
+.content-container
+{
+	width: 100%;
+	height: 50%;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: red;
+}
+
+.content-left
+{
+	width: 20%;
+	height: 100%;
+	float: left;
+	background-color: orange;
+}
+
+.content-right
+{
+	width: 80%;
+	height: 100%;
+	float: right;
+	background-color: pink;
+}
+
+.content
+{
+	width: 50%;
+	height: 100%;
+	float: right;
+	background-color: purple;
+}
+
+.label
+{
+	font-size: 24px;
+	border-bottom: 2px solid black;
+}
+
+.content-title
+{
+	height: 10%;
+	width: 100%;
+	padding: 20px;
+}
+
+.content-content
+{
+	padding: 20px;
+}
