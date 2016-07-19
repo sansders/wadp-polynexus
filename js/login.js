@@ -25,7 +25,7 @@ function login(){
       alert('Invalid User');
     }
     else{
-      alert('error');
+      alert(err.name);
     }
   }
 
