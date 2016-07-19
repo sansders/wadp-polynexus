@@ -9,6 +9,7 @@
 			<link rel="stylesheet" href="css/rulesstylesheet.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.css" type="text/css" />
 			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 			<script
 		        src="https://code.jquery.com/jquery-1.12.4.js"
@@ -18,6 +19,7 @@
 		        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
 		        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
 		        crossorigin="anonymous"></script>
+			<script src="js/rulesFAQ.js"></script>
 			<script>
 			var theme = sessionStorage.getItem('theme');
 
@@ -42,9 +44,9 @@
         div.style.display = "block";
       }
     }
-	
-	
-	
+
+
+
 	function themechanger(){
     if (theme == "pink") {
 	var sheet = document.createElement('style');
@@ -71,12 +73,29 @@
     console.log("Theme changed to mono");
 	}
   }
-  
-  
+
+
 			</script>
 		</head>
 		<body onload="hidecontent(); themechanger()"> <!-- Sean look here 18/7 Monday -->
 			<h1>polyNexus</h1>
+			<ul class="navbarlist">
+		    <li>
+		      <a href="main.html#tabs-1"  id="tab-1">Chats</a>
+		    </li>
+		    <li>
+		      <a href="main.html#tabs-2" id="tab-2">Events</a>
+		    </li>
+		    <li>
+		      <a href="main.html#tabs-3" id="tab-3">Settings</a>
+		    </li>
+		    <li>
+		      <a onclick="goBlog()" id="tab-4">Blog</a>
+		    </li>
+		    <li>
+		      <a onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		    </li>
+		  </ul>
 			<div class="intro">
 				<h2>Rules of polyNexus</h2>
 					<p>
@@ -128,7 +147,7 @@
 				<button onclick="contentshow('rules3')"><span>Chat rules</span></button>
 				<div id="rules3">
 						<p>Do not spam in message groups or in private messages.</p>
-						
+
 						<p>Private messages are meant to be private between sender and recipient, hence the content of such messages is unmonitored. You may send referral links and such to friends if appropriate, but sending these to strangers may get you blocked by them.</p>
 
 						<p>Linking to malware/adware/spyware/software of malicious intent is not allowed. This includes shock sites. A shock site is a website that is intended to be offensive, disgusting, or disturbing to its viewers. </p>

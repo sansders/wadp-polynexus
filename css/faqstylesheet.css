@@ -31,7 +31,41 @@ h1
 	z-index: 100;
 }
 
+.navbarlist
+{
+  position: fixed;
+  margin:0;
+  left: 45%;
+  z-index: 101;
+}
 
+.navbarlist li
+{
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  right: 1%;
+  transition: background, 0.5s;
+  padding:23px;
+}
+
+.navbarlist {
+	overflow: hidden;
+	width:100%;
+}
+
+.navbarlist li a
+{
+  padding:25px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.navbarlist li:hover
+{
+  background-color: rgba(0, 76, 159, 0.7);
+}
 .intro
 {
 	padding-top:60px;
@@ -41,7 +75,7 @@ h1
 }
 .intro h2
 {
-  font-size: 70px;
+  font-size: 69px;
   text-align:center;
 }
 

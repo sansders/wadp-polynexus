@@ -5,6 +5,7 @@
 		<head>
 			<title>polyNexus FAQ</title>
 			<link rel="stylesheet" href="css/faqstylesheet.css" type="text/css" />
+			<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.css" type="text/css" />
 			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 			<meta name="viewport" content="width=device-width" />
@@ -16,6 +17,7 @@
 		        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
 		        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
 		        crossorigin="anonymous"></script>
+			<script src="js/rulesFAQ.js"></script>
 			<script>
 			var theme = sessionStorage.getItem('theme');
 			function hidecontent(){
@@ -43,7 +45,7 @@
 
 			}
 		}
-		
+
 			function themechanger(){
     if (theme == "pink") {
 	var sheet = document.createElement('style');
@@ -74,6 +76,23 @@
 		</head>
 		<body onload="hidecontent(); themechanger()">
 			<h1>polyNexus</h1>
+		  <ul class="navbarlist">
+		    <li>
+		      <a href="main.html#tabs-1"  id="tab-1">Chats</a>
+		    </li>
+		    <li>
+		      <a href="main.html#tabs-2" id="tab-2">Events</a>
+		    </li>
+		    <li>
+		      <a href="main.html#tabs-3" id="tab-3">Settings</a>
+		    </li>
+		    <li>
+		      <a onclick="goBlog()" id="tab-4">Blog</a>
+		    </li>
+		    <li>
+		      <a onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		    </li>
+		  </ul>
 			<div class="intro">
 				<h2>FAQ</h2>
 					<p>
