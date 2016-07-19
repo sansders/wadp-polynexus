@@ -127,6 +127,22 @@ function loadChats(){
       li.appendChild(time);
       document.getElementById('chatul').insertBefore(li, addchat);
   }
+  for(var x=0; x<privchat.length; x++){
+    var li1 = document.createElement('LI');
+    var h31 = document.createElement('H3');
+    var p1 = document.createElement('P');
+    var time1 = document.createElement('P');
+    p1.className = "textchat";
+    time1.className = "timestamp";
+    p1.innerHTML = "placeholder: i am a placeholder";
+    time1.innerHTML = "13:13";
+
+    h31.innerHTML = privchat[i];
+    li1.appendChild(h31);
+    li1.appendChild(p1);
+    li1.appendChild(time1);
+    document.getElementById('chatul').insertBefore(li1, addchat);
+  }
 }
 
 
