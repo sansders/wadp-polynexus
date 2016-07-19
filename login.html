@@ -18,8 +18,8 @@
         src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
         crossorigin="anonymous"></script>
-  <script src="js/login.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/adminlogin.js"></script>
+
   <script>
     function contentshow(content)
     {
@@ -36,31 +36,30 @@
   <title>polyNexus</title>
 </head>
 <body>
+
+<ul>
+
+<li>
 <div id="logo">
-  <p>polyNexus</p>
+  <p>polyNexus <br /> admin portal </p>
 </div>
-<div class="line">
-</div>
+</li>
+
+<li>
 <div class="fields">
+
   <button onclick="contentshow('loginfield')"><span>Log In</span></button>
   <div id="loginfield">
     <input type="text" id="usernameinput" required placeholder="Username"/>
     <br />
     <input type="password" required placeholder="Password"/>
     <br />
-    <button class="button" onclick="login()"><span>Login</span></button>
+    <button class="buttontwo" onclick="login()"><span>Login</span></button>
   </div>
   <br />
-  <button onclick="contentshow('signupfield')"><span>Sign Up</span></button>
-  <div id="signupfield">
-	<input type="text" placeholder="NYP email" />
-	<br />
-    <input type="password" placeholder="Password" />
-    <br />
-    <input type="password" placeholder="Retype Password" />
-    <br />
-    <button class="button"><span>Create Account</span></button>
-  </div>
+</li>
+
+</ul> 
 </div>
 </body>
 </html>
