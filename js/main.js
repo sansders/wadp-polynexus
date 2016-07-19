@@ -8,7 +8,7 @@ $(document).ready(function(){
   if(user === null){
     window.location = 'index.html';
   }
-  else{
+  else{ 
     $(function() {
       $("#tabs").tabs();
     });
@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
     $(function() {
       $("#events").tabs();
-    });
+    }); 
     var theme = sessionStorage.getItem('theme');
     var language = sessionStorage.getItem('language');
     changetheme(theme);
@@ -28,7 +28,7 @@ $(document).ready(function(){
     xmlDoc = JSON.parse(xmlhttp.responseText);
     loadChats();
 	  events1();
-  }
+  } 
 
 });
 

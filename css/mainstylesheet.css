@@ -83,7 +83,7 @@ h1
   width: 20%;
   height: 100%;
   border: solid 1px #dcdcdc;
-  overflow: auto;
+  overflow: scroll;
   border-collapse: collapse;
 
 
