@@ -66,9 +66,8 @@ h1
 .content-container-container
 {
 	position: relative;
-	top: 52px;
+	top: 72px;
 	width: 100%;
-	background-color: green;
 }
 
 .content-container
@@ -76,8 +75,7 @@ h1
 	width: 100%;
 	height: 50%;
 	margin: 0 auto;
-	margin-top: 20px;
-	background-color: red;
+	border-bottom: 1px solid black;
 }
 
 .content-left
@@ -85,7 +83,6 @@ h1
 	width: 20%;
 	height: 100%;
 	float: left;
-	background-color: orange;
 }
 
 .content-right
@@ -93,15 +90,14 @@ h1
 	width: 80%;
 	height: 100%;
 	float: right;
-	background-color: pink;
 }
 
 .content
 {
-	width: 50%;
+	width: 49.9%;
 	height: 100%;
 	float: right;
-	background-color: purple;
+	border-left: 1px solid black;
 }
 
 .label
