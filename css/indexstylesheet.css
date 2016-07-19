@@ -25,6 +25,13 @@ h1
  height: auto;
 }
 
+a:focus {
+outline: 0;
+}
+a{
+  outline: 0;
+
+}
 .opacity
 {
   webkit-filter: opacity(50%);
