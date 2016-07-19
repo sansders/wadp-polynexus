@@ -1,4 +1,4 @@
-/*var user;
+var user;
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
 $(document).ready(function(){
@@ -8,7 +8,7 @@ $(document).ready(function(){
   if(user === null){
     window.location = 'index.html';
   }
-  else{ */
+  else{
     $(function() {
       $("#tabs").tabs();
     });
@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
     $(function() {
       $("#events").tabs();
-    }); /*
+    });
     var theme = sessionStorage.getItem('theme');
     var language = sessionStorage.getItem('language');
     changetheme(theme);
@@ -30,7 +30,7 @@ $(document).ready(function(){
 	  events1();
   } 
 
-}); */
+});
 
 function changeUsername(){
   //will contain two parts.
