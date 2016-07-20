@@ -145,8 +145,15 @@ function loadChats(){
   }
 }
 
-function addEvent(){
-	var div = document.createElement('div');
-	div.id = "newEvent";
-	div.innerHTML = "Hello testing";
-}
+/* function addEvent(){
+	var divA = document.createElement('div');
+	divA.innerHTML = "hello testing";
+	
+	document.getElementById('#inputeventname');
+	document.getElementById('#inputeventtype');
+	
+	divA.appendChild('#inputeventname');
+	document.getElementById('events-1').insertBefore(divA, events-9999);
+	
+	
+} */
