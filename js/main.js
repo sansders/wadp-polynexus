@@ -145,13 +145,8 @@ function loadChats(){
   }
 }
 
-
 function addEvent(){
 	var div = document.createElement('div');
 	div.id = "newEvent";
 	div.innerHTML = "Hello testing";
-
-
-
-
 }

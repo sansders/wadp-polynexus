@@ -33,7 +33,7 @@ $(document).ready(function() {
 					sheet.innerHTML = ".navbarlist li:hover {background-color: rgba(0, 76, 159, 0.7);} .navbar-container h1{  background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .navbarlist li a{color: white} .footerlist li:hover {background-color: rgba(0, 76, 159, 0.7);} footer{background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .footerlist li a{color: white}" ;
 					document.body.appendChild(sheet);
 					break;
-					
+
 	}
 });
 
