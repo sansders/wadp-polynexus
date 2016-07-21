@@ -146,17 +146,19 @@ function loadChats(){
 }
 
 function addEvent(){
-	var divA = document.createElement('div');
-	var pA = document.createElement('p')
-	pA.innerHTML = "hello testing";
+	var liA = document.createElement('li');
 	
-	var eventnameA = document.getElementById('#inputeventname');
-	document.getElementById('#inputeventtype');
+	var pA = document.createElement('p');
+	var eventnameA = document.getElementById('inputeventname').value;
+	var eventtypeA = document.getElementById('inputeventtype').value;
 	
-	pA.appendChild('eventnameA');
-	pA.appendChild('#inputeventtype');
-	divA.appendChild(pA);
-
-	document.getElementById('events').insertBefore(divA, firstEvent);
-	document.getElementById('chatul').insertBefore(pA, firstEvent);
-]
+	var textnode0 = document.createTextNode(eventnameA);
+	var textnode1 = document.createTextNode(eventtypeA);
+	
+	pA.appendChild(textnode0);
+	pA.appendChild(textnode1);
+	liA.appendChild(pA);
+	
+	var list= document.getElementById('eventsul');
+	list.insertBefore(liA, document.getElementById('addevent'));
+} 
