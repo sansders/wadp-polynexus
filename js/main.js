@@ -148,15 +148,26 @@ function loadChats(){
 function addEvent(){
 	var liA = document.createElement('li');
 	
-	var pA = document.createElement('p');
-	var eventnameA = document.getElementById('inputeventname').value;
-	var eventtypeA = document.getElementById('inputeventtype').value;
+	var h3A = document.createElement('h3');
+	var eventnameA = document.getElementById('inputeventname').value; 
+	
+	var h4A = document.createElement('h4');
+	var eventtypeA = document.getElementById('inputeventtype').value; 
+	
+	var pA = document.createElement('p')
+	var timeAndVenueA = document.getElementById('inputeventtime').value;
+	var timeAndVenueB = document.getElementById('inputeventvenue').value;
 	
 	var textnode0 = document.createTextNode(eventnameA);
 	var textnode1 = document.createTextNode(eventtypeA);
+	var textnode2 = document.createTextNode(timeAndVenueA + " at " + timeAndVenueB);
 	
-	pA.appendChild(textnode0);
-	pA.appendChild(textnode1);
+	h3A.appendChild(textnode0);
+	h4A.appendChild(textnode1);
+	pA.appendChild(textnode2);
+	
+	liA.appendChild(h3A);
+	liA.appendChild(h4A);
 	liA.appendChild(pA);
 	
 	var list= document.getElementById('eventsul');
