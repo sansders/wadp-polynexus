@@ -1,6 +1,6 @@
 $(document).ready(function() {
 $(document).profanityFilter({
-    externalSwears: '../data/badWords.json',
+    customSwears:['fuck', 'bastion'],
     replaceWith: ['(>.<)'],
 });
 });
