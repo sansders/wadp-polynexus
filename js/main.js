@@ -147,13 +147,17 @@ function loadChats(){
 
 /* function addEvent(){
 	var divA = document.createElement('div');
-	divA.innerHTML = "hello testing";
+	var pA = document.createElement('p')
+	pA.innerHTML = "hello testing";
 	
-	document.getElementById('#inputeventname');
+	var eventnameA = document.getElementById('#inputeventname');
 	document.getElementById('#inputeventtype');
 	
-	divA.appendChild('#inputeventname');
-	document.getElementById('events-1').insertBefore(divA, events-9999);
-	
+	pA.appendChild('eventnameA');
+	pA.appendChild('#inputeventtype');
+	divA.appendChild(pA);
+
+	document.getElementById('events').insertBefore(divA, firstEvent);
+	document.getElementById('chatul').insertBefore(pA, firstEvent);
 	
 } */
