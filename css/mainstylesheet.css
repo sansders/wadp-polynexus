@@ -361,6 +361,12 @@ button:hover span:after
 	border-radius: 5px;
 	width: 500px;
 	margin-top: -20px;
+
+}
+
+.inputeventdetails span{
+	margin-left: 10px;
+
 }
 
 .inputeventdetails input, textarea{
