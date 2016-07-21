@@ -64,7 +64,7 @@
     document.body.appendChild(sheet);
     console.log("Theme changed to classic");
 	}
-	else {
+	else if (theme == "mono"){
 	var sheet = document.createElement('style');
     console.log("Attempting to change theme to mono");
 	sessionStorage.setItem("theme","mono");
@@ -72,6 +72,7 @@
     document.body.appendChild(sheet);
     console.log("Theme changed to mono");
 	}
+	else console.log("Invalid theme");
   }
 
 
