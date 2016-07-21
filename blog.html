@@ -176,16 +176,15 @@
 							</div>
 						</div>
 					</li>
-					<!-- Posted Article with Written and Preview -->
 				</ul>
 				<!-- Button -->
 				<div class="button-container">
-					<button type="button" class="button">More Post...</button>
+					<button><span>More Post...</span></button>
 				</div>
 			</div>
 			<!-- Side Navigation -->
 			<div id="navigation-side-left">
-				<button type="button" class="button" id="newblog">Create New Blog</button>
+				<button id="newblog"><span>Create New Blog</span></button>
 			</div>
 			<div id="navigation-side-right">
 			</div>
@@ -206,16 +205,13 @@
 						<input type="text" placeholder="Subtitle" id="Subtitle" class="forminput" onfocusout="wordcheck(this.id)"><br>
 
 						Image URL: <br>
-						<input type="url" placeholder="http://www.google.com/" id="Image" class="forminput"><br><br>OR<br><br>
-
-						Image file location:
-						<input type="file" name="img" accept="image/*" id="File"><br>
+						<input type="url" placeholder="http://www.google.com/" id="Image" class="forminput"><br>
 
 						Article: <br>
 						<textarea rows="2" cols="100" id="Article" placeholder="Article" class="forminput" onfocusout="wordcheck(this.id)"></textarea><br>
 
-						<input class="sbutton" type="reset" value="Reset" id="afterpressjavascriptdoesnotwork">
-						<button class="sbutton" onclick="verify(); creatingDiv(); posting(); showtime();">Submit</button>
+						<button class="sbutton" type="reset" id="afterpressjavascriptdoesnotwork"><span>Reset</span></button>
+						<button class="sbutton" onclick="verify(); creatingDiv(); posting(); showtime();"><span>Submit</span></button>
 						</p>
 					</form>
 				</div>
