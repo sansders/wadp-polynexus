@@ -73,7 +73,7 @@ function changetheme(n){
     var sheet = document.createElement('style');
     sheet.innerHTML = ".navbarlist li:hover {background-color: rgba(0, 76, 159, 0.7);} h1{  background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  rgba(0, 76, 159, 0.7);} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border 1px solid dcdcdc;} button:hover{background-color: rgba(30, 172, 253, 1);}" ;
     document.body.appendChild(sheet);
-	sessionStorage.setItem("theme","pink");
+	sessionStorage.setItem("theme","classic");
   }
 
 }
@@ -148,12 +148,12 @@ function loadChats(){
 /* function addEvent(){
 	var divA = document.createElement('div');
 	divA.innerHTML = "hello testing";
-	
+
 	document.getElementById('#inputeventname');
 	document.getElementById('#inputeventtype');
-	
+
 	divA.appendChild('#inputeventname');
 	document.getElementById('events-1').insertBefore(divA, events-9999);
-	
-	
+
+
 } */
