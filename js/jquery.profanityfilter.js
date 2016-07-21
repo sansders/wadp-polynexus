@@ -142,7 +142,7 @@
                     badWords = readJsonFromController(options.externalSwears);
                 }
                 if (options.customSwears !== null) {
-                    badWords = badWords.concat(options.customSwears).unique();
+                    badWords = badWords.concat(options.customSwears).uniqueSort();
                 }
             } else {
                 if (options.customSwears !== null) {
@@ -190,7 +190,7 @@
             }
 
             if (profane) {
-                options.profaneText(data.unique());
+                options.profaneText(data.uniqueSort());
             };
         });
     };
