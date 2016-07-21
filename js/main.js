@@ -146,8 +146,10 @@ function loadChats(){
 }
 
 function addEvent(){
+	/* Creating new li to store data in. 'A' variables will also be created below. */
 	var liA = document.createElement('li');
 	
+	/* Creating element types to store data in */
 	var h3A = document.createElement('h3');
 	var eventnameA = document.getElementById('inputeventname').value; 
 	
@@ -157,19 +159,24 @@ function addEvent(){
 	var pA = document.createElement('p')
 	var timeAndVenueA = document.getElementById('inputeventtime').value;
 	var timeAndVenueB = document.getElementById('inputeventvenue').value;
+	/* End of creating element types */
 	
+	/* Creating textnodes to store the element types stored in the variables */
 	var textnode0 = document.createTextNode(eventnameA);
 	var textnode1 = document.createTextNode(eventtypeA);
 	var textnode2 = document.createTextNode(timeAndVenueA + " at " + timeAndVenueB);
 	
+	/* Appending textnodes to 'A' variables to allow the element types to show */
 	h3A.appendChild(textnode0);
 	h4A.appendChild(textnode1);
 	pA.appendChild(textnode2);
 	
+	/* Appending 'A' variables into liA so it'll appear in #events */
 	liA.appendChild(h3A);
 	liA.appendChild(h4A);
 	liA.appendChild(pA);
 	
+	/* Putting #events above the 'Create an event' li, inside #eventsul */
 	var list= document.getElementById('eventsul');
 	list.insertBefore(liA, document.getElementById('addevent'));
 } 
