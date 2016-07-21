@@ -281,3 +281,7 @@ function changeImg(clicked_id) {
 		document.getElementById(clicked_id).src = "http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png";
 	}
 }
+
+function goBlog(){
+  window.location ="blog.html";
+}

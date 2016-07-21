@@ -1,6 +1,6 @@
 $(document).ready(function() {
 $(document).profanityFilter({
-    externalSwears: '../../wadp-polynexus/data/badWords.json',
+    externalSwears: '../data/badWords.json',
     replaceWith: ['(>.<)'],
 });
 });
