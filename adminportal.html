@@ -1,10 +1,14 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/adminportalstylesheet.css" type="text/css" />
+		<!-- Admin Portal Style Sheet -->
+		<link rel="stylesheet" href="css/adminportal.css" type="text/css" >
+		<!-- Font Awesome -->
 		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome-animation.min.css" type="text/css" />
+		<!-- Font -->
 		<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+		<!-- Jquery Javascript -->
 		<script
 			src="https://code.jquery.com/jquery-1.12.4.js"
 			integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
@@ -13,107 +17,98 @@
 			src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
 			integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
 			crossorigin="anonymous"></script>
+		<!-- Chart -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+		<!-- Smooth Scroll -->
 		<script src="js/smoothscroll.js"></script>
+		<!-- Javascript -->
 		<script src="js/adminPortal.js"></script>
 	</head>
 	<body>
-		<div id="nav">
-			<h1 id="titlebar">polyNexus</h1>
-			<nav class="navbar">
-				<ul class="navbarlist">
-					<li>
-						<a href="#users"  id="tab-1">Users</a>
-					</li>
-					<li>
-						<a href="#filter" id="tab-2">Filter</a>
-					</li>
-					<li>
-						<a href="#stats" id="tab-3">Stats</a>
-					</li>
-					<li>
-						<a onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
-					</li>
-				</ul>
-			</nav>
+		<!-- Main Navigation -->
+		<div id="sidenav">
+			<div id="title">
+				<h2>Admin Portal</h2>
+			</div>
+			<div>
+				<a href="#users" class="navbar"><i class="fa fa-users" aria-hidden="true"></i>Users</a>
+				<a href="#filter" class="navbar"><i class="fa fa-list" aria-hidden="true"></i>Word Filter</a>
+				<a href="#stats" class="navbar"><i class="fa fa-bar-chart" aria-hidden="true"></i>Statistics</a>
+			</div>
 		</div>
-		<div class="content-container-container">
-			<div class="content-container" id="users">
-				<div class="content-left">
+		<div id="right">
+			<!-- PolyNexus Title -->
+			<div id="nav">
+				<div id="h1">
+					<h1>polyNexus</h1>
+				</div>
+				<div>
+					<img src="" />
+				</div>
+			</div>
+			<!-- Main content -->
+			<div class="maincontent">
+				<!-- Users -->
+				<div id="users" class="individual">
 					<div class="label">
 						<p>Users</p>
 					</div>
 				</div>
-				<div class="content-right">
-					<div class="content">
-						<div class="content-title">
-							<p>Banned List</p>
-						</div>
-						<div class="content-content">
-							<p>Matt <button>Remove</button></p>
-						</div>
-					</div>
-					<div class="content">
-						<div class="content-title">
-							<p>Users info</p>
-						</div>
-						<div class="content-content">
-							<p>JZ</p><button>Ban</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="content-container" id="filter">
-				<div class="content-left">
+				<!-- Words Filter -->
+				<div id="filter" class="individual">
 					<div class="label">
-						<p>Filter</p>
-					</div>
-				</div>
-				<div class="content-right">
-					<div class="content">
-						<div class="content-title">
-							<p>Add Word</p>
-						</div>
-						<div class="content-content">
-							<input type="text">
-						</div>
+						<p>Words Filter</p>
 					</div>
 					<div class="content">
-						<div class="content-title">
-							<p>Filter List (Banned words)</p>
-						</div>
-						<div class="content-content">
-							<ul>
-								<li>Fuck</li>
-							</ul>
-						</div>
+						<p>Banned words</p>
+						<ul>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-			<div class="content-container" id="stats">
-				<div class="content-left">
+				<!-- Statistics -->
+				<div id="stats" class="individual">
 					<div class="label">
-						<p>Stats</p>
+						<p>Statistics</p>
 					</div>
-				</div>
-				<div class="content-right">
+					<!-- Pie Chart -->
 					<div class="content">
-						<div class="content-title">
-							<p>Users info</p>
-						</div>
-						<div class="content-content">
-							<p>JZ</p><button>Ban</button>
-						</div>
+						<h2>People's Most Used</h2>
+						<p>Subtitle</p>
+						<canvas id="mostUsed" width="400" height="400"></canvas>
 					</div>
+					<!-- Line Graph -->
 					<div class="content">
-						<div class="content-title">
-							<p>Users info</p>
-						</div>
-						<div class="content-content">
-							<p>JZ</p><button>Ban</button>
-						</div>
+						<h2>Number of visitors</h2>
+						<p>Subtitle</p>
+						<canvas id="visitors" width="600" height="400"></canvas>
 					</div>
+					<!-- Chart Javascript -->
+					<script src="js/stats.js"></script>
 				</div>
+				<!-- Footer -->
+				<footer>
+					<ul>
+						<li><a href="">Main</a></li>
+						<li><a href="">Chat</a></li>
+						<li><a href="">Setting</a></li>
+						<li><a href="">Blog</a></li>
+					</ul>
+				</footer>
 			</div>
 		</div>
 	</body>
-</html
+</html>
