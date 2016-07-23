@@ -179,4 +179,33 @@ function addEvent(){
 	/* Putting #events above the 'Create an event' li, inside #eventsul */
 	var list= document.getElementById('eventsul');
 	list.insertBefore(liA, document.getElementById('addevent'));
-} 
+	
+
+	
+	var divB = document.createElement('div');
+	
+	var h2B = document.createElement('h2');
+	var eventNameB = document.getElementById('inputeventname').value;
+	
+	var h4B = document.createElement('h4');
+	var eventDateB = document.getElementById('inputeventdate').value;
+	var eventTimeB = document.getElementById('inputeventtime').value;
+	
+	var pB = document.createElement('p');
+	var eventDescriptionB = document.getElementById('inputeventdescription').value;
+	
+	var textnode0 = document.createTextNode(eventNameB);
+	var textnode1 = document.createTextNode(eventDateB + eventTimeB);
+	var textnode2 = document.createTextNode(eventDescriptionB);
+	
+	h2B.appendChild(textnode0);
+	h4B.appendChild(textnode1);
+	pB.appendChild(textnode2);
+	
+	divB.appendChild(h2B);
+	divB.appendChild(h4B);
+	divB.appendChild(pB);
+	
+	
+	
+}
