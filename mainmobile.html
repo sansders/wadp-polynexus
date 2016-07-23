@@ -28,7 +28,7 @@
   <script src="js/main.js"></script>
   <script>
     function nextPageIsChats(){
-	$('#eventlist').hide();
+	$('#eventsul').hide();
 	$('#events-1').hide();
 	$('#events-2').hide();
 			
@@ -53,7 +53,7 @@
 	$('#setting-4').hide();
 	$('#setting-5').hide();
 	
-	$('#eventlist').show();
+	$('#eventsul').show();
 	$('#events-1').hide();
 	$('#events-2').hide();
 }	
@@ -68,7 +68,7 @@
 		$('#setting-4').hide();
 		$('#setting-5').hide();
 	
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').show();
 		$('#events-2').hide();
 		}
@@ -83,7 +83,7 @@
 		$('#setting-4').hide();
 		$('#setting-5').hide();
 	
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').hide();
 		$('#events-2').show();
 		}
@@ -98,7 +98,7 @@
 	$('#setting-4').hide();
 	$('#setting-5').hide();
 	
-	$('#eventlist').hide();
+	$('#eventsul').hide();
 	$('#events-1').hide();
 	$('#events-2').hide();
 }	
@@ -113,7 +113,7 @@
 		$('#setting-4').hide();
 		$('#setting-5').hide();
 		
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').hide();
 		$('#events-2').hide();
 		}
@@ -128,7 +128,7 @@
 		$('#setting-4').hide();
 		$('#setting-5').hide();
 		
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').hide();
 		$('#events-2').hide();
 		}
@@ -143,7 +143,7 @@
 		$('#setting-4').hide();
 		$('#setting-5').hide();
 		
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').hide();
 		$('#events-2').hide();
 		}
@@ -158,7 +158,7 @@
 		$('#setting-4').show();
 		$('#setting-5').hide();
 		
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').hide();
 		$('#events-2').hide();
 		}
@@ -173,7 +173,7 @@
 		$('#setting-4').hide();
 		$('#setting-5').show();
 		
-		$('#eventlist').hide();
+		$('#eventsul').hide();
 		$('#events-1').hide();
 		$('#events-2').hide();
 		}
@@ -245,7 +245,7 @@
 	<div id="tabs-2" class="tabs">
 	
 	<div id="events">
-    <ul class="currenteventlist" id="eventlist">
+    <ul class="currenteventsul" id="eventsul">
       <li>
         <h2>Events</h2>
         <p class="textchat" id="eventsdesc">
@@ -278,17 +278,17 @@
 		</div> 
 
 		<div id="events-2" class="activetab">
-		<form method="post" action="">
+		
 			<h4 class="inputeventdetails">
-			&nbsp;&nbsp;Event Name:	<br/><input type="text" id="inputeventname" /> <br/>
-			&nbsp;&nbsp;Event Type:<br/><input type="text" placeholder="Gathering, Party etc." id="inputeventtype" /><br/>
-			&nbsp;&nbsp;Date:<br/><input type="date" id="inputeventdate" placeholder="dd/mm/yyy" /> <br/>
-			&nbsp;&nbsp;Time:<br/><input type="time" id="inputeventtime" /><br/>
-			&nbsp;&nbsp;Venue:<br/><input type="text" id="inputeventvenue"/><br/>
-			&nbsp;&nbsp;Event description:<br/><textarea rows="4" cols="35" id="inputeventdescription"></textarea> <br/>
-			&nbsp;<input type="submit" id="submiteventButton" value="Submit!" />
+			<span>Event Name:</span>	<br/><input type="text" id="inputeventname" /> <br/>
+			<span>Event Type:</span><br/><input type="text" placeholder="Gathering, Party etc." id="inputeventtype" /><br/>
+			<span>Date:</span><br/><input type="date" id="inputeventdate" placeholder="dd/mm/yyy" /> <br/>
+			<span>Time:</span><br/><input type="time" id="inputeventtime" /><br/>
+			<span>Venue:</span><br/><input type="text" id="inputeventvenue"/><br/>
+			<span>Event description:</span><br/><textarea rows="4" cols="35" id="inputeventdescription"></textarea> <br/>
+			<input type="submit" id="submiteventButton" value="Submit!" onclick="addEvent(), nextPageIsEvents()" />
 			</h4>
-		</form>
+		
 		</div> 
 
 	</div>
