@@ -100,55 +100,59 @@
         <i class="fa fa-plus-square-o" aria-hidden="true"></i>Create an event</a></li>
     </ul>
 	</div>
-		<div id="events-1" class="activetab">
-		<h2><i class="eventtitle" aria-hidden="true"></i> Making pot brownies </h2>
-		<br/>
-		<br/>
-		<h4 class="eventdetails"> Date: 29/2/2017<br/> Time: 19:00 <br/> Venue: Jz's house</h4>
-		<br/>
-		<br/>
-		<p class="eventdescription"><b> Event description:</b>
-		<br/>
-		<br/>
-		Join me in my flowery adventures as I attempt to make hashbrowns with my home-grown, organic, cannabis! </p>
-		</div>
+	
+		<div id="primaryEventsPlace">
+		
+			<div id="events-1" class="activetab">
+			<h2><i class="eventtitle" aria-hidden="true"></i> Making pot brownies </h2>
+			<br/>
+			<br/>
+			<h4 class="eventdetails"> Date: 29/2/2017<br/> Time: 19:00 <br/> Venue: Jz's house</h4>
+			<br/>
+			<br/>
+			<p class="eventdescription"><b> Event description:</b>
+			<br/>
+			<br/>
+			Join me in my flowery adventures as I attempt to make hashbrowns with my home-grown, organic, cannabis! </p>
+			</div>
 
-		<div id="events-2" class="activetab">
-		<h2><i class="eventtitle" aria-hidden="true"></i> Organize an event </h2>
-		<br/>
-		<br/>
+			<div id="events-2" class="activetab">
+			<h2><i class="eventtitle" aria-hidden="true"></i> Organize an event </h2>
+			<br/>
+			<br/>
 
-			<h4 class="inputeventdetails">
+				<h4 class="inputeventdetails">
+				
+				<span>Event Name:</span>	
+					<br/>
+				<input type="text" id="inputeventname" /> 
+					<br/>
+				<span>Event Type:</span>	
+					<br/>
+				<input type="text" placeholder="Gathering, Party etc." id="inputeventtype" />
+					<br/>
+				<span>Date:</span>
+					<br/>
+				<input type="date" id="inputeventdate" placeholder="dd/mm/yyy" /> 
+					<br/>
+				<span>Time:</span>
+					<br/>
+				<input type="time" id="inputeventtime" />
+					<br/>
+				<span>Venue:</span>
+					<br/>
+					<input type="text" id="inputeventvenue"/>
+					<br/>
+				<span>Event description:</span>
+					<br/>
+					<textarea rows="4" cols="35" id="inputeventdescription"></textarea> 
+					<br/>
+				<input type="submit" id="submiteventButton" value="Submit!" onclick="addEvent()" />
+				</h4>
+
+			</div>
 			
-			<span>Event Name:</span>	
-				<br/>
-			<input type="text" id="inputeventname" /> 
-				<br/>
-			<span>Event Type:</span>	
-				<br/>
-			<input type="text" placeholder="Gathering, Party etc." id="inputeventtype" />
-				<br/>
-			<span>Date:</span>
-				<br/>
-			<input type="date" id="inputeventdate" placeholder="dd/mm/yyy" /> 
-				<br/>
-			<span>Time:</span>
-				<br/>
-			<input type="time" id="inputeventtime" />
-				<br/>
-			<span>Venue:</span>
-				<br/>
-				<input type="text" id="inputeventvenue"/>
-				<br/>
-			<span>Event description:</span>
-				<br/>
-				<textarea rows="4" cols="35" id="inputeventdescription"></textarea> 
-				<br/>
-			<input type="submit" id="submiteventButton" value="Submit!" onclick="addEvent()" />
-			</h4>
-
 		</div>
-
 </div>
 
 <div class="tabs" id="tabs-3">
