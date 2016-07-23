@@ -371,8 +371,7 @@ button:hover span:after
 	left: 10%;
 	width: 80%;
 	height: 100%;
-	background-image: url("http://www.animateit.net/data/media/august2009/space_bg.gif");
-	background-size: ;
+	background-image: url("../img/8.gif");
 	color: white;
 }
 
@@ -413,7 +412,7 @@ form
 .sbutton
 {
 	color: black;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 /* Footer */

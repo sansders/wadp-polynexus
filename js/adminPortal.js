@@ -1,7 +1,28 @@
+/*
+$(document).ready(function(){
+	$(document).profanityFilter({
+		customSwears:['fuck'],
+		replaceWith: ['(>.<)']
+	});
+}); 
+
+$(document).ready(function() {
+	user = sessionStorage.getItem('username');
+	if(user === null){
+		window.location = 'adminlogin.html';
+	}
+});
+
+function logout(){
+  window.location.replace('adminlogin.html');
+  sessionStorage.removeItem('username');
+  sessionStorage.removeItem('language');
+  sessionStorage.removeItem('userid');
+  sessionStorage.removeItem('theme');
+} */
 
 $(document).ready(function(){
-$(document).profanityFilter({
-    customSwears:['fuck'],
-    replaceWith: ['(>.<)']
-});
+	$("#h1-left").click(function(){
+		$("#sidenav").toggle("drop");
+	});
 });

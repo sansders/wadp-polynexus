@@ -32,9 +32,9 @@
 					<h2>Admin Portal</h2>
 				</div>
 				<div>
-					<a href="#users" class="navbar"><i class="fa fa-users" aria-hidden="true"></i>Users</a>
-					<a href="#filter" class="navbar"><i class="fa fa-list" aria-hidden="true"></i>Word Filter</a>
-					<a href="#stats" class="navbar"><i class="fa fa-bar-chart" aria-hidden="true"></i>Statistics</a>
+					<a href="#users" class="navbar"><i class="fa fa-users fa-fw" aria-hidden="true"></i>&emsp;&emsp;&emsp;&emsp;&emsp;Users</a>
+					<a href="#filter" class="navbar"><i class="fa fa-list fa-fw" aria-hidden="true"></i>&emsp;&emsp;&emsp;&emsp;Word Filter</a>
+					<a href="#stats" class="navbar"><i class="fa fa-bar-chart fa-fw" aria-hidden="true"></i>&emsp;&emsp;&emsp;&emsp;&ensp;Statistics</a>
 				</div>
 			</div>
 		</div>
@@ -42,6 +42,8 @@
 			<!-- PolyNexus Title -->
 			<div id="nav">
 				<div id="h1">
+					<i id="h1-left" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+					<a id="h1-right" href="" onclick="logout()"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
 					<h1>polyNexus</h1>
 				</div>
 				<div>
@@ -49,7 +51,7 @@
 				</div>
 			</div>
 			<!-- Main content -->
-			<div class="maincontent">
+			<div id="maincontent">
 				<!-- Users -->
 				<div id="users" class="individual">
 					<div class="label">
@@ -97,6 +99,12 @@
 						<h2>Number of visitors</h2>
 						<p>Subtitle</p>
 						<canvas id="visitors" width="600" height="400"></canvas>
+					</div>
+					<!-- Bar Graph -->
+					<div class="content">
+						<h2>Title</h2>
+						<p>Subtitle</p>
+						<canvas id="idk" width="600" height="400"></canvas>
 					</div>
 					<!-- Chart Javascript -->
 					<script src="js/stats.js"></script>
