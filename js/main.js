@@ -221,6 +221,7 @@ function addEvent(){
 	h4B.appendChild(textnode2);
 	h4B.appendChild(document.createElement("br"));
 	h4B.appendChild(textnode3);
+	h4B.classname = "eventdetails";
 
 	pB.appendChild(textnode9);
 	pB.style.fontWeight = "bold";
