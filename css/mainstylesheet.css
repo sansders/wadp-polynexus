@@ -195,6 +195,20 @@ a{
   padding: 7px 6px;
   width: 100%;
   border-bottom: solid 2px #dcdcdc;
+  margin-bottom: 3%;
+}
+
+.activetab span h2
+{
+  padding: 7px 6px;
+  width: 100%;
+  border-bottom: solid 2px #dcdcdc;
+  margin-bottom: 0;
+}
+
+.activetab h4
+{
+	margin-bottom: 4%;
 }
 
 #chatinterface
@@ -389,26 +403,11 @@ h2 .eventtitle
 	padding: 7px 6px;
 	width: 100%;
 	border-bottom: solid 2px #dcdcdc;
-	
 }
-
-<<<<<<< HEAD
-
-
-=======
-#invisibleBarrier{
-  width: 100%;
-  background-color: #FFFFFF;
-  color: white;
-  padding-left: 5%;
-  position:fixed;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  z-index: 99;
->>>>>>> origin/gh-pages
 
 }
 #themehr
 {
   width: 50%;
 }
+

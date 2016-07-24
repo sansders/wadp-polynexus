@@ -188,6 +188,7 @@ function addEvent(){
 	// Still not working though //
 	
 	var divB = document.createElement('div');
+	divB.id= 'divisionB';
 	
 	var h2B = document.createElement('h2');
 	var eventNameB = document.getElementById('inputeventname').value;
@@ -196,31 +197,44 @@ function addEvent(){
 	var h4B = document.createElement('h4');
 	var eventDateB = document.getElementById('inputeventdate').value;
 	var eventTimeB = document.getElementById('inputeventtime').value;
+	var eventVenueB = document.getElementById('inputeventvenue').value;
 	h4B.className = "eventdetails";
 	
 	
 	var pB = document.createElement('p');
+	var pB1 = document.createElement('p');
 	var eventDescriptionB = document.getElementById('inputeventdescription').value;
 	
 	eventDescriptionB.className = "eventdescription"; 
 	
-	// look up how to create br in textnode!! //
 	var textnode0 = document.createTextNode(eventNameB);
 	var textnode1 = document.createTextNode("Date: "+eventDateB); 
-	//br here please//
 	var textnode2 = document.createTextNode("Time: "+eventTimeB);
-	var textnode3 = document.createTextNode("Venue: ");
-	var textnode9 = document.createTextNode(eventDescriptionB);
+	var textnode3 = document.createTextNode("Venue: "+eventVenueB);
+	var textnode9 = document.createTextNode("Event description: ");
+	var textnode91 = document.createTextNode(eventDescriptionB);
 	
 	h2B.appendChild(textnode0);
-	h4B.appendChild(textnode1);
-	h4B.appendChild(textnode2);
-	h4B.appendChild(textnode3);
-	pB.appendChild(textnode9);
 	
+	h4B.appendChild(textnode1);
+	h4B.appendChild(document.createElement("br"));
+	h4B.appendChild(textnode2);
+	h4B.appendChild(document.createElement("br"));
+	h4B.appendChild(textnode3);
+
+	pB.appendChild(textnode9);
+	pB.style.fontWeight = "bold";
+	pB.appendChild(document.createElement("br"));
+	pB.appendChild(document.createElement("br"));
+	
+	pB1.appendChild(textnode91);
+	
+
+	// It all comes together *evil laughter* //
 	divB.appendChild(h2B);
 	divB.appendChild(h4B);
 	divB.appendChild(pB);
+	divB.appendChild(pB1);
 	
 	var list1 = document.getElementById('primaryEventsPlace');
 	list1.className = "activetab";
