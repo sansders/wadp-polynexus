@@ -31,32 +31,6 @@ h1
 	z-index: 100;
 }
 
-/*.navbarlist
-{
-  position: fixed;
-  margin:0;
-  left: 45%;
-  z-index: 101;
-}
-
-.navbarlist li
-{
-  list-style-type: none;
-  display: inline-block;
-  position: relative;
-  transition: background, 0.5s;
-  padding:23px;
-}
-
-.navbarlist {
-	overflow: hidden;
-	width:100%;
-}
-
-.navbarlist li:hover
-{
-  background-color: rgba(0, 76, 159, 0.7);
-}*/
 nav ul li:hover{
   background-color: rgba(0, 76, 159, 0.7);
 }

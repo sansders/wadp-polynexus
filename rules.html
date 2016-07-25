@@ -48,7 +48,7 @@
 
 
 	function themechanger(){
-    if (theme == "pink") {
+    if (theme == "pink") { /*Depending on theme, will create and append a modified stylesheet to apply alternative theme*/
 	var sheet = document.createElement('style');
     console.log("Attempting to change theme to pink");
 	sessionStorage.setItem("theme","pink");
@@ -78,7 +78,7 @@
 
 			</script>
 		</head>
-		<body onload="hidecontent(); themechanger()"> <!-- Sean look here 18/7 Monday -->
+		<body onload="hidecontent(); themechanger()">
 			<h1>polyNexus</h1>
 			<nav>
 			<ul class="navbarlist">
