@@ -244,7 +244,6 @@ function posting() {
 		var postsubtitle = document.getElementById("Subtitle").value;
 		var postarticle = document.getElementById("Article").value;
 		var postimage = document.getElementById("Image").value;
-		var postfile = document.getElementById("File").value
 		document.getElementById("posted-article-title" + counter).innerHTML = posttitle;
 		document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
 		document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
