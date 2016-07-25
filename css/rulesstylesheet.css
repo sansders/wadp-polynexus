@@ -68,6 +68,67 @@ h1
   background-color: rgba(0, 76, 159, 0.7);
 }
 
+nav ul li:hover{
+  background-color: rgba(0, 76, 159, 0.7);
+}
+
+nav ul ul{
+	display: none;
+}
+
+nav ul li:hover > ul {
+		display: block;
+    background-color: rgba(0, 76, 159, 0.7);
+	}
+
+nav ul{
+  display: inline-table;
+  overflow: hidden;
+	width:100%;
+  position: fixed;
+  margin:0;
+  left: 45%;
+  z-index: 101;
+}
+
+nav ul:after {
+		content: "";
+    clear: both;
+    display: block;
+	}
+
+nav ul li a {
+    padding:25px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  transition: background, 0.5s;
+  padding:23px;
+}
+
+nav ul li .dropdown-menu li{
+  display:block;
+  text-align:center;
+}
+
+nav ul li .dropdown-menu{
+  width:7%;
+  text-align:left;
+  margin-left:588px;
+  margin-top:22px;
+}
+
+nav ul{
+  margin:0;
+  padding:0 0;
+}
+
 .intro
 {
 	padding-top:60px;
