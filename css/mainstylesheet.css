@@ -190,15 +190,16 @@ a{
 
 .activetab
 {
+  width: 77.5%;
   padding: 10px 10px;
   position: relative;
-  left: 20%;
+  float: right;
 }
 
 .activetab h2
 {
   padding: 7px 6px;
-  width: 100%;
+  width: 90%;
   border-bottom: solid 2px #dcdcdc;
   margin-bottom: 3%;
 }
@@ -216,7 +217,7 @@ a{
 	margin-bottom: 4%;
 }
 
-#chatinterface
+.chatinterface
 {
   width:77.5%;
 }
@@ -259,12 +260,11 @@ a{
 .chatoutput
 {
   position: fixed;
-  top: 75px;
-
+  top: 20%;
   overflow: auto;
   padding: 10px 10px;
-  width: 77%;
-  height: 70%;
+  width: 70%;
+  height: 65%;
   margin: 5px 1px;
   border: 1px solid #dcdcdc;
   border-radius: 5px;
@@ -415,4 +415,3 @@ h2 .eventtitle
 {
   width: 50%;
 }
-
