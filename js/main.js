@@ -251,6 +251,7 @@ function addEvent(){
 	divB.appendChild(pB);
 	divB.appendChild(pB1);
 	divB.id = 'events-3';
+	divB.className = 'activetab';
 	
 	var list1 = document.getElementById('primaryEventsPlace');
 	list1.className = "activetab";
