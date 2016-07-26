@@ -12,6 +12,11 @@ html,body
   margin:0;
 }
 
+.pointer
+{
+	cursor: pointer;
+}
+
 body {
   background-image: url(../img/6.jpg);
   padding-bottom:15px;

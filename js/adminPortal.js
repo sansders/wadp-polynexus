@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
 	user = sessionStorage.getItem('username');
 	perm = sessionStorage.getItem('perm');

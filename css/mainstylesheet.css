@@ -114,6 +114,11 @@ a{
   color: black;
 }
 
+.pointer
+{
+	cursor: pointer;
+}
+
 #searchbar input[type="text"]
 {
   width: 90%;

@@ -18,6 +18,11 @@ body{
     padding-bottom:15px;
 }
 
+.pointer
+{
+	cursor: pointer;
+}
+
 h1
 {
 	margin:0px;
