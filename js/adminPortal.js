@@ -2,7 +2,8 @@
 
 $(document).ready(function() {
 	user = sessionStorage.getItem('username');
-	if(user === null){
+	perm = sessionStorage.getItem('perm');
+	if(user === null || perm == 0){
 		window.location = 'adminlogin.html';
 	}
 });
