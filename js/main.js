@@ -153,7 +153,7 @@ function loadChats(){
     time1.innerHTML = "13:13";
 
     h31.innerHTML = privchat[x];
-    a1.href = "chat-" + ++index;
+    a1.href = "#chat-" + ++index;
     a1.appendChild(h31);
     a1.appendChild(p1);
     a1.appendChild(time1);
@@ -171,8 +171,8 @@ function loadChatoutput(){
   for(var i=0; i<grpchat.length; i++){
     var container = document.createElement("DIV");
     var h2 = document.createElement("H2");
-    var div = document.createElement("div");
-    var div1 = document.createElement("div1");
+    var div = document.createElement("DIV");
+    var div1 = document.createElement("DIV");
     div1.className="chatinputbox";
     div1.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
     container.className = "activetab chatinterface";
@@ -184,11 +184,11 @@ function loadChatoutput(){
     container.appendChild(div1);
     document.getElementById("chat").appendChild(container);
   }
-  for(var x=0; x<privchat.length; i++){
+  for(var x=0; x<privchat.length; x++){
     var container1 = document.createElement("DIV");
     var h21 = document.createElement("H2");
-    var div2 = document.createElement("div");
-    var div11 = document.createElement("div1");
+    var div2 = document.createElement("DIV");
+    var div11 = document.createElement("DIV");
     div11.className="chatinputbox";
     div11.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
     container1.className = "activetab chatinterface";
@@ -216,7 +216,7 @@ function addEvent(){
 	var h4A = document.createElement('h4');
 	var eventtypeA = document.getElementById('inputeventtype').value;
 
-	var pA = document.createElement('p')
+	var pA = document.createElement('p');
 	var timeAndVenueA = document.getElementById('inputeventtime').value;
 	var timeAndVenueB = document.getElementById('inputeventvenue').value;
 	/* End of creating element types */
