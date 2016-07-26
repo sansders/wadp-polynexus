@@ -18,6 +18,9 @@ function logout(){
   sessionStorage.removeItem('language');
   sessionStorage.removeItem('userid');
   sessionStorage.removeItem('theme');
+  sessionStorage.removeItem('groupchats');
+  sessionStorage.removeItem('privatechats');
+  sessionStorage.removeItem('perm');
 } 
 
 $(document).ready(function(){

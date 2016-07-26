@@ -53,6 +53,7 @@ function logout(){
   sessionStorage.removeItem('groupchats');
   sessionStorage.removeItem('privatechats');
   sessionStorage.removeItem('theme');
+  sessionStorage.removeItem('perm');
 }
 
 function changetheme(n){
