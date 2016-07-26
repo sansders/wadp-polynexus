@@ -21,14 +21,13 @@ $(document).ready(function(){
     var theme = sessionStorage.getItem('theme');
     var language = sessionStorage.getItem('language');
     changetheme(theme);
-
+    setLanguage(language);
 
     xmlhttp.open("GET", "data/data.json", false);
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
     loadChats();
 	  events1();
-    setLanguage(language);
   }
 
 });
@@ -121,24 +120,21 @@ function loadChats(){
   //function will load chats from json file.
   var grpchat = JSON.parse(sessionStorage.getItem('groupchats'));
   var privchat = JSON.parse(sessionStorage.getItem('privatechats'));
-  index = 0;
+
   for(var i=0; i<grpchat.length; i++){
       var li = document.createElement('LI');
       var h3 = document.createElement('H3');
       var p = document.createElement('P');
       var time = document.createElement('P');
-      var a = document.createElement("A");
       p.className = "textchat";
       time.className = "timestamp";
       p.innerHTML = "placeholder: i am a placeholder";
       time.innerHTML = "13:13";
 
       h3.innerHTML = grpchat[i];
-      a.href = "#chat-" + ++index;
-      a.appendChild(h3);
-      a.appendChild(p);
-      a.appendChild(time);
-      li.appendChild(a);
+      li.appendChild(h3);
+      li.appendChild(p);
+      li.appendChild(time);
       document.getElementById('chatul').insertBefore(li, addchat);
   }
   for(var x=0; x<privchat.length; x++){
@@ -146,61 +142,17 @@ function loadChats(){
     var h31 = document.createElement('H3');
     var p1 = document.createElement('P');
     var time1 = document.createElement('P');
-    var a1 = document.createElement("A");
     p1.className = "textchat";
     time1.className = "timestamp";
     p1.innerHTML = "placeholder: i am a placeholder";
     time1.innerHTML = "13:13";
 
-    h31.innerHTML = privchat[x];
-    a1.href = "chat-" + ++index;
-    a1.appendChild(h31);
-    a1.appendChild(p1);
-    a1.appendChild(time1);
-    li1.appendChild(a1);
+    h31.innerHTML = privchat[i];
+    li1.appendChild(h31);
+    li1.appendChild(p1);
+    li1.appendChild(time1);
     document.getElementById('chatul').insertBefore(li1, addchat);
   }
-  loadChatoutput();
-}
-
-function loadChatoutput(){
-  //will load the container containing chatoutput
-  var grpchat = JSON.parse(sessionStorage.getItem('groupchats'));
-  var privchat = JSON.parse(sessionStorage.getItem('privatechats'));
-  var index = 0;
-  for(var i=0; i<grpchat.length; i++){
-    var container = document.createElement("DIV");
-    var h2 = document.createElement("H2");
-    var div = document.createElement("div");
-    var div1 = document.createElement("div1");
-    div1.className="chatinputbox";
-    div1.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
-    container.className = "activetab chatinterface";
-    container.id = "chat-" + ++index;
-    div.className = "chatoutput";
-    h2.innerHTML = grpchat[i];
-    container.appendChild(h2);
-    container.appendChild(div);
-    container.appendChild(div1);
-    document.getElementById("chat").appendChild(container);
-  }
-  for(var x=0; x<privchat.length; i++){
-    var container1 = document.createElement("DIV");
-    var h21 = document.createElement("H2");
-    var div2 = document.createElement("div");
-    var div11 = document.createElement("div1");
-    div11.className="chatinputbox";
-    div11.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
-    container1.className = "activetab chatinterface";
-    container1.id = "chat-" + ++index;
-    div2.className = "chatoutput";
-    h21.innerHTML = privchat[x];
-    container1.appendChild(h21);
-    container1.appendChild(div2);
-    container1.appendChild(div11);
-    document.getElementById("chat").appendChild(container1);
-  }
-  $("#chat").tabs();
 }
 
 function addEvent(){
@@ -208,77 +160,77 @@ function addEvent(){
 	var liA = document.createElement('li');
 	var aA = document.createElement('a');
 	aA.setAttribute('href', '#events-3');
-
+	
 	/* Creating element types to store data in */
 	var h3A = document.createElement('h3');
-	var eventnameA = document.getElementById('inputeventname').value;
-
+	var eventnameA = document.getElementById('inputeventname').value; 
+	
 	var h4A = document.createElement('h4');
-	var eventtypeA = document.getElementById('inputeventtype').value;
-
+	var eventtypeA = document.getElementById('inputeventtype').value; 
+	
 	var pA = document.createElement('p')
 	var timeAndVenueA = document.getElementById('inputeventtime').value;
 	var timeAndVenueB = document.getElementById('inputeventvenue').value;
 	/* End of creating element types */
-
+	
 	/* Creating textnodes to store the element types stored in the variables */
 	var textnode0 = document.createTextNode(eventnameA);
 	var textnode1 = document.createTextNode(eventtypeA);
 	var textnode2 = document.createTextNode(timeAndVenueA + " at " + timeAndVenueB);
-
+	
 	/* Appending textnodes to 'A' variables to allow the element types to show */
 	h3A.appendChild(textnode0);
 	h4A.appendChild(textnode1);
 	pA.appendChild(textnode2);
-
+	
 	/* Appending 'A' variables into liA so it'll appear in #events */
 	liA.appendChild(h3A);
 	liA.appendChild(h4A);
 	liA.appendChild(pA);
 	liA.setAttribute('onclick','events3()');
-
+	
 	aA.appendChild(liA);
-
+	
 	/* Putting #events above the 'Create an event' li, inside #eventsul */
 	var list= document.getElementById('eventsul');
 	list.insertBefore(aA, document.getElementById('addevent'));
-
+	
 	// End of putting event details to side bar. //
-
-
-
+	
+	
+	
 	// Start of putting event details into the page //
 	// Still not working though //
-
+	
 	var divB = document.createElement('div');
 	divB.id= 'divisionB';
-
+	
 	var h2B = document.createElement('h2');
 	var eventNameB = document.getElementById('inputeventname').value;
 	h2B.id = "eventtitle";
-
+	
 	var h4B = document.createElement('h4');
 	var eventDateB = document.getElementById('inputeventdate').value;
 	var eventTimeB = document.getElementById('inputeventtime').value;
 	var eventVenueB = document.getElementById('inputeventvenue').value;
 	h4B.className = "eventdetails";
-
-
+	
+	
 	var pB = document.createElement('p');
 	var pB1 = document.createElement('p');
 	var eventDescriptionB = document.getElementById('inputeventdescription').value;
-
-	eventDescriptionB.className = "eventdescription";
-
+	
+	eventDescriptionB.className = "eventdescription"; 
+	
 	var textnode0 = document.createTextNode(eventNameB);
-	var textnode1 = document.createTextNode("Date: "+eventDateB);
+	var textnode1 = document.createTextNode("Date: "+eventDateB); 
 	var textnode2 = document.createTextNode("Time: "+eventTimeB);
 	var textnode3 = document.createTextNode("Venue: "+eventVenueB);
 	var textnode9 = document.createTextNode("Event description: ");
 	var textnode91 = document.createTextNode(eventDescriptionB);
-
+	
 	h2B.appendChild(textnode0);
-
+	
 	h4B.appendChild(textnode1);
 	h4B.appendChild(document.createElement("br"));
 	h4B.appendChild(textnode2);
@@ -290,9 +242,9 @@ function addEvent(){
 	pB.style.fontWeight = "bold";
 	pB.appendChild(document.createElement("br"));
 	pB.appendChild(document.createElement("br"));
-
+	
 	pB1.appendChild(textnode91);
-
+	
 
 	// It all comes together *evil laughter* //
 	divB.appendChild(h2B);
@@ -301,9 +253,9 @@ function addEvent(){
 	divB.appendChild(pB1);
 	divB.id = 'events-3';
 	divB.className = 'activetab';
-
+	
 	var list1 = document.getElementById('primaryEventsPlace');
 	list1.className = "activetab";
 	list1.insertBefore(divB, document.getElementById('events-999'));
-
+	
 }

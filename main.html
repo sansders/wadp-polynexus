@@ -55,7 +55,7 @@
   </ul>
   </nav>
   <div id="tabs-1" class="tabs">
-    <div id="chat">
+    <div class="currentchats" id="chatlist">
       <ul class="currentchatlist" id="chatul">
         <li>
           <h2 id="userid">Chats</h2>
@@ -67,7 +67,15 @@
           <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add a group
         </li>
       </ul>
-  </div>
+    </div>
+    <div class="activetab" id="chatinterface">
+      <h2>Alice</h2>
+      <div class="chatoutput">
+      </div>
+      <div class="chatinputbox">
+        <input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </div>
+    </div>
   </div>
   <div class="tabs" id="tabs-2">
   <!-- sean manages events tab-->
@@ -139,11 +147,11 @@
 				</h4>
 
 			</div>
-
+			
 			<div id="events-999" class="activetab">
 			</div>
-
-
+			
+			
 		</div>
 </div>
 
