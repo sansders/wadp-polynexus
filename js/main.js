@@ -97,14 +97,23 @@ function goRule(){
  function events1(){
 	$('#events-2').hide();
 	$('#events-1').show();
+	$('#events-3').hide();
+	$('#events-999').hide();
 }
 
  function events2(){
 	$('#events-1').hide();
 	$('#events-2').show();
+	$('#events-3').hide();
+	$('#events-999').hide();
 }
 
-
+ function events3(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').show();
+	$('#events-999').hide();
+}
 
 function loadChats(){
   //function will load chats from json file.
@@ -148,6 +157,8 @@ function loadChats(){
 function addEvent(){
 	/* Creating new li to store data in. 'A' variables will also be created below. */
 	var liA = document.createElement('li');
+	var aA = document.createElement('a');
+	aA.setAttribute('href', '#events-3');
 	
 	/* Creating element types to store data in */
 	var h3A = document.createElement('h3');
@@ -175,10 +186,13 @@ function addEvent(){
 	liA.appendChild(h3A);
 	liA.appendChild(h4A);
 	liA.appendChild(pA);
+	liA.setAttribute('onclick','events3()');
+	
+	aA.appendChild(liA);
 	
 	/* Putting #events above the 'Create an event' li, inside #eventsul */
 	var list= document.getElementById('eventsul');
-	list.insertBefore(liA, document.getElementById('addevent'));
+	list.insertBefore(aA, document.getElementById('addevent'));
 	
 	// End of putting event details to side bar. //
 	
@@ -236,9 +250,10 @@ function addEvent(){
 	divB.appendChild(h4B);
 	divB.appendChild(pB);
 	divB.appendChild(pB1);
+	divB.id = 'events-3';
 	
 	var list1 = document.getElementById('primaryEventsPlace');
 	list1.className = "activetab";
-	list1.insertBefore(divB, document.getElementById('events-2'));
+	list1.insertBefore(divB, document.getElementById('events-999'));
 	
 }
