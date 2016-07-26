@@ -15,7 +15,7 @@ html,body
 
 body{
   	background-image: url(../img/3classic.jpg);
-    padding-bottom:10px;
+    padding-bottom:15px;
 }
 
 h1
@@ -30,42 +30,6 @@ h1
   padding-bottom:15px;
   padding-right:15px;
 	z-index: 100;
-}
-
-.navbarlist
-{
-  position: fixed;
-  margin:0;
-  left: 45%;
-  z-index: 101;
-}
-
-.navbarlist li
-{
-  list-style-type: none;
-  display: inline-block;
-  position: relative;
-  right: 1%;
-  transition: background, 0.5s;
-  padding:23px;
-}
-
-.navbarlist {
-	overflow: hidden;
-	width:100%;
-}
-
-.navbarlist li a
-{
-  padding:25px 25px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-}
-
-.navbarlist li:hover
-{
-  background-color: rgba(0, 76, 159, 0.7);
 }
 
 nav ul li:hover{
@@ -87,7 +51,7 @@ nav ul{
 	width:100%;
   position: fixed;
   margin:0;
-  left: 45%;
+  left: 35%;
   z-index: 101;
 }
 
@@ -119,8 +83,7 @@ nav ul li .dropdown-menu li{
 
 nav ul li .dropdown-menu{
   width:7%;
-  text-align:left;
-  margin-left:588px;
+  margin-left:609px;
   margin-top:22px;
 }
 

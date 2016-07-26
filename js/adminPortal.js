@@ -1,10 +1,4 @@
-/*
-$(document).ready(function(){
-	$(document).profanityFilter({
-		customSwears:['fuck'],
-		replaceWith: ['(>.<)']
-	});
-}); 
+
 
 $(document).ready(function() {
 	user = sessionStorage.getItem('username');
@@ -19,7 +13,7 @@ function logout(){
   sessionStorage.removeItem('language');
   sessionStorage.removeItem('userid');
   sessionStorage.removeItem('theme');
-} */
+} 
 
 $(document).ready(function(){
 	$("#h1-left").click(function(){
