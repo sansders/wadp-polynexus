@@ -3,8 +3,12 @@
 $(document).ready(function() {
 	user = sessionStorage.getItem('username');
 	perm = sessionStorage.getItem('perm');
-	if(user === null || perm == 0){
+	if(user === null){
 		window.location = 'adminlogin.html';
+	}
+	else if(perm == 0){
+		window.location = 'main.html';
+		alert("Higher permission required!")
 	}
 });
 

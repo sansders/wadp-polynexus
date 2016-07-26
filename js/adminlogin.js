@@ -21,7 +21,7 @@ function login(){
     sessionStorage.setItem('theme', theme);
     sessionStorage.setItem('perm', perm);
     if(perm === "1"){
-      document.location = "admin.html";
+      document.location = "adminportal.html";
     }
     else{
       alert('Invalid User');
