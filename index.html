@@ -40,7 +40,7 @@
         <input type="text" id="usernameinput" placeholder="Username"/>
       </li>
       <li>
-        <input type="password" placeholder="Password"/>
+        <input type="password" id="passwordinput" placeholder="Password"/>
       </li>
       <li>
         <button class="button" value="submit" onclick="login()"><span>Login</span></button>
@@ -51,16 +51,16 @@
         <h3>Sign Up</h3>
         <ul>
           <li>
-            <input type="text" placeholder="NYP email" />
+            <input id="username" type="text" placeholder="NYP email" />
           </li>
           <li>
-            <input type="password" placeholder="Password" />
+            <input id="password" type="password" placeholder="Password" onfocus="passwordCheck()" />
           </li>
           <li>
-            <input type="password" placeholder="Retype Password" />
+            <input id="passwordcom" type="password" placeholder="Retype Password" onfocus="passwordCheck()" /><br><span id="match"></span>
           </li>
           <li>
-            <button class="button"><span>Create Account</span></button>
+            <button class="button" onclick="signUp();"><span>Create Account</span></button>
           </li>
         </ul>
 

@@ -55,6 +55,7 @@ function logout(){
   sessionStorage.removeItem('privatechats');
   sessionStorage.removeItem('theme');
   sessionStorage.removeItem('perm');
+  sessionStorage.removeItem("password");
 }
 
 function changetheme(n){

@@ -5,6 +5,7 @@ var xmlDoc = JSON.parse(xmlhttp.responseText)
 function login(){
   var input = document.getElementById('usernameinput').value;
   input = input.toLowerCase();
+  var passinput = document.getElementById('passwordinput').value;
   try{
     //load session storage
     var username = eval("xmlDoc.users['"+input+"'].username");
@@ -24,7 +25,24 @@ function login(){
   }
   catch(err){
     if(err.name === 'TypeError'){
-      alert('Invalid User');
+		var user = sessionStorage.getItem("username");
+		var pass = sessionStorage.getItem("password");
+		if(user != null && user != ""){
+			if(input == user && passinput == pass){
+				sessionStorage.setItem('language' , "en");
+				sessionStorage.setItem('groupchats', "");
+				sessionStorage.setItem('privatechats', "");
+				sessionStorage.setItem('theme', theme);
+				sessionStorage.setItem('perm', 0);
+				document.location = "main.html"
+			}
+			else{
+				alert("Wrong username or password");
+			}
+		} 
+		else{
+			alert('Invalid User');
+		}
     }
     else{
       alert(err.name);
