@@ -267,6 +267,8 @@ function addEvent(){
 
 	var pB = document.createElement('p');
 	var pB1 = document.createElement('p');
+	pB.className = 'eventdescription';
+	pB1.className = 'eventdescription';
 	var eventDescriptionB = document.getElementById('inputeventdescription').value;
 
 	eventDescriptionB.className = "eventdescription";
@@ -304,7 +306,7 @@ function addEvent(){
 	divB.className = 'activetab';
 
 	var list1 = document.getElementById('primaryEventsPlace');
-	list1.className = "activetab";
+	list1.className = "activetab"; //This line causes events to bug when new event is created
 	list1.insertBefore(divB, document.getElementById('events-999'));
 
 }

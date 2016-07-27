@@ -96,7 +96,7 @@
 		<div id="primaryEventsPlace">
 
 			<div id="events-1" class="activetab">
-			<h2><i class="eventtitle" aria-hidden="true"></i> Making pot brownies </h2>
+			<h2 id="eventtitle">Making pot brownies </h2>
 			<h4 class="eventdetails"> Date: 29/2/2017<br/> Time: 19:00 <br/> Venue: Jz's house</h4>
 			<p class="eventdescription"><b> Event description:</b>
 			<br/>
@@ -108,28 +108,28 @@
 			<span><h2><i class="eventtitle" aria-hidden="true"></i>Organize an event </h2></span>
 			<br/>
 			<br/>
-
+				
 				<h4 class="inputeventdetails">
 
 				<span>Event Name:</span>
 					<br/>
-				<input type="text" id="inputeventname" />
+				<input type="text" id="inputeventname" required />
 					<br/>
 				<span>Event Type:</span>
 					<br/>
-				<input type="text" placeholder="Gathering, Party etc." id="inputeventtype" />
+				<input type="text" placeholder="Gathering, Party etc." id="inputeventtype" required />
 					<br/>
 				<span>Date:</span>
-					<br/>
-				<input type="date" id="inputeventdate" placeholder="dd/mm/yyy" />
+					<br/>	
+				<input type="date" id="inputeventdate" placeholder="dd/mm/yyy" required />
 					<br/>
 				<span>Time:</span>
 					<br/>
-				<input type="time" id="inputeventtime" />
+				<input type="time" id="inputeventtime" required />
 					<br/>
 				<span>Venue:</span>
 					<br/>
-					<input type="text" id="inputeventvenue"/>
+					<input type="text" id="inputeventvenue" required/>
 					<br/>
 				<span>Event description:</span>
 					<br/>
@@ -137,7 +137,7 @@
 					<br/>
 				<input type="submit" id="submiteventButton" value="Submit!" onclick="addEvent()" />
 				</h4>
-
+				
 			</div>
 
 			<div id="events-999" class="activetab">
