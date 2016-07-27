@@ -152,7 +152,7 @@ function loadChats(){
     p1.innerHTML = "placeholder: i am a placeholder";
     time1.innerHTML = "13:13";
 
-    h31.innerHTML = privchat[x];
+    h31.innerHTML = xmlDoc.users[privchat[x]].username;
     a1.href = "#chat-" + ++index;
     a1.appendChild(h31);
     a1.appendChild(p1);
@@ -194,7 +194,7 @@ function loadChatoutput(){
     container1.className = "activetab chatinterface";
     container1.id = "chat-" + ++index;
     div2.className = "chatoutput";
-    h21.innerHTML = privchat[x];
+    h21.innerHTML = xmlDoc.users[privchat[x]].username;
     container1.appendChild(h21);
     container1.appendChild(div2);
     container1.appendChild(div11);
