@@ -188,13 +188,40 @@ a{
   display: block;
 }
 
-.activetab
+#setting .activetab
 {
   width: 77.5%;
   padding: 10px 10px;
   position: relative;
   float: right;
 }
+
+#chat .activetab
+{
+  width: 77.5%;
+  padding: 10px 10px;
+  position: relative;
+  float: right;
+}
+
+#primaryEventsPlace .activetab
+{
+	width: 77.5%;
+  padding: 10px 10px;
+  position: relative;
+  float: right;
+}
+
+#addevent:hover
+{
+	cursor: pointer;
+}
+
+#eventsul
+{
+	float:left;
+}
+
 
 .activetab h2
 {
