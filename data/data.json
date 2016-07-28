@@ -37,5 +37,17 @@
       "privatechats": ["123456a"],
       "perm" : "1"
     }
+  },
+  "group":{
+    "CSIT scholarship":{},
+    "Gardening":{},
+    "anime":{},
+    "basketballers":{},
+    "Chinese Club":{},
+    "French Midgets":{},
+    "Lolicons":{},
+    "Crossdressing":{},
+    "osu":{},
+    "Gunpla":{},
   }
 }

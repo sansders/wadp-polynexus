@@ -1,7 +1,7 @@
 var xmlhttp= new XMLHttpRequest();
 xmlhttp.open("GET", "data/data.json", false);
 xmlhttp.send();
-var xmlDoc = JSON.parse(xmlhttp.responseText)
+var xmlDoc = JSON.parse(xmlhttp.responseText);
 function login(){
   var input = document.getElementById('usernameinput').value;
   input = input.toLowerCase();
@@ -19,8 +19,8 @@ function login(){
     sessionStorage.setItem('groupchats', JSON.stringify(groupchats));
     sessionStorage.setItem('privatechats', JSON.stringify(privatechats));
     sessionStorage.setItem('theme', theme);
-	sessionStorage.setItem('perm', perm);
-    document.location = "main.html"
+	  sessionStorage.setItem('perm', perm);
+    document.location = "main.html";
   }
   catch(err){
     if(err.name === 'TypeError'){
