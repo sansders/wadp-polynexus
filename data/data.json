@@ -36,7 +36,15 @@
       "groupchats": ["osu","Gunpla"],
       "privatechats": ["123456a"],
       "perm" : "1"
-    }
+    },
+	"bbbelson":{
+	  "username": "Blueberry Belson",
+      "lang": "en",
+      "groupchats": ["Complex People","Imaginary People", "Blueberries"],
+      "privatechats": ["123456a"],
+      "theme": "pink",
+	  "perm" : "1"
+	}
   },
   "group":{
     "CSIT scholarship":{},
@@ -49,14 +57,5 @@
     "Crossdressing":{},
     "osu":{},
     "Gunpla":{}
-    },
-	"bbbelson":{
-	  "username": "Blueberry Belson",
-      "lang": "en",
-      "groupchats": ["Complex People","Imaginary People", "Blueberries"],
-      "privatechats": ["123456a"],
-      "theme": "pink",
-	  "perm" : "1"
-	}
-  }
-}
+    }
+ }
