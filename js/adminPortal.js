@@ -1,4 +1,4 @@
-$(document).ready(function() {/*
+$(document).ready(function() {
 	user = sessionStorage.getItem('username');
 	perm = sessionStorage.getItem('perm');
 	if(user === null){
@@ -8,7 +8,7 @@ $(document).ready(function() {/*
 		window.location = 'main.html';
 		alert("Higher permission required!")
 	}
-});*/
+});
 
 function logout(){
   window.location.replace('adminlogin.html');
@@ -32,4 +32,21 @@ function addToList(wordToAdd){
   var theNewWord = document.createTextNode(wordToAdd);
   newWord.appendChild(theNewWord);
 	document.getElementById('wordList').appendChild(newWord);
+}
+
+function listUsernames(){
+	/* Creating new li to store data in. 'A' variables will also be created below. */
+	var liX = document.createElement('li');
+	var bigDiv = document.getElementById('usernames');
+	var pX = document.createElement('p');
+
+	var userusername = //attempt to extract data from json data file
+	var textnode0 = document.createTextNode(userusername);
+
+	pX.appendChild(textnode0);
+
+
+	liX.appendChild(pX);
+	bigDiv.appendChild(liX);
+
 }

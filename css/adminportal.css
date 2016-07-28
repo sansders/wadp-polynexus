@@ -121,6 +121,11 @@ a
 	clear: both;
 }
 
+.content-container
+{
+	width: calc(100% - 40px);
+}
+
 .content
 {
 	border-radius: 10px;
@@ -136,6 +141,11 @@ a
 	padding-bottom: 20px;
 }
 
+#filter .content ul li
+{
+	float: left;
+	margin: 5px 15px;
+}
 /* Footer */
 
 footer
