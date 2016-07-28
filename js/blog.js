@@ -13,6 +13,7 @@ function logout(){
   sessionStorage.removeItem('groupchats');
   sessionStorage.removeItem('privatechats');
   sessionStorage.removeItem('theme');
+  sessionStorage.removeItem('perm');
 }
 
 $(document).ready(function() {
@@ -160,6 +161,10 @@ function verify() {
 	}
 }
 
+var stophiding = false;
+var numOfArticle = 3;
+var i = 0;
+var x;
 var counter = "";
 function creatingDiv() {
 	if (confirmation == true) {
@@ -201,7 +206,7 @@ function creatingDiv() {
 		H4.className = "article-subtitle";
 		IMG2.className = "blackLike";
 
-		Div1.setAttribute("id", "posted-article-container" + counter);
+		Div1.setAttribute("id", (i + 4));
 		Div2.setAttribute("id", "posted-article-preview"  + counter);
 		Div5.setAttribute("id", "posted-article"  + counter);
 		H3.setAttribute("id", "posted-article-title"  + counter);
@@ -235,6 +240,16 @@ function creatingDiv() {
 		P3.appendChild(P3Text);
 		P3.appendChild(SPAN1);
 		P3.appendChild(IMG2);
+		
+		if (stophiding == false) {
+			numOfArticle++
+			while (numOfArticle > 4){
+				document.getElementById(i).style.display = "none";
+				numOfArticle = eval(numOfArticle - 1);
+			}
+			i++;
+			x=i;
+		}
 	}
 }
 
@@ -248,7 +263,6 @@ function posting() {
 		document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
 		document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
 		document.getElementById("posted-image" + counter).src = postimage;
-
 		if (counter == "") {
 			$("#posted-article").hide();
 			$("#posted-article-preview").click(function(){
@@ -265,6 +279,12 @@ function posting() {
 			$("#posted-article2").hide();
 			$("#posted-article-preview2").click(function(){
 				$("#posted-article2").slideToggle("slow");
+			});
+		}
+		else if (counter == 3) {
+			$("#posted-article3").hide();
+			$("#posted-article-preview3").click(function(){
+				$("#posted-article3").slideToggle("slow");
 			});
 		}
 		counter++
@@ -284,3 +304,13 @@ function changeImg(clicked_id) {
 function goBlog(){
   window.location ="blog.html";
 }
+
+function hiddenpostshow() {
+	while (x > 0){
+		document.getElementById(x).style.display = "block";
+		x--
+		stophiding = true;
+	}
+}
+
+/* Seleting Blog Based on Group */
