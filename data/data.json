@@ -12,7 +12,7 @@
       "username":"john lim",
       "lang": "en",
       "groupchats": ["CSIT scholarship","Gardening"],
-      "privatechats": ["161714f","160364n"],
+      "privatechats": ["161714f","160364n","BBBelson"],
       "perm" : "1"
     },
     "111111a":{
@@ -36,6 +36,14 @@
       "groupchats": ["osu","Gunpla"],
       "privatechats": ["123456a"],
       "perm" : "1"
-    }
+    },
+	"BBBelson":{
+	  "username": "Blueberry Belson",
+      "lang": "en",
+      "groupchats": ["Complex People","Imaginary People", "Blueberries"],
+      "privatechats": ["123456a"],
+      "perm" : "2",
+	  "theme": "pink",
+	}
   }
 }
