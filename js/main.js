@@ -248,7 +248,7 @@ function addEvent(){
 
 
 	// Start of putting event details into the page //
-	// Still not working though //
+	// It works! //
 
 	var divB = document.createElement('div');
 	divB.id= 'divisionB';

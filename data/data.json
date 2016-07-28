@@ -12,7 +12,7 @@
       "username":"john lim",
       "lang": "en",
       "groupchats": ["CSIT scholarship","Gardening"],
-      "privatechats": ["161714f","111111a"],
+      "privatechats": ["161714f","160364n"],
       "perm" : "1"
     },
     "111111a":{
@@ -29,6 +29,13 @@
       "theme": "pink",
       "privatechats": ["161714f"],
       "perm" : "0"
+    },
+	"160364n":{
+      "username": "Shota Sean",
+      "lang": "en",
+      "groupchats": ["osu","Gunpla"],
+      "privatechats": ["123456a"],
+      "perm" : "1"
     }
   }
 }

@@ -20,8 +20,10 @@ function login(){
     sessionStorage.setItem('privatechats', JSON.stringify(privatechats));
     sessionStorage.setItem('theme', theme);
     sessionStorage.setItem('perm', perm);
+	xmlhttp.open("GET", "data/data.json", false);
     if(perm === "1"){
       document.location = "adminportal.html";
+	  
     }
     else{
       alert('Invalid User');

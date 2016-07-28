@@ -26,3 +26,20 @@ $(document).ready(function(){
 		$("#sidenav").toggle("drop");
 	});
 });
+
+function listUsernames(){
+	/* Creating new li to store data in. 'A' variables will also be created below. */
+	var liX = document.createElement('li');
+	var bigDiv = document.getElementById('usernames');
+	var pX = document.createElement('p');
+	
+	var userusername = //attempt to extract data from json data file
+	var textnode0 = document.createTextNode(userusername);
+
+	pX.appendChild(textnode0);
+
+
+	liX.appendChild(pX);
+	bigDiv.appendChild(liX);
+
+}
