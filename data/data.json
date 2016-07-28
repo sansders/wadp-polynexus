@@ -55,8 +55,9 @@
       "lang": "en",
       "groupchats": ["Complex People","Imaginary People", "Blueberries"],
       "privatechats": ["123456a"],
-      "perm" : "1",
-	  "theme": "pink",
+      "theme": "pink",
+	  "perm" : "1"
+	  
 	}
   }
 }
