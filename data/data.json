@@ -50,14 +50,13 @@
     "osu":{},
     "Gunpla":{}
     },
-	"BBBelson":{
+	"bbbelson":{
 	  "username": "Blueberry Belson",
       "lang": "en",
       "groupchats": ["Complex People","Imaginary People", "Blueberries"],
       "privatechats": ["123456a"],
       "theme": "pink",
 	  "perm" : "1"
-	  
 	}
   }
 }
