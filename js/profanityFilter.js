@@ -8,5 +8,5 @@ $(document).profanityFilter({
        'motherfk', 'fucking', 'fking', 'lj', 'fucked', 'fked', 'focked', 'focking', 'focks', 'fucks', 'fks', 'facked', 'facks', 'facking',],
 replaceWith: ['(>.<)'],
 });
-  }, 5000);
+  }, 1000);
 });
