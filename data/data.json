@@ -42,7 +42,7 @@
       "lang": "en",
       "groupchats": ["Complex People","Imaginary People", "Blueberries"],
       "privatechats": ["123456a"],
-      "perm" : "2",
+      "perm" : "1",
 	  "theme": "pink",
 	}
   }
