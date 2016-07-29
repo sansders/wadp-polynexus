@@ -25,7 +25,9 @@
   <script src="js/language.js"></script>
   <script src="js/dropit.js"></script>
   <script src="js/mainmobile.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/jquery.profanityfilter.js"></script>
+  <script src="js/profanityFilter.js"></script>
   <script>
     function nextPageIsChats(){
 	$('#eventsul').hide();
@@ -39,12 +41,12 @@
 	$('#setting-4').hide();
 	$('#setting-5').hide();
 
-	$('#chatlist').show();
+	$('#chat').show();
 }	
 
 
 	function nextPageIsEvents(){
-	$('#chatlist').hide();
+	$('#chat').hide();
 		
 	$('#setting').hide();
 	$('#setting-1').hide();
@@ -59,7 +61,7 @@
 }	
 
 		function nextPageIsEvents1(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').hide();
@@ -74,7 +76,7 @@
 		}
 		
 		function nextPageIsEvents2(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').hide();
@@ -89,7 +91,7 @@
 		}
 
 	function nextPageIsSettings(){
-	$('#chatlist').hide();
+	$('#chat').hide();
 	
 	$('#setting').show();
 	$('#setting-1').hide();
@@ -104,7 +106,7 @@
 }	
 		
 		function nextPageIsSettings1(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').show();
@@ -119,7 +121,7 @@
 		}
 		
 		function nextPageIsSettings2(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').hide();
@@ -134,7 +136,7 @@
 		}
 		
 		function nextPageIsSettings3(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').hide();
@@ -149,7 +151,7 @@
 		}
 		
 		function nextPageIsSettings4(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').hide();
@@ -164,7 +166,7 @@
 		}
 		
 		function nextPageIsSettings5(){
-		$('#chatlist').hide();
+		$('#chat').hide();
 		
 		$('#setting').hide();
 		$('#setting-1').hide();
@@ -203,37 +205,13 @@
   </nav>
  
 	<div id="tabs-1" class="tabs">
-    <div class="currentchats" id="chatlist">
-      <ul class="currentchatlist">
+    <div id="chat">
+      <ul class="currentchatlist" id="chatul">
+		<li>
+		  <h2 id="userid">Chats</h2>
+		</li>
 		<li>
           <input id="searchbar" type="text" placeholder="Search" />
-        </li>
-        <li>
-          <h3>Alice</h3>
-          <p class="textchat">
-            Im in wonderland!
-          </p>
-          <p class="timestamp">
-            19:28
-          </p>
-        </li>
-        <li>
-          <h3>Gardening</h3>
-          <p class="textchat">
-            Matthew: Wheres the shovel?
-          </p>
-          <p class="timestamp">
-            15:11
-          </p>
-        </li>
-        <li>
-          <h3>Overwatch</h3>
-          <p class="textchat">
-            Belson1999: Who's up for a game tonight?
-          </p>
-          <p class="timestamp">
-            13:12
-          </p>
         </li>
         <li class="addchat" id="addchat">
           <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add a group
