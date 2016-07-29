@@ -40,15 +40,15 @@ function readTextFile(file)
 	console.log('running1');
 	alert(allText);
 	console.log('running2');
-    rawFile.send(null); 	
-	
+    rawFile.send(null);
+
 }
 
 
 $(document).ready(function listUsernames(){
-	
+
 	console.log('running');
-	
+
 	var ulX = document.getElementById('usernames');
 	var liX0 = document.createElement('li');
 	var liX1 = document.createElement('li');
@@ -56,8 +56,8 @@ $(document).ready(function listUsernames(){
 	var liX3 = document.createElement('li');
 	var liX4 = document.createElement('li');
 	var liX5 = document.createElement('li');
-	
-	
+
+
 	console.log('running2');
 
 	var userusername0 = "161714f";
@@ -67,12 +67,12 @@ $(document).ready(function listUsernames(){
 	var userusername4 = "160364n";
 	var userusername5 = "bbbelson";
 
-	
-	
+
+
 	//attempt to extract data from json data file soon!!!
-	
-	
-	
+
+
+
 	var textnode0 = document.createTextNode(userusername0);
 	var textnode1 = document.createTextNode(userusername1);
 	var textnode2 = document.createTextNode(userusername2);
@@ -81,7 +81,7 @@ $(document).ready(function listUsernames(){
 	var textnode5 = document.createTextNode(userusername5);
 
 	console.log('running3');
-	
+
 	liX0.appendChild(textnode0);
 	liX1.appendChild(textnode1);
 	liX2.appendChild(textnode2);
@@ -89,8 +89,8 @@ $(document).ready(function listUsernames(){
 	liX4.appendChild(textnode4);
 	liX5.appendChild(textnode5);
 
-	
-	
+
+
 	console.log('running4');
 
 	ulX.appendChild(liX0);
