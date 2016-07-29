@@ -21,6 +21,7 @@
   <script src="js/language.js"></script>
   <script src="js/language.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/icons.js"></script>
   <script src="js/jquery.profanityfilter.js"></script>
   <script src="js/profanityFilter.js"></script>
   <script>
@@ -109,7 +110,7 @@
 			<span><h2><i class="eventtitle" aria-hidden="true"></i>Organize an event </h2></span>
 			<br/>
 			<br/>
-				
+
 				<h4 class="inputeventdetails">
 
 				<span>Event Name:</span>
@@ -121,7 +122,7 @@
 				<input type="text" placeholder="Gathering, Party etc." id="inputeventtype" required />
 					<br/>
 				<span>Date:</span>
-					<br/>	
+					<br/>
 				<input type="date" id="inputeventdate" placeholder="dd/mm/yyy" required />
 					<br/>
 				<span>Time:</span>
@@ -138,7 +139,7 @@
 					<br/>
 				<input type="submit" id="submiteventButton" value="Submit!" onclick="addEvent()" />
 				</h4>
-				
+
 			</div>
 
 			<div id="events-999" class="activetab">
@@ -277,6 +278,15 @@
         English <button class="themeclass" onclick="setLanguage('en')"><span>Select Theme</span></button>
         <hr id="themehr" />
       </ul>
+    </div>
+    <div id="setting-6" class="activetab">
+      <h2>User Icon</h2>
+      <h3>Please select an icon</h3>
+      <p>Your current icon is:<img src="icons/icon0.jpg" id="changeableIcon"></p>
+        <div class="iconSelector">
+          <img src="icons/icon0.jpg" onclick="setIcon('icon0')" class="iconButton">
+          <img src="icons/icon1.jpg" onclick="setIcon('icon1')" class="iconButton">
+        </div>
     </div>
 
   </div>

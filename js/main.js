@@ -5,10 +5,10 @@ $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
   document.getElementById('displaycurrentid').innerHTML="Current Username: "+user;
-  if(user === null){
+  /*if(user === null){
     window.location = 'index.html';
-  }
-  else{
+
+  else{*/
     $(function() {
       $("#tabs").tabs();
     });
@@ -29,7 +29,7 @@ $(document).ready(function(){
     loadChats();
 	  events1();
     setLanguage(language);
-  }
+  /*}*/
 
 });
 
@@ -55,6 +55,7 @@ function logout(){
   sessionStorage.removeItem('privatechats');
   sessionStorage.removeItem('theme');
   sessionStorage.removeItem('perm');
+  sessionStorage.removeItem('icon')
 }
 
 function changetheme(n){
