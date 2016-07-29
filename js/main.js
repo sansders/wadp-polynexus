@@ -97,24 +97,120 @@ function goRule(){
   window.location="rules.html";
 }
 
- function events1(){
-	$('#events-2').hide();
+function events1(){
 	$('#events-1').show();
+	$('#events-2').hide();
 	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').hide();
 	$('#events-999').hide();
 }
 
- function events2(){
+function events2(){
 	$('#events-1').hide();
 	$('#events-2').show();
 	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').hide();
 	$('#events-999').hide();
 }
 
- function events3(){
+function events3(){
 	$('#events-1').hide();
 	$('#events-2').hide();
 	$('#events-3').show();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').hide();
+	$('#events-999').hide();
+}
+
+function events4(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').hide();
+	$('#events-4').show();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').hide();
+	$('#events-999').hide();
+}
+
+function events5(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').show();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').hide();
+	$('#events-999').hide();
+}
+
+function events6(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').show();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').hide();
+	$('#events-999').hide();
+}
+
+function events7(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').show();
+	$('#events-8').hide();
+	$('#events-9').hide();
+	$('#events-999').hide();
+}
+
+function events8(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').show();
+	$('#events-9').hide();
+	$('#events-999').hide();
+}
+
+function events9(){
+	$('#events-1').hide();
+	$('#events-2').hide();
+	$('#events-3').hide();
+	$('#events-4').hide();
+	$('#events-5').hide();
+	$('#events-6').hide();
+	$('#events-7').hide();
+	$('#events-8').hide();
+	$('#events-9').show();
 	$('#events-999').hide();
 }
 
@@ -204,11 +300,17 @@ function loadChatoutput(){
   $("#chat").tabs();
 }
 
+var j = 2;
+
 function addEvent(){
 	/* Creating new li to store data in. 'A' variables will also be created below. */
 	var liA = document.createElement('li');
 	var aA = document.createElement('a');
-	aA.setAttribute('href', '#events-3');
+	
+	
+	
+	
+	aA.setAttribute("href", "#events-" + ++j  );
 
 	/* Creating element types to store data in */
 	var h3A = document.createElement('h3');
@@ -236,7 +338,7 @@ function addEvent(){
 	liA.appendChild(h3A);
 	liA.appendChild(h4A);
 	liA.appendChild(pA);
-	liA.setAttribute('onclick','events3()');
+	liA.setAttribute('onclick','events' + j + '()'); 
 
 	aA.appendChild(liA);
 
@@ -302,7 +404,7 @@ function addEvent(){
 	divB.appendChild(h4B);
 	divB.appendChild(pB);
 	divB.appendChild(pB1);
-	divB.id = 'events-3';
+	divB.id = 'events-' + j;
 	divB.className = 'activetab';
 
 	var list1 = document.getElementById('primaryEventsPlace');
