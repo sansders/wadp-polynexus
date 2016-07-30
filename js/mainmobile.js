@@ -101,7 +101,7 @@ function goRule(){
   window.location="rules.html";
 }
 
-function events1(){
+/*function events1(){
 	$('#events-1').show();
 	$('#events-2').hide();
 	$('#events-3').hide();
@@ -216,7 +216,7 @@ function events9(){
 	$('#events-8').hide();
 	$('#events-9').show();
 	$('#events-999').hide();
-}
+} */
 
 function loadChats(){
   //function will load chats from json file.
@@ -342,7 +342,7 @@ function addEvent(){
 	liA.appendChild(h3A);
 	liA.appendChild(h4A);
 	liA.appendChild(pA);
-	liA.setAttribute('onclick','events' + j + '()'); 
+	liA.setAttribute('onclick','nextPageIsEvents' + j + '()'); 
 
 	aA.appendChild(liA);
 
@@ -363,6 +363,9 @@ function addEvent(){
 	var h2B = document.createElement('h2');
 	var eventNameB = document.getElementById('inputeventname').value;
 	h2B.id = "eventtitle";
+	
+	var h3C = document.createElement('h2');
+	var h3D = document.createElement('h2');
 
 	var h4B = document.createElement('h4');
 	var eventDateB = document.getElementById('inputeventdate').value;
@@ -386,18 +389,25 @@ function addEvent(){
 	var textnode9 = document.createTextNode("Event description: ");
 	var textnode91 = document.createTextNode(eventDescriptionB);
 
+	h2B.appendChild(document.createElement("br"));
+	h2B.appendChild(document.createElement("br"));
 	h2B.appendChild(textnode0);
-
+	
+	h3C.appendChild(document.createElement("br"));
+	h3C.style.borderBottom = "0";
+	
 	h4B.appendChild(textnode1);
 	h4B.appendChild(document.createElement("br"));
 	h4B.appendChild(textnode2);
 	h4B.appendChild(document.createElement("br"));
 	h4B.appendChild(textnode3);
 	h4B.classname = "eventdetails";
+	
+	h3D.appendChild(document.createElement("br"));
+	h3D.style.borderBottom = "0";
 
 	pB.appendChild(textnode9);
 	pB.style.fontWeight = "bold";
-	pB.appendChild(document.createElement("br"));
 	pB.appendChild(document.createElement("br"));
 
 	pB1.appendChild(textnode91);
@@ -405,7 +415,9 @@ function addEvent(){
 
 	// It all comes together *evil laughter* //
 	divB.appendChild(h2B);
+	divB.appendChild(h3C);
 	divB.appendChild(h4B);
+	divB.appendChild(h3D);
 	divB.appendChild(pB);
 	divB.appendChild(pB1);
 	divB.id = 'events-' + j;
@@ -413,9 +425,8 @@ function addEvent(){
 
 	
 	
-	// Edit this in the morning, Sean //
 	var list1 = document.getElementById('primaryEventsPlace');
 	list1.className = "activetab"; //This line causes events to bug when new event is created
 	list1.insertBefore(divB, document.getElementById('events-999'));
-	// Edit this in the morning, Sean //
+
 }
