@@ -120,7 +120,7 @@ header
 
 /* Article */
 
-.article-container-container-container-container
+.article-container-container-container
 {
 	position: relative;
 	top: 0px;
@@ -190,14 +190,14 @@ header
 	width: 100%;
 	height: 90%;
 	text-align: center;
-	padding: 20px;
-	padding-bottom: 0px;
+	padding: 0px 20px;
 }
 
 .article
 {
 	height: 500px;
 	width: 100%;
+	cursor: auto;
 }
 
 .written-article
@@ -286,6 +286,7 @@ header
 	width: 20px;
 	height: 20px;
 	margin-left: 5px;
+	margin-bottom: 10px;
 }
 
 .info
@@ -388,7 +389,6 @@ form
 .forminput
 {
 	margin: 10px;
-	box-shadow: 5px 5px grey;
 	resize: none;
 	color: black;
 }
@@ -404,6 +404,12 @@ form
 	background-color: lightyellow;
 }
 
+.length
+{
+	width: 80px;
+	color: black;
+}
+
 #form-container
 {
 	margin: 0 auto;
@@ -416,6 +422,67 @@ form
 {
 	color: black;
 	border-radius: 10px;
+}
+
+/* Adjust Image Overlay */
+
+#close2 img
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	-webkit-filter: opacity(50%);
+	cursor: pointer;
+}
+
+#close2 img:hover
+{
+	-webkit-filter: opacity(100%);
+}
+
+#adjust-image
+{
+	position: absolute;
+	top: 0;
+	left: 10%;
+	width: 80%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0 ,0 ,0 , 0.8);
+}
+
+#image-overlay
+{
+	width: 40%;
+	height: 500px;
+	background-color: rgb(51, 255, 51);
+	float: right;
+	margin: 20px 30% 0px 0px;
+}
+
+#previewImg
+{
+	width: 100%;
+	height: 500px;
+}
+
+#vertical-range
+{
+	-webkit-appearance: slider-vertical;
+	width: 8px;
+    height: 500px;
+	margin: 20px 40px 0px 0px;
+	float: right;
+}
+
+#range
+{
+	width: 40%;
+    height: 8px;
+	clear: both;
+	margin: 0 auto;
 }
 
 /* Footer */

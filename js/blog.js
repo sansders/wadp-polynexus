@@ -72,7 +72,31 @@ $(document).ready(function(){
 	$("#close").click(function(){
 		$("#createblog").hide("fold");
 	});
+	$("#close2").click(function(){
+		$("#adjust-image").hide("scale");
+	});
 });
+
+var width1;
+var height1;
+function overlay(){
+	$("#adjust-image").show("scale");
+	var preview = document.getElementById("Image").value;
+	document.getElementById("previewImg").src = preview;
+	width1 = document.getElementById("range").value;
+	height1 = document.getElementById("vertical-range").value;
+	document.getElementById("previewImg").style.width = width1 + "%";
+	document.getElementById("previewImg").style.height = height1 + "px";
+}
+
+function checkSlider(){
+	setInterval(function(){
+		width1 = document.getElementById("range").value;
+		height1 = document.getElementById("vertical-range").value;
+		document.getElementById("previewImg").style.width = width1 + "%";
+		document.getElementById("previewImg").style.height = height1 + "px";
+	}, 50);
+}
 
 var title, article, subtitle;
 function wordcheck(clicked_id){
@@ -161,9 +185,8 @@ function verify() {
 	}
 }
 
-var stophiding = false;
 var numOfArticle = 3;
-var i = 0;
+var i = 3;
 var x;
 var counter = "";
 function creatingDiv() {
@@ -206,7 +229,7 @@ function creatingDiv() {
 		H4.className = "article-subtitle";
 		IMG2.className = "blackLike";
 
-		Div1.setAttribute("id", (i + 4));
+		Div1.setAttribute("id", (i + 1));
 		Div2.setAttribute("id", "posted-article-preview"  + counter);
 		Div5.setAttribute("id", "posted-article"  + counter);
 		H3.setAttribute("id", "posted-article-title"  + counter);
@@ -241,16 +264,37 @@ function creatingDiv() {
 		P3.appendChild(SPAN1);
 		P3.appendChild(IMG2);
 		
-		if (stophiding == false) {
-			numOfArticle++
-			while (numOfArticle > 4){
-				document.getElementById(i).style.display = "none";
-				numOfArticle = eval(numOfArticle - 1);
-			}
-			i++;
-			x=i;
+		
+		numOfArticle++
+		while (numOfArticle > 4){
+			document.getElementById(i - 3).style.display = "none";
+			numOfArticle = eval(numOfArticle - 1);
 		}
+		i++;
+		x=i;
 	}
+}
+
+function hiddenpostshow() {
+	if (i > 4){
+		x=i;
+		var word = document.getElementById("morepost").innerHTML
+		if (word == "More Post..."){
+			document.getElementById("morepost").innerHTML= "Less Post...";
+			while (x > 0){
+				document.getElementById(x).style.display = "block";
+				x--
+			}
+		}
+		else if (word == "Less Post..."){
+			document.getElementById("morepost").innerHTML= "More Post...";
+			x = eval(x - 4);
+			while (x > 0){
+				document.getElementById(x).style.display = "none";
+				x--
+			}
+		}
+	} else{}
 }
 
 function posting() {
@@ -263,6 +307,8 @@ function posting() {
 		document.getElementById("posted-article-subtitle" + counter).innerHTML = postsubtitle;
 		document.getElementById("posted-written-article" + counter).innerHTML = postarticle;
 		document.getElementById("posted-image" + counter).src = postimage;
+		document.getElementById("posted-image" + counter).style.width = width1 + "%";
+		document.getElementById("posted-image" + counter).style.height = height1 + "px";
 		if (counter == "") {
 			$("#posted-article").hide();
 			$("#posted-article-preview").click(function(){
@@ -288,6 +334,10 @@ function posting() {
 			});
 		}
 		counter++
+		document.getElementById("Title").value = "";
+		document.getElementById("Subtitle").value = "";
+		document.getElementById("Image").value = "";
+		document.getElementById("Article").value = "";
 	}
 }
 
@@ -305,12 +355,196 @@ function goBlog(){
   window.location ="blog.html";
 }
 
-function hiddenpostshow() {
-	while (x > 0){
-		document.getElementById(x).style.display = "block";
-		x--
-		stophiding = true;
-	}
-}
-
 /* Seleting Blog Based on Group */
+$(document).ready(function() {
+	var blogGroup1 = sessionStorage.getItem('bloggroup');
+	if (blogGroup1 != null && blogGroup1 != ""){
+		var blogGroup = JSON.parse(sessionStorage.getItem('bloggroup'));
+		
+		switch(blogGroup[0]){
+			case "Anime":
+					document.getElementById("title-1").innerHTML = "Pokemon GO";
+					document.getElementById("subtitle-1").innerHTML = "Gotta catch 'em all";
+					document.getElementById("written-1").innerHTML = "People say that Sean to this day is still waiting for it...";
+					document.getElementById("img-1").src = "http://toucharcade.com/wp-content/uploads/2016/07/landscape-1456483171-pokemon2.jpg";
+					
+					document.getElementById("title-2").innerHTML = "Doraemon";
+					document.getElementById("subtitle-2").innerHTML = "Your friendly blue cat(?)";
+					document.getElementById("written-2").innerHTML = "That August 30, 2122 is the exact date when Doraemon's ears were eaten by mice. (Sorry I dont know what to write here)";
+					document.getElementById("img-2").src = "http://www.spyderonlines.com/images/wallpapers/doraemon-images/doraemon-images-9.jpg";
+					
+					document.getElementById("title-3").innerHTML = "Digimon";
+					document.getElementById("subtitle-3").innerHTML = "I forgot the purpose of the show";
+					document.getElementById("written-3").innerHTML = "Woops... I thought this is pokemon.";
+					document.getElementById("img-3").src = "http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/shows/banner_191.jpg";
+					break;
+					
+			case "Belson":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "Chinese":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "French":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "Gaming":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "Gardening":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "Money":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "School":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "Sports":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+					
+			case "Weird":
+					document.getElementById("title-1").innerHTML = "";
+					document.getElementById("subtitle-1").innerHTML = "";
+					document.getElementById("written-1").innerHTML = "";
+					document.getElementById("img-1").src = "";
+					
+					document.getElementById("title-2").innerHTML = "";
+					document.getElementById("subtitle-2").innerHTML = "";
+					document.getElementById("written-2").innerHTML = "";
+					document.getElementById("img-2").src = "";
+					
+					document.getElementById("title-3").innerHTML = "";
+					document.getElementById("subtitle-3").innerHTML = "";
+					document.getElementById("written-3").innerHTML = "";
+					document.getElementById("img-3").src = "";
+					break;
+		}
+		
+		for(var a = 0; a < blogGroup.length; a++){
+			var blogList = document.getElementById("bloglist");
+			var group = document.createElement("li");
+			var groupName = document.createTextNode(blogGroup[a]);
+		
+			group.setAttribute("onclick", "");
+			
+			group.appendChild(groupName);
+			blogList.appendChild(group);
+		}
+		group.style.backgroundColor = "rgba(0, 76, 159, 0.7)";
+		group.style.color = "white";
+	} 
+	else{}
+});
