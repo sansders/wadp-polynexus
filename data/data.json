@@ -5,6 +5,7 @@
       "lang": "jp",
       "groupchats": ["anime" , "basketballers"],
       "privatechats":["123456a", "111111a","696969b"],
+	  "bloggroup": ["Anime", "Sports", "Belson"],
       "theme": "mono",
       "perm" : "1"
     },
@@ -13,6 +14,7 @@
       "lang": "en",
       "groupchats": ["CSIT scholarship","Gardening"],
       "privatechats": ["161714f","160364n","696969b"],
+	  "bloggroup": ["Money", "School", "Gardening", "Belson"],
       "perm" : "1"
     },
     "111111a":{
@@ -20,6 +22,7 @@
       "lang":"cn",
       "groupchats": ["Chinese Club","Gardening"],
       "privatechats": ["161714f", "123456a"],
+	  "bloggroup": ["Chinese", "Gardening", "Belson"],
       "perm" : "0"
     },
     "160280x":{
@@ -28,6 +31,7 @@
       "groupchats": ["French Midgets","Lolicons","Crossdressing"],
       "theme": "pink",
       "privatechats": ["161714f"],
+	  "bloggroup": ["French", "Weird Hobbies", "Belson"],
       "perm" : "0"
     },
 	"160364n":{
@@ -35,6 +39,7 @@
       "lang": "en",
       "groupchats": ["osu","Gunpla"],
       "privatechats": ["123456a"],
+	  "bloggroup": ["Anime", "Gaming", "Belson"],
       "perm" : "1"
     },
 	"696969b":{
@@ -42,6 +47,7 @@
       "lang": "en",
       "groupchats": ["Complex People","Imaginary People", "Blueberries"],
       "privatechats": ["123456a"],
+	  "bloggroup": ,
       "theme": "pink",
 	  "perm" : "1"
 	}

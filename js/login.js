@@ -17,6 +17,7 @@ function login(){
     var language = eval("xmlDoc.users['"+input+"'].lang");
     var groupchats = eval("xmlDoc.users['"+input+"'].groupchats");
     var privatechats = eval("xmlDoc.users['"+input+"'].privatechats");
+	var bloggroup = eval("xmlDoc.users['"+input+"'].bloggroup");
     var theme = eval("xmlDoc.users['"+input+"'].theme");
 	var perm = eval("xmlDoc.users['"+input+"'].perm");
     sessionStorage.setItem('username' , username);
@@ -24,8 +25,9 @@ function login(){
     sessionStorage.setItem('userid', input);
     sessionStorage.setItem('groupchats', JSON.stringify(groupchats));
     sessionStorage.setItem('privatechats', JSON.stringify(privatechats));
+	sessionStorage.setItem('bloggroup', JSON.stringify(bloggroup));
     sessionStorage.setItem('theme', theme);
-	  sessionStorage.setItem('perm', perm);
+	sessionStorage.setItem('perm', perm);
     document.location = "main.html";
   }
   catch(err){
