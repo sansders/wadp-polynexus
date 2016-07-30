@@ -227,9 +227,8 @@ function loadChats(){
       var a = document.createElement("A");
       p.className = "textchat";
       time.className = "timestamp";
-      p.innerHTML = "placeholder: i am a placeholder";
+      p.innerHTML = xmlDoc.group[grpchat[i]].placeholder;
       time.innerHTML = "13:13";
-
       h3.innerHTML = grpchat[i];
       a.href = "#chat-" + ++index;
       a.appendChild(h3);
@@ -246,7 +245,7 @@ function loadChats(){
     var a1 = document.createElement("A");
     p1.className = "textchat";
     time1.className = "timestamp";
-    p1.innerHTML = "placeholder: i am a placeholder";
+    p1.innerHTML = xmlDoc.private[privchat[x]].placeholder;
     time1.innerHTML = "13:13";
 
     h31.innerHTML = xmlDoc.users[privchat[x]].username;

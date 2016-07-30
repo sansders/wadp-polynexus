@@ -12,7 +12,7 @@
       "username":"john lim",
       "lang": "en",
       "groupchats": ["CSIT scholarship","Gardening"],
-      "privatechats": ["161714f","160364n","BBBelson"],
+      "privatechats": ["161714f","160364n","696969b"],
       "perm" : "1"
     },
     "111111a":{
@@ -37,7 +37,7 @@
       "privatechats": ["123456a"],
       "perm" : "1"
     },
-	"bbbelson":{
+	"696969b":{
 	  "username": "Blueberry Belson",
       "lang": "en",
       "groupchats": ["Complex People","Imaginary People", "Blueberries"],
@@ -47,15 +47,64 @@
 	}
   },
   "group":{
-    "CSIT scholarship":{},
-    "Gardening":{},
-    "anime":{},
-    "basketballers":{},
-    "Chinese Club":{},
-    "French Midgets":{},
-    "Lolicons":{},
-    "Crossdressing":{},
-    "osu":{},
-    "Gunpla":{}
+    "CSIT scholarship":{
+      "placeholder":"Matt: Where is my money"
+    },
+    "Gardening":{
+      "placeholder":"John Lim: i got money"
+    },
+    "anime":{
+      "placeholder":"John Lim: i love highschool dxd"
+    },
+    "basketballers":{
+      "placeholder":"Slam: Dunk"
+    },
+    "Chinese Club":{
+      "placeholder":"Mao: Zedong"
+    },
+    "French Midgets":{
+      "placeholder":"Matt: baguette"
+    },
+    "Lolicons":{
+      "placeholder":"Matt:　ロリが大好き"
+    },
+    "Crossdressing":{
+      "placeholder":"Matt: 男の娘が大好き"
+    },
+    "osu":{
+      "placeholder": "Dean: Click the circles"
+    },
+    "Gunpla":{
+      "placeholder":"Shota Sean: but why?"
+    },
+    "Complex People":{
+      "placeholder":"Belson: i am complex"
+    },
+    "Imaginary People":{
+      "placeholder":"Belson: i am imaginary"
+    },
+    "Blueberries":{
+      "placeholder":"Belson: i love blue berries"
     }
+  },
+  "private":{
+    "161714f":{
+      "placeholder":"I love you"
+    },
+    "123456a":{
+      "placeholder":"I wont give you my money"
+    },
+    "111111a":{
+      "placeholder":"wo shi chinese"
+    },
+    "160280x":{
+      "placeholder":"i love little girls"
+    },
+    "160384n":{
+      "placeholder":"hi"
+    },
+    "696969b":{
+      "placeholder":"Blueberries are awesome!"
+    }
+  }
  }
