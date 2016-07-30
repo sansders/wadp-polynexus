@@ -305,10 +305,10 @@ function addEvent(){
 	/* Creating new li to store data in. 'A' variables will also be created below. */
 	var liA = document.createElement('li');
 	var aA = document.createElement('a');
-	
-	
-	
-	
+
+
+
+
 	aA.setAttribute("href", "#events-" + ++j  );
 
 	/* Creating element types to store data in */
@@ -337,7 +337,7 @@ function addEvent(){
 	liA.appendChild(h3A);
 	liA.appendChild(h4A);
 	liA.appendChild(pA);
-	liA.setAttribute('onclick','events' + j + '()'); 
+	liA.setAttribute('onclick','events' + j + '()');
 
 	aA.appendChild(liA);
 

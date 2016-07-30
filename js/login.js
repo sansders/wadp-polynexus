@@ -2,6 +2,12 @@ var xmlhttp= new XMLHttpRequest();
 xmlhttp.open("GET", "data/data.json", false);
 xmlhttp.send();
 var xmlDoc = JSON.parse(xmlhttp.responseText);
+$(document).keypress(function(event) {
+    if (event.which == 13) {
+     login();
+
+   }
+});
 function login(){
   var input = document.getElementById('usernameinput').value;
   input = input.toLowerCase();

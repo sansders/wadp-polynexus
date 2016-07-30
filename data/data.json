@@ -4,7 +4,7 @@
       "username":"タンさん",
       "lang": "jp",
       "groupchats": ["anime" , "basketballers"],
-      "privatechats":["123456a", "111111a"],
+      "privatechats":["123456a", "111111a","696969b"],
       "theme": "mono",
       "perm" : "1"
     },
@@ -100,7 +100,7 @@
     "160280x":{
       "placeholder":"i love little girls"
     },
-    "160384n":{
+    "160364n":{
       "placeholder":"hi"
     },
     "696969b":{
