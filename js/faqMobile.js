@@ -13,3 +13,7 @@ function logout(){
   sessionStorage.removeItem('perm');
   sessionStorage.removeItem('icon');
 }
+
+$(".fa fa-bars").click(function(){
+    $(".intro").css("padding-top", "0px;");
+});
