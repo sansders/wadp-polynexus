@@ -6,21 +6,24 @@
       "groupchats": ["anime" , "basketballers"],
       "privatechats":["123456a", "111111a","696969b"],
       "theme": "mono",
-      "perm" : "1"
+      "perm" : "1",
+      "icon" : "icon4"
     },
     "123456a":{
       "username":"john lim",
       "lang": "en",
       "groupchats": ["CSIT scholarship","Gardening"],
       "privatechats": ["161714f","160364n","696969b"],
-      "perm" : "1"
+      "perm" : "1",
+      "icon" : "icon7"
     },
     "111111a":{
       "username":"小明",
       "lang":"cn",
       "groupchats": ["Chinese Club","Gardening"],
       "privatechats": ["161714f", "123456a"],
-      "perm" : "0"
+      "perm" : "0",
+      "icon":"icon5"
     },
     "160280x":{
       "username": "baguette matte",
@@ -28,14 +31,16 @@
       "groupchats": ["French Midgets","Lolicons","Crossdressing"],
       "theme": "pink",
       "privatechats": ["161714f"],
-      "perm" : "0"
+      "perm" : "0",
+      "icon":"icon2"
     },
 	"160364n":{
       "username": "Shota Sean",
       "lang": "en",
       "groupchats": ["osu","Gunpla"],
       "privatechats": ["123456a"],
-      "perm" : "1"
+      "perm" : "1",
+      "icon":"icon3"
     },
 	"696969b":{
 	  "username": "Blueberry Belson",
@@ -43,7 +48,8 @@
       "groupchats": ["Complex People","Imaginary People", "Blueberries"],
       "privatechats": ["123456a"],
       "theme": "pink",
-	  "perm" : "1"
+	    "perm" : "1",
+      "icon" : "icon6"
 	}
   },
   "group":{
