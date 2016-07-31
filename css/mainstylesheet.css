@@ -464,3 +464,8 @@ h2 .eventtitle
   border-color:rgba(220,220,220,1);
   border-width: 4px;
 }
+
+#emptySpace
+{
+	height: 100px;
+}
