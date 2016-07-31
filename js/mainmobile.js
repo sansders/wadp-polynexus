@@ -31,7 +31,6 @@ $(document).ready(function(){
     xmlhttp.send();
     xmlDoc = JSON.parse(xmlhttp.responseText);
     loadChats();
-	  events1();
     setLanguage(language);
   }
 
@@ -66,7 +65,7 @@ function changetheme(n){
   if(n === 'mono'){
     //monochrome theme
     var sheet = document.createElement('style');
-    sheet.innerHTML = ".navbarlist li:hover {background-color: #ebebeb;} h1{  background-color: white; color: black; border-bottom:2px solid #dcdcdc;} .navbarlist li a{color: black} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  #dcdcdc;} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border 1px solid dcdcdc;}";
+    sheet.innerHTML = ".navbarlist li:hover {background-color: #ebebeb;} h1{  background-color: white; color: black; border-bottom:2px solid #dcdcdc;} .navbarlist li a{color: black} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  #dcdcdc;} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border: 1px solid dcdcdc;} #bars {color:black;}";
     document.body.appendChild(sheet);
 	sessionStorage.setItem("theme","mono");
   }
@@ -231,9 +230,8 @@ function loadChats(){
       var a = document.createElement("A");
       p.className = "textchat";
       time.className = "timestamp";
-      p.innerHTML = "placeholder: i am a placeholder";
+      p.innerHTML = xmlDoc.group[grpchat[i]].placeholder;
       time.innerHTML = "13:13";
-
       h3.innerHTML = grpchat[i];
       a.href = "#chat-" + ++index;
       a.appendChild(h3);
@@ -250,7 +248,7 @@ function loadChats(){
     var a1 = document.createElement("A");
     p1.className = "textchat";
     time1.className = "timestamp";
-    p1.innerHTML = "placeholder: i am a placeholder";
+    p1.innerHTML = xmlDoc.private[privchat[x]].placeholder;
     time1.innerHTML = "13:13";
 
     h31.innerHTML = xmlDoc.users[privchat[x]].username;
@@ -261,12 +259,12 @@ function loadChats(){
     li1.appendChild(a1);
     document.getElementById('chatul').insertBefore(li1, addchat);
   }
-	/* loadChatoutput(); */
+  loadChatoutput();
 }
 
 /* function loadChatoutput(){
   //will load the container containing chatoutput
-  var grpchat = JSON.parse(sessionStorage.getItem('groupchats'));
+ var grpchat = JSON.parse(sessionStorage.getItem('groupchats'));
   var privchat = JSON.parse(sessionStorage.getItem('privatechats'));
   var index = 0;
   for(var i=0; i<grpchat.length; i++){
@@ -284,7 +282,7 @@ function loadChats(){
     container.appendChild(div);
     container.appendChild(div1);
     document.getElementById("chat").appendChild(container);
-  }
+}
   for(var x=0; x<privchat.length; x++){
     var container1 = document.createElement("DIV");
     var h21 = document.createElement("H2");
