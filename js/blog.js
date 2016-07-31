@@ -228,7 +228,8 @@ function creatingDiv() {
 		H3.className = "article-title";
 		H4.className = "article-subtitle";
 		IMG2.className = "blackLike";
-
+		
+		Li1.setAttribute("id", CurrentGroup + counter);
 		Div1.setAttribute("id", (i + 1));
 		Div2.setAttribute("id", "posted-article-preview"  + counter);
 		Div5.setAttribute("id", "posted-article"  + counter);
@@ -299,6 +300,8 @@ function hiddenpostshow() {
 
 function posting() {
 	if (confirmation == true) {
+		var blogGroup = JSON.parse(sessionStorage.getItem('bloggroup'));
+		
 		var posttitle = document.getElementById("Title").value;
 		var postsubtitle = document.getElementById("Subtitle").value;
 		var postarticle = document.getElementById("Article").value;
@@ -338,6 +341,7 @@ function posting() {
 		document.getElementById("Subtitle").value = "";
 		document.getElementById("Image").value = "";
 		document.getElementById("Article").value = "";
+		
 	}
 }
 
@@ -356,180 +360,155 @@ function goBlog(){
 }
 
 /* Seleting Blog Based on Group */
+var currentGroup;
+var wf, a1, b2, c3, d4, e5, f6, g7, h8, i9, j10
 $(document).ready(function() {
 	var blogGroup1 = sessionStorage.getItem('bloggroup');
 	if (blogGroup1 != null && blogGroup1 != ""){
 		var blogGroup = JSON.parse(sessionStorage.getItem('bloggroup'));
 		
+		var container = document.getElementById("selectioncontainer");
+		var Anime = document.getElementById("ConAnime");
+		var Belson = document.getElementById("ConBelson");
+		var Chinese = document.getElementById("ConChinese");
+		var French = document.getElementById("ConFrench");
+		var Gaming = document.getElementById("ConGaming");
+		var Gardening = document.getElementById("ConGardening");
+		var Money = document.getElementById("ConMoney");
+		var School = document.getElementById("ConSchool");
+		var Sports = document.getElementById("ConSports");
+		var Weird = document.getElementById("ConWeird");
+		var Original = document.getElementById("ConOriginal");
+		
 		switch(blogGroup[0]){
 			case "Anime":
-					document.getElementById("title-1").innerHTML = "Pokemon GO";
-					document.getElementById("subtitle-1").innerHTML = "Gotta catch 'em all";
-					document.getElementById("written-1").innerHTML = "People say that Sean to this day is still waiting for it...";
-					document.getElementById("img-1").src = "http://toucharcade.com/wp-content/uploads/2016/07/landscape-1456483171-pokemon2.jpg";
-					
-					document.getElementById("title-2").innerHTML = "Doraemon";
-					document.getElementById("subtitle-2").innerHTML = "Your friendly blue cat(?)";
-					document.getElementById("written-2").innerHTML = "That August 30, 2122 is the exact date when Doraemon's ears were eaten by mice. (Sorry I dont know what to write here)";
-					document.getElementById("img-2").src = "http://www.spyderonlines.com/images/wallpapers/doraemon-images/doraemon-images-9.jpg";
-					
-					document.getElementById("title-3").innerHTML = "Digimon";
-					document.getElementById("subtitle-3").innerHTML = "I forgot the purpose of the show";
-					document.getElementById("written-3").innerHTML = "Woops... I thought this is pokemon.";
-					document.getElementById("img-3").src = "http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/shows/banner_191.jpg";
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Belson":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Chinese":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "French":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Gaming":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Gardening":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Money":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "School":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Sports":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					j10 = container.removeChild(Weird);
+					wf = container.removeChild(Original);
 					break;
 					
 			case "Weird":
-					document.getElementById("title-1").innerHTML = "";
-					document.getElementById("subtitle-1").innerHTML = "";
-					document.getElementById("written-1").innerHTML = "";
-					document.getElementById("img-1").src = "";
-					
-					document.getElementById("title-2").innerHTML = "";
-					document.getElementById("subtitle-2").innerHTML = "";
-					document.getElementById("written-2").innerHTML = "";
-					document.getElementById("img-2").src = "";
-					
-					document.getElementById("title-3").innerHTML = "";
-					document.getElementById("subtitle-3").innerHTML = "";
-					document.getElementById("written-3").innerHTML = "";
-					document.getElementById("img-3").src = "";
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					wf = container.removeChild(Original);
 					break;
 		}
 		
@@ -537,14 +516,765 @@ $(document).ready(function() {
 			var blogList = document.getElementById("bloglist");
 			var group = document.createElement("li");
 			var groupName = document.createTextNode(blogGroup[a]);
-		
-			group.setAttribute("onclick", "");
+			
+			group.setAttribute("id", blogGroup[a]);
+			group.setAttribute("onclick", "changeGroup(this.id)");
 			
 			group.appendChild(groupName);
 			blogList.appendChild(group);
 		}
-		group.style.backgroundColor = "rgba(0, 76, 159, 0.7)";
-		group.style.color = "white";
+		
+		var first = document.getElementById(blogGroup[0]);
+		first.style.backgroundColor = "rgba(0, 76, 159, 0.7)";
+		first.style.color = "white";
+		
+		CurrentGroup = blogGroup[0];
+		console.log("Current group: " + CurrentGroup);
 	} 
 	else{}
 });
+
+function changeGroup(click_id){
+	
+	var Selected = document.getElementById(click_id);
+	Selected.style.backgroundColor = "rgba(0, 76, 159, 0.7)";
+	Selected.style.color = "white";
+	
+	var container = document.getElementById("selectioncontainer");
+	var Anime = document.getElementById("ConAnime");
+	var Belson = document.getElementById("ConBelson");
+	var Chinese = document.getElementById("ConChinese");
+	var French = document.getElementById("ConFrench");
+	var Gaming = document.getElementById("ConGaming");
+	var Gardening = document.getElementById("ConGardening");
+	var Money = document.getElementById("ConMoney");
+	var School = document.getElementById("ConSchool");
+	var Sports = document.getElementById("ConSports");
+	var Weird = document.getElementById("ConWeird");
+	var Original = document.getElementById("ConOriginal");
+		
+	switch(click_id){
+		case "Anime":
+					switch(CurrentGroup){		
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(a1);
+					break;
+					
+		case "Belson":
+				switch(CurrentGroup){	
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(b2);
+					break;
+				
+		case "Chinese":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(c3);
+					break;
+				
+		case "French":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(d4);
+					break;
+				
+		case "Gaming":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(e5);
+					break;
+				
+		case "Gardening":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(f6);
+					break;
+				
+		case "Money":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(g7)
+					break;
+				
+		case "School":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(h8)
+					break;
+				
+		case "Sports":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Weird":
+								j10 = container.removeChild(Weird);
+								var Wei = document.getElementById("Weird");
+								Wei.style.backgroundColor = "";
+								Wei.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+					}
+					container.appendChild(i9);
+					break;
+				
+		case "Weird":
+				switch(CurrentGroup){
+						case "Anime":
+								a1 = container.removeChild(Anime);
+								var Ani = document.getElementById("Anime");
+								Ani.style.backgroundColor = "";
+								Ani.style.color = "black";
+								break;
+								
+						case "Belson":
+								b2 = container.removeChild(Belson);
+								var Bel = document.getElementById("Belson");
+								Bel.style.backgroundColor = "";
+								Bel.style.color = "black";
+								break;
+								
+						case "Chinese":
+								c3 = container.removeChild(Chinese);
+								var Chi = document.getElementById("Chinese");
+								Chi.style.backgroundColor = "";
+								Chi.style.color = "black";
+								break;
+								
+						case "French":
+								d4 = container.removeChild(French);
+								var Fre = document.getElementById("French");
+								Fre.style.backgroundColor = "";
+								Fre.style.color = "black";
+								break;
+								
+						case "Gaming":
+								e5 = container.removeChild(Gaming);
+								var Gam = document.getElementById("Gaming");
+								Gam.style.backgroundColor = "";
+								Gam.style.color = "black";
+								break;
+								
+						case "Gardening":
+								f6 = container.removeChild(Gardening);
+								var Gar = document.getElementById("Gardening");
+								Gar.style.backgroundColor = "";
+								Gar.style.color = "black";
+								break;
+								
+						case "Money":
+								g7 = container.removeChild(Money);
+								var Mon = document.getElementById("Money");
+								Mon.style.backgroundColor = "";
+								Mon.style.color = "black";
+								break;
+								
+						case "School":
+								h8 = container.removeChild(School);
+								var Sch = document.getElementById("School");
+								Sch.style.backgroundColor = "";
+								Sch.style.color = "black";
+								break;
+								
+						case "Sports":
+								i9 = container.removeChild(Sports);
+								var Spo = document.getElementById("Sports");
+								Spo.style.backgroundColor = "";
+								Spo.style.color = "black";
+								break;
+								
+						default:
+								wf = container.removeChild(Original);
+								break;
+				}
+				container.appendChild(j10);
+				break;
+	}
+	
+	CurrentGroup = click_id;
+	console.log("Current group: " + CurrentGroup);
+}
