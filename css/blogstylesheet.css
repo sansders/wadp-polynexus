@@ -210,7 +210,8 @@ header
 .written
 {
 	height: 90%;
-	width: 50%;
+	width: 100%;
+	padding: 50px;
 }
 
 .article-container p
