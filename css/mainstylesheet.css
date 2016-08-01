@@ -457,6 +457,12 @@ h2 .eventtitle
   margin:0px 10px;
 }
 
+#changeableIcon1{
+  max-height: 32px;
+  max-width: 32px;
+  border-radius:4px;
+}
+
 .iconSelector{
   padding:20px 10px;
   border-radius:8px;
@@ -474,4 +480,8 @@ h2 .eventtitle
 .currentchatlist #emptySpace:hover
 {
 	box-shadow: 0 0 0px 0px #000000;
+}
+
+#userid{
+  float:right;
 }

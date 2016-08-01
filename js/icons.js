@@ -1,3 +1,9 @@
+var iconNo;
+$(document).ready(function(){
+  iconNo = sessionStorage.getItem('icon');
+  setIcon(iconNo);
+});
+
 function setIcon(iconNo){
   switch (iconNo) {
 
