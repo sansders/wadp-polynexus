@@ -8,7 +8,8 @@
 	  "bloggroup": ["Anime", "Sports", "Belson"],
       "theme": "mono",
       "perm" : "1",
-      "icon" : "icon4"
+      "icon" : "icon4",
+      "hash" : "123382570"
     },
     "123456a":{
       "username":"john lim",
@@ -17,7 +18,8 @@
       "privatechats": ["161714f","160364n","696969b"],
 	  "bloggroup": ["Money", "School", "Gardening", "Belson"],
       "perm" : "1",
-      "icon" : "icon7"
+      "icon" : "icon7",
+      "hash" : "-455698941"
     },
     "111111a":{
       "username":"小明",
@@ -26,7 +28,8 @@
       "privatechats": ["161714f", "123456a"],
 	  "bloggroup": ["Chinese", "Gardening", "Belson"],
       "perm" : "0",
-      "icon":"icon5"
+      "icon":"icon5",
+      "hash" : "1739033442"
     },
     "160280x":{
       "username": "baguette matte",
@@ -36,7 +39,8 @@
       "privatechats": ["161714f"],
 	  "bloggroup": ["French", "Weird", "Belson"],
       "perm" : "0",
-      "icon":"icon2"
+      "icon":"icon2",
+      "hash" : "970700992"
     },
 	"160364n":{
       "username": "Shota Sean",
@@ -45,7 +49,8 @@
       "privatechats": ["123456a"],
 	  "bloggroup": ["Anime", "Gaming", "Belson"],
       "perm" : "1",
-      "icon":"icon3"
+      "icon":"icon3",
+      "hash" : "396979667"
     },
 	"696969b":{
 	  "username": "Blueberry Belson",
@@ -54,7 +59,8 @@
       "privatechats": ["123456a"],
       "theme": "pink",
 	  "perm" : "1",
-      "icon" : "icon6"
+      "icon" : "icon6",
+      "hash" : "-821775658"
 	}
   },
   "group":{

@@ -11,26 +11,30 @@ $(document).keypress(function(event) {
 function login(){
   var input = document.getElementById('usernameinput').value;
   input = input.toLowerCase();
+  var password = document.getElementById("passwordinput").value;
+  var hash = hashCode(password + input);
   try{
     //load session storage
-    var username = eval("xmlDoc.users['"+input+"'].username");
-    var language = eval("xmlDoc.users['"+input+"'].lang");
-    var groupchats = eval("xmlDoc.users['"+input+"'].groupchats");
-    var privatechats = eval("xmlDoc.users['"+input+"'].privatechats");
-	var bloggroup = eval("xmlDoc.users['"+input+"'].bloggroup");
-    var theme = eval("xmlDoc.users['"+input+"'].theme");
-	var perm = eval("xmlDoc.users['"+input+"'].perm");
-    var icon = eval("xmlDoc.users['"+input+"'].icon");
-    sessionStorage.setItem('username' , username);
-    sessionStorage.setItem('language' , language);
-    sessionStorage.setItem('userid', input);
-    sessionStorage.setItem('groupchats', JSON.stringify(groupchats));
-    sessionStorage.setItem('privatechats', JSON.stringify(privatechats));
-	sessionStorage.setItem('bloggroup', JSON.stringify(bloggroup));
-    sessionStorage.setItem('theme', theme);
-	sessionStorage.setItem('perm', perm);
-    sessionStorage.setItem('icon', icon)
-    document.location = "main.html";
+    if(hash == xmlDoc.users[input].hash){
+      var username = eval("xmlDoc.users['"+input+"'].username");
+      var language = eval("xmlDoc.users['"+input+"'].lang");
+      var groupchats = eval("xmlDoc.users['"+input+"'].groupchats");
+      var privatechats = eval("xmlDoc.users['"+input+"'].privatechats");
+      var theme = eval("xmlDoc.users['"+input+"'].theme");
+      var perm = eval("xmlDoc.users['"+input+"'].perm");
+      sessionStorage.setItem('username' , username);
+      sessionStorage.setItem('language' , language);
+      sessionStorage.setItem('userid', input);
+      sessionStorage.setItem('groupchats', JSON.stringify(groupchats));
+      sessionStorage.setItem('privatechats', JSON.stringify(privatechats));
+      sessionStorage.setItem('theme', theme);
+      sessionStorage.setItem('perm', perm);
+      document.location = "main.html";
+    }
+    else
+    {
+      alert("wrong username or password");
+    }
   }
   catch(err){
     if(err.name === 'TypeError'){
@@ -41,4 +45,12 @@ function login(){
     }
   }
 
+}
+
+function hashCode(str) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+        hash = ~~(((hash << 5) - hash) + str.charCodeAt(i));
+    }
+    return hash;
 }
