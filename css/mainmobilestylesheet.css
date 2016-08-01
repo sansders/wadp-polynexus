@@ -359,18 +359,17 @@ button
   margin: 5px 1px;
   border: 1px solid #dcdcdc;
   border-radius: 5px;
+  margin-top: 13px;
 }
 
 .chatinputbox1
 {
 	width: 240px;
 	margin-right: 10px;
-	margin-bottom: 10px;
 }
 
 .chatinputbox2
 {
 	width: 240px;
 	margin-right: 10px;
-	margin-bottom: 10px;
 }
