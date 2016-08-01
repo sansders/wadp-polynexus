@@ -238,6 +238,8 @@ function loadChats(){
       a.appendChild(p);
       a.appendChild(time);
       li.appendChild(a);
+	  li.setAttribute('onclick','nextPageIsGrpChats' + ++i + '()'); 
+	  --i;
       document.getElementById('chatul').insertBefore(li, addchat);
   }
   for(var x=0; x<privchat.length; x++){
@@ -257,12 +259,13 @@ function loadChats(){
     a1.appendChild(p1);
     a1.appendChild(time1);
     li1.appendChild(a1);
+	li1.setAttribute('onclick','nextPageIsPrivChats' + ++x + '()'); 
     document.getElementById('chatul').insertBefore(li1, addchat);
-  }
+  } 
   loadChatoutput();
 }
 
-/* function loadChatoutput(){
+function loadChatoutput(){
   //will load the container containing chatoutput
  var grpchat = JSON.parse(sessionStorage.getItem('groupchats'));
   var privchat = JSON.parse(sessionStorage.getItem('privatechats'));
@@ -270,26 +273,32 @@ function loadChats(){
   for(var i=0; i<grpchat.length; i++){
     var container = document.createElement("DIV");
     var h2 = document.createElement("H2");
+	h2.style.borderBottom="0";
     var div = document.createElement("DIV");
     var div1 = document.createElement("DIV");
     div1.className="chatinputbox";
-    div1.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
-    container.className = "activetab chatinterface";
+    div1.innerHTML= '<input type="text" placeholder="Type a message" class="chatinputbox1"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
+	
+	container.className = "activetab chatinterface";
     container.id = "chat-" + ++index;
     div.className = "chatoutput";
     h2.innerHTML = grpchat[i];
+	
     container.appendChild(h2);
     container.appendChild(div);
-    container.appendChild(div1);
+	container.appendChild(div1);
+	container.style.paddingTop="53px";
+	container.style.position="fixed";
     document.getElementById("chat").appendChild(container);
 }
   for(var x=0; x<privchat.length; x++){
     var container1 = document.createElement("DIV");
     var h21 = document.createElement("H2");
+	h21.style.borderBottom="0";
     var div2 = document.createElement("DIV");
     var div11 = document.createElement("DIV");
     div11.className="chatinputbox";
-    div11.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
+    div11.innerHTML= '<input type="text" placeholder="Type a message" class="chatinputbox2"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
     container1.className = "activetab chatinterface";
     container1.id = "chat-" + ++index;
     div2.className = "chatoutput";
@@ -297,10 +306,12 @@ function loadChats(){
     container1.appendChild(h21);
     container1.appendChild(div2);
     container1.appendChild(div11);
+	container1.style.paddingTop="53px";
+	container1.style.position="fixed";
     document.getElementById("chat").appendChild(container1);
   } 
   $("#chat").tabs();
-} */
+} 
 
 var j = 2;
 

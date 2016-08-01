@@ -347,3 +347,28 @@ button
 {
 	height: 300px;
 }
+
+.chatoutput
+{
+  position: fixed;
+  top: 20%;
+  overflow: auto;
+  padding: 10px 10px;
+  width: 70%;
+  height: 65%;
+  margin: 5px 1px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+.chatinputbox1
+{
+	width: 260px;
+	margin-right: 10px;
+}
+
+.chatinputbox2
+{
+	width: 260px;
+	margin-right: 10px;
+}
