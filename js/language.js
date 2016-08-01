@@ -103,7 +103,7 @@ function setLanguage(language){
 	document.getElementById('event1-8').innerHTML="Event description:";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
     document.getElementById('settingsdesc').innerHTML="Change how the application works.";
-	document.getElementById('setting1h3').innerHTML= "<i class='fa fa-user' aria-hidden='true'></i> 帐号";
+	document.getElementById('setting1h3').innerHTML= "<i class='fa fa-user' aria-hidden='true'></i> Username";
 	document.getElementById('settingsusernamedesc').innerHTML="Change your username.";
 	document.getElementById('setting1-1').innerHTML= "Username";
 	document.getElementById('setting1-2').innerHTML= "Please select a username of your liking.";
