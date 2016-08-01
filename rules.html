@@ -21,6 +21,11 @@
 		        crossorigin="anonymous"></script>
 			<script src="js/rulesFAQ.js"></script>
 			<script>
+		    if (screen.width <= 800) {
+		      window.location = "rulesMobile.html";
+		    } //redirect
+		  </script>
+			<script>
 			var theme = sessionStorage.getItem('theme');
 
 			function hidecontent(){

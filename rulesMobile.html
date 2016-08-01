@@ -1,0 +1,198 @@
+<!--Matt Will Do-->
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>polyNexus FAQ</title>
+			<link rel="stylesheet" href="css/faqmobilestylesheet.css" type="text/css" />
+			<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.css" type="text/css" />
+			<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+			<meta name="viewport" content="width=device-width" />
+			<script
+		        src="https://code.jquery.com/jquery-1.12.4.js"
+		        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+		        crossorigin="anonymous"></script>
+		  <script
+		        src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+		        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="
+		        crossorigin="anonymous"></script>
+			<script src="js/faqMobile.js"></script>
+			<script>
+			var theme = sessionStorage.getItem('theme');
+			function hidecontent(){
+
+				div1a = document.getElementById('questionSet1');
+				div1a.style.display = "none";
+				div2a = document.getElementById('questionSet2');
+				div2a.style.display = "none";
+				div3a = document.getElementById('questionSet3');
+				div3a.style.display = "none";
+				div4a = document.getElementById('questionSet4');
+				div4a.style.display = "none";
+				div5a = document.getElementById('questionSet5');
+				div5a.style.display = "none";
+        div1z = document.getElementById('navbarlist');
+				div1z.style.display = "none";
+			}
+			function contentshow(content){
+
+			div = document.getElementById(content);
+			if(div.style.display == "block")
+			{
+				div.style.display = "none";
+			}
+			else{
+				div.style.display = "block";
+
+			}
+		}
+
+			function themechanger(){
+    if (theme == "pink") {
+	var sheet = document.createElement('style');
+    console.log("Attempting to change theme to pink");
+	sessionStorage.setItem("theme","pink");
+    sheet.innerHTML = "button {background-color:rgba(255,105,180,1);} button:hover{background-color: rgba(255,150,180,0.4);} h1 {background-color: rgba(255,255,255,0.7); color:black;} body {background-image: url(img/3pink.jpg);} .intro h2{color:rgba(0,0,0,0.8);} .intro p{color:rgba(0,0,0,0.8)} nav ul li a{color:black;} nav ul li:hover > ul{background-color: rgba(255,255,255,0.7)} nav ul li:hover{background-color: rgba(255,255,255, 0.7)}";
+    document.body.appendChild(sheet);
+    console.log("Theme changed to pink");
+	}
+	else if (theme == "classic"){
+	var sheet = document.createElement('style');
+    console.log("Attempting to change theme to classic");
+	sessionStorage.setItem("theme","classic");
+    sheet.innerHTML = "button{background-color: rgba(0, 76, 159, 0.7);} button:hover{background-color: rgba(0, 76, 159, 0.4);} h1 {background-color: rgba(0, 76, 159, 0.7); color:white;} body {background-image: url(img/3classic.jpg);} .intro h2{color:rgba(255,255,255,1);} .intro p{color:rgba(255,255,255,1)} nav ul li a {color:white} nav ul li:hover > ul{background-color: rgba(0, 76, 159, 0.7)} nav ul li:hover{background-color: rgba(0, 76, 159, 0.7)}";
+    document.body.appendChild(sheet);
+    console.log("Theme changed to classic");
+	}
+	else if (theme == "mono"){
+	var sheet = document.createElement('style');
+    console.log("Attempting to change theme to mono");
+	sessionStorage.setItem("theme","mono");
+     sheet.innerHTML ="button {background-color:rgba(140,140,140,1);} button:hover{background-color: rgba(110,110,110,0.7);} h1 {background-color:rgba(110,110,110,0.7); color:white;}body {background-image: url(img/3mono.jpg);} .intro h2{color:rgba(255,255,255,1);} .intro p{color:rgba(255,255,255,1)} nav ul li a {color:white} nav ul li:hover > ul {background-color: rgba(110,110,110,0.7)} nav ul li:hover{background-color: rgba(110,110,110,0.7)}";
+    document.body.appendChild(sheet);
+    console.log("Theme changed to mono");
+	}
+	else console.log("Invalid theme");
+  }
+			</script>
+		</head>
+		<body onload="hidecontent(); themechanger()">
+			<h1><a class="fa fa-bars" aria-hidden="true" id="bars" href="#menu" onclick="contentshow('navbarlist')" ></a>polyNexus</h1>
+			<nav>
+		  <ul id="navbarlist">
+		    <li>
+		      <a href="main.html#tabs-1"  id="tab-1">Chats</a>
+		    </li>
+		    <li>
+		      <a href="main.html#tabs-2" id="tab-2">Events</a>
+		    </li>
+		    <li>
+		      <a href="main.html#tabs-3" id="tab-3">Settings</a>
+		    </li>
+		    <li>
+		      <a onclick="goBlog()" class="pointer" id="tab-4">Blog</a>
+		    </li>
+					<li>
+            <a href="rules.html">Rules</a>
+              </li>
+					<li>
+            <a href="faq.html">FAQ</a>
+          </li>
+		    <li>
+		      <a onclick="logout()" class="pointer"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		    </li>
+		  </ul>
+		</nav>
+			<div class="intro">
+				<h2>FAQ</h2>
+					<p>
+						polyNexus has a lot of functionality and fun available
+            for its users! Read up here to see if others commonly
+            experience the difficulties you are having to unlock
+            as much potential as you can from polyNexus.
+					</p>
+					<p>
+						The FAQ page is updated as time goes on and as new features are implemented. Check back if you ever are in doubt!
+					</p>
+			</div>
+
+			<div class="content2">
+
+				<button onclick="contentshow('questionSet5')"><span>General</span></button>
+
+				<div id="questionSet5">
+				    <p class="question">What is polyNexus for?</p>
+						<p class="answer">polyNexus provides a platform for polytechnic students to share and interact with other one another through mutual interests by placing them into chat rooms based on their interests.</p>
+
+						<p class="question">How does it do so?</p>
+						<p class="answer">We also facilitate bonding between our users by offering a private messaging system and an offline meeting scheduler.</p>
+
+						<p class="question">What is the code of conduct on the platform?</p>
+						<p class="answer">On top of the general code of conduct, being general netiquette, there is a detailed rules page on the site. Vist it <a href=rules.html>here</a>.</p>
+				</div>
+
+				<button onclick="contentshow('questionSet1')"><span>Accounts</span></button>
+
+				<div id="questionSet1">
+
+				    <p class="question">How do I create an account?</p>
+						<p class="answer">To create your account, simply visit our home page and sign up with your NYP assigned email address.</p>
+
+						<p class="question">Is there a way for users to be banned?</p>
+						<p class="answer">No, but users can block anyone they feel like. polyNexus accounts are also linked to school emails, which can be used to identify repeat offenders.</p>
+
+						<p class="question">Can I change my username?</p>
+						<p class="answer">Yes, just go to the settings tab.</p>
+
+						<p class="question">What usernames are allowed on polyNexus?</p>
+						<p class="answer">Any names that are not offensive or derogatory to any person or group of people. Names that contain personal information such as one's full name, address or phone number are not advised.</p>
+				</div>
+
+				<button onclick="contentshow('questionSet2')"><span>Chats</span></button>
+
+				<div id="questionSet2">
+						<p class="question">What is the chat feature for?</p>
+						<p class="answer">The chat feature is for our users to communicate in chat groups or privately to discuss and explore their interests as well as form friendships with other users.</p>
+
+						<p class="question">How do I start a chat?</p>
+						<p class="answer">Start a chat by simply typing in your interest you would like to discuss. e.g; Football, League of Legends</p>
+
+						<p class="question">What is the chat labelling standard?</p>
+						<p class="answer">Use appropriate spacings and do not use abbrevations where appropriate. e.g; WTF as an exclamation and Whisky Tango Foxtrot the movie are very different.</p>
+
+						<p class="question">Is there any way to send private messages?</p>
+						<p class="answer">Use the private messaging option instead of the group chat one.</p>
+				</div>
+
+				<button onclick="contentshow('questionSet3')"><span>Blogs</span></button>
+
+				<div id="questionSet3">
+
+						<p class="question">What is the blogs feature for?</p>
+						<p class="answer">The blogs feature is for users to have a permanently accessable discussion on a specific, in-depth topic for other users to see as well as to share content</p>
+
+						<p class="question">Is there any rules or guidelines for the blogs?</p>
+						<p class="answer">Yes, go check out our rules page</p>
+
+						<p class="question">How are blogs generated?</p>
+						<p class="answer">Blogs are automatically generated to match each chat group and are created simultaneously</p>
+				</div>
+
+				<button onclick="contentshow('questionSet4')"><span>Event Planners</span></button>
+
+				<div id="questionSet4">
+						<p class="question">What is the event planner for?</p>
+						<p class="answer">To easily and convieniently coordinate meetups in real life between users to enhance the polyNexus experience, upgrading it from a solely online platform to a physical social influence</p>
+
+						<p class="question">Who can plan events?</p>
+						<p class="answer">The event planner is to be used by the users to create events for other users, hence any registered user may plan an event.</p>
+
+						<p class="question">Who can plan group events?</p>
+						<p class="answer">To uphold relevence in the events hosted, events may be planned by any user inside the group they are planning the event for.</p>
+				</div>
+				</div>
+
+			</div>
+		</body>
+	</html>
