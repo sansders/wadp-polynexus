@@ -78,7 +78,7 @@
 	<div id="events">
     <ul class="currentchatlist" id="eventsul">
       <li>
-        <h2>Events</h2>
+        <h2 id="event1-1">Events</h2>
         <p class="textchat" id="eventsdesc">
           You can only join events if you are in the specified chat group.
         </p>
@@ -111,33 +111,33 @@
 			</div>
 
 			<div id="events-2" class="activetab">
-			<span><h2><i class="eventtitle" aria-hidden="true"></i>Organize an event </h2></span>
+			<span><h2 id="event1-2"><i class="eventtitle" aria-hidden="true"></i>Organize an event </h2></span>
 			<br/>
 			<br/>
 
 				<h4 class="inputeventdetails">
 
-				<span>Event Name:</span>
+				<span id="event1-3">Event Name:</span>
 					<br/>
 				<input type="text" id="inputeventname" required />
 					<br/>
-				<span>Event Type:</span>
+				<span id="event1-4">Event Type:</span>
 					<br/>
 				<input type="text" placeholder="Gathering, Party etc." id="inputeventtype" required />
 					<br/>
-				<span>Date:</span>
+				<span id="event1-5">Date:</span>
 					<br/>
 				<input type="date" id="inputeventdate" placeholder="dd/mm/yyy" required />
 					<br/>
-				<span>Time:</span>
+				<span id="event1-6">Time:</span>
 					<br/>
 				<input type="time" id="inputeventtime" required />
 					<br/>
-				<span>Venue:</span>
+				<span id="event1-7">Venue:</span>
 					<br/>
 					<input type="text" id="inputeventvenue" required/>
 					<br/>
-				<span>Event description:</span>
+				<span id="event1-8">Event description:</span>
 					<br/>
 					<textarea rows="4" cols="35" id="inputeventdescription"></textarea>
 					<br/>
@@ -157,7 +157,7 @@
   <div id="setting">
     <ul class="currentchatlist">
       <li>
-        <h2>Settings</h2>
+        <h2 id="settings">Settings</h2>
         <p class="textchat" id="settingsdesc">
           Change how the application works.
         </p>
@@ -189,7 +189,7 @@
       </li>
       <li><a href="#setting-5">
         <h3 id="setting5h3"><i class="fa fa-globe" aria-hidden="true"></i> Language</h3>
-        <p class="textchat">
+        <p class="textchat" id="settingslanguagedesc">
           Change the language of the application.
         </p></a>
       </li>
@@ -204,45 +204,45 @@
       </li>
     </ul>
     <div id="setting-1" class="activetab">
-      <h2>Username</h2>
-      <h3>Please select a username of your liking.</h3>
+      <h2 id="setting1-1">Username</h2>
+      <h3 id="setting1-2">Please select a username of your liking.</h3>
       <h4 id="displaycurrentid">Current Username:</h4>
-      <h4>New Username:</h4>
+      <h4 id="setting1-3">New Username:</h4>
       <input class="settingsinput" type="text" id="usernamefield" placeholder="New Username"/>
     <br />
-    <button class="button" onclick="changeUsername()"><span>Change Username</span></button>
+    <button id="setting1-4" class="button" onclick="changeUsername()"><span>Change Username</span></button>
     </div>
     <div id="setting-2" class="activetab">
-      <h2>Password</h2>
-      <h3>Please choose a secure password.</h3>
-      <h4>Current Password:</h4>
+      <h2 id="setting2-1">Password</h2>
+      <h3 id="setting2-2">Please choose a secure password.</h3>
+      <h4 id="setting2-3">Current Password:</h4>
       <input id="changepasswordvalidation" class="settingsinput" type="password" placeholder="Current password"/>
-      <h4>New Password:</h4>
+      <h4 id="setting2-4">New Password:</h4>
       <input id="changepassword" class="settingsinput" type="password" placeholder="New password"/>
-      <h4>Re-enter Password</h4>
+      <h4 id="setting2-5">Re-enter Password</h4>
       <input id="changepasswordcheck" class="settingsinput" type="password" placeholder="Re-enter Password"/>
       <br />
-      <button><span>Change Password</span></button>
+      <button><span id="setting2-6">Change Password</span></button>
     </div>
     <div id="setting-3" class="activetab">
-      <h2>Blocked Users</h2>
-      <h3>Manage blocked users.</h3>
+      <h2  id="setting3-1">Blocked Users</h2>
+      <h3 id="setting3-2">Manage blocked users.</h3>
       <ol id="blockedusers">
-        <li>
+        <li id="setting3-3">
           Donald Trump <button class="unblockbutton">Unblock</button>
         </li>
-        <li>
+        <li id="setting3-4">
           Eugene <button class="unblockbutton">Unblock</button>
-        </li>
+        </li id="setting3-5">
         <li>
           DJKeemstar <button class="unblockbutton">Unblock</button>
         </li>
       </ol>
-      <button><span>Unblock All</span></button>
+      <button><span id="setting3-3">Unblock All</span></button>
     </div>
     <div id="setting-4" class="activetab">
-      <h2>Theme</h2>
-      <h3>Please select a new look</h3>
+      <h2 id="setting4-1">Theme</h2>
+      <h3 id="setting4-2">Please select a new look</h3>
       <ul>
         Monochrome <button class="themeclass" onclick="changetheme('mono')"><span>Select Theme</span></button>
         <hr id="themehr"/>
@@ -257,8 +257,8 @@
       </ul>
     </div>
     <div id="setting-5" class="activetab">
-      <h2>Language</h2>
-      <h3>Translations might not be complete/accurate, please bear with us :)</h3>
+      <h2 id="setting5-1">Language</h2>
+      <h3 id="setting5-2">Translations might not be complete/accurate, please bear with us :)</h3>
       <ul>
         Japanese <button class="themeclass" onclick="setLanguage('jp')"><span>Select Theme</span></button>
         <hr id="themehr" />
@@ -277,8 +277,8 @@
       </ul>
     </div>
     <div id="setting-6" class="activetab">
-      <h2>User Icon</h2>
-      <h3>Please select an icon</h3>
+      <h2 id="setting6-1">User Icon</h2>
+      <h3 id="setting6-2">Please select an icon</h3>
       <p>Your current icon is:<img src="icons/icon0.jpg" id="changeableIcon"></p>
         <div class="iconSelector">
           <img src="icons/icon0.jpg" onclick="setIcon('icon0')" class="iconButton">
