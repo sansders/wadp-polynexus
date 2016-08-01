@@ -15,6 +15,7 @@ function setLanguage(language){
     document.getElementById('settingsblockedesc').innerHTML="Displays a list of blocked users.";
     document.getElementById('settingsthemedesc').innerHTML="Change the look and feel of the application.";
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> Create an event.";
+	console.log("Current Language: Japanese");
   }
   else if(language === 'cn'){
     document.getElementById('tab-1').innerHTML="对话";
@@ -70,6 +71,7 @@ function setLanguage(language){
 	document.getElementById('setting6-3').innerHTML= "您目前的图标:<img src='icons/icon0.jpg' id='changeableIcon'>"
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建活动";
 	document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建小组";
+	console.log("Current Language: Chinese");
   }
   else if(language === 'fr'){
       document.getElementById('tab-1').innerHTML="Chats";
@@ -85,6 +87,7 @@ function setLanguage(language){
       document.getElementById('settingsblockedesc').innerHTML="Afficher une liste des utilisateurs bloqués";
       document.getElementById('settingsthemedesc').innerHTML="Changer l'apparence de l'application";
       document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> Créer un événement";
+	  console.log("Current Language: French");
   }
   else if(language === 'en'){
     document.getElementById('tab-1').innerHTML="Chats";
@@ -101,7 +104,7 @@ function setLanguage(language){
 	document.getElementById('event1-6').innerHTML="Time:";
 	document.getElementById('event1-7').innerHTML="Venue:";
 	document.getElementById('event1-8').innerHTML="Event description:";
-    document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
+	document.getElementById('settings').innerHTML= "Settings";
     document.getElementById('settingsdesc').innerHTML="Change how the application works.";
 	document.getElementById('setting1h3').innerHTML= "<i class='fa fa-user' aria-hidden='true'></i> Username";
 	document.getElementById('settingsusernamedesc').innerHTML="Change your username.";
@@ -140,5 +143,6 @@ function setLanguage(language){
 	document.getElementById('setting6-3').innerHTML= "Your current icon is:<img src='icons/icon0.jpg' id='changeableIcon'>"
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> Create an event.";
     document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> Add a group";
+	console.log("Current Language: English");
   }
 }

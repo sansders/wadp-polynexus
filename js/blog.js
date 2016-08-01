@@ -95,15 +95,39 @@ function checkSlider(){
 		height1 = document.getElementById("vertical-range").value;
 		document.getElementById("previewImg").style.width = width1 + "%";
 		document.getElementById("previewImg").style.height = height1 + "px";
-	}, 50);
+	}, 1);
 }
 
 var title, article, subtitle;
+function firstWordCheck(){
+	var Allt = document.getElementById("Title").value;
+	var Alls = document.getElementById("Subtitle").value;
+	var Alla = document.getElementById("Article").value;
+	if (Allt != "" && Allt != null) {
+		title = 1;
+	}
+	else {
+		title = 0;
+	}
+	if (Alls != "" && Alls != null) {
+		subtitle = 1;
+	}
+	else {
+		subtitle = 0;
+	}
+	if (Alla != "" && Alla != null) {
+		article = 1;
+	}
+	else {
+		article = 0;
+	}
+}
+
 function wordcheck(clicked_id){
 	var word = document.getElementById(clicked_id).value;
 	switch(clicked_id){
 		case "Title":
-			if (word != "") {
+			if (word != "" && word != null) {
 				title = 1;
 			}
 			else {
@@ -112,7 +136,7 @@ function wordcheck(clicked_id){
 			break;
 
 		case "Subtitle":
-			if (word != "") {
+			if (word != "" && word != null) {
 				subtitle = 1;
 			}
 			else {
@@ -121,7 +145,7 @@ function wordcheck(clicked_id){
 			break;
 
 		case "Article":
-			if (word != "") {
+			if (word != "" && word != null) {
 				article = 1;
 			}
 			else {
@@ -145,6 +169,7 @@ function verify() {
 	else if (title != 1 || subtitle != 1 || article != 1) {
 		if (title != 1 && subtitle != 1 && article != 1) {
 				alert("WRITE SOMETHING!");
+				confirmation = false;
 		}
 		else if (title != 1 && subtitle != 1) {
 			confirmation = confirm("There is no title and subtitle. Are you sure you want to continue?");
@@ -236,7 +261,7 @@ function creatingDiv() {
 		H3.setAttribute("id", "posted-article-title"  + counter);
 		H4.setAttribute("id", "posted-article-subtitle"  + counter);
 		P1.setAttribute("id", "posted-written-article"  + counter);
-		P2.setAttribute("id", "posted-time"  + counter);
+		P2.setAttribute("id", "posted-time"  + eval(counter + 1));
 		IMG1.setAttribute("id", "posted-image" + counter);
 		IMG2.setAttribute("src", "http://www.clker.com/cliparts/n/J/7/9/S/x/thumbs-up-icon-black-md.png");
 		IMG2.setAttribute("id", "blackLike-" + eval(counter + 4));
@@ -334,6 +359,48 @@ function posting() {
 			$("#posted-article3").hide();
 			$("#posted-article-preview3").click(function(){
 				$("#posted-article3").slideToggle("slow");
+			});
+		}
+		else if (counter == 4) {
+			$("#posted-article4").hide();
+			$("#posted-article-preview4").click(function(){
+				$("#posted-article4").slideToggle("slow");
+			});
+		}
+		else if (counter == 5) {
+			$("#posted-article5").hide();
+			$("#posted-article-preview5").click(function(){
+				$("#posted-article5").slideToggle("slow");
+			});
+		}
+		else if (counter == 6) {
+			$("#posted-article6").hide();
+			$("#posted-article-preview6").click(function(){
+				$("#posted-article6").slideToggle("slow");
+			});
+		}
+		else if (counter == 7) {
+			$("#posted-article7").hide();
+			$("#posted-article-preview7").click(function(){
+				$("#posted-article7").slideToggle("slow");
+			});
+		}
+		else if (counter == 8) {
+			$("#posted-article8").hide();
+			$("#posted-article-preview8").click(function(){
+				$("#posted-article8").slideToggle("slow");
+			});
+		}
+		else if (counter == 9) {
+			$("#posted-article9").hide();
+			$("#posted-article-preview9").click(function(){
+				$("#posted-article9").slideToggle("slow");
+			});
+		}
+		else if (counter == 10) {
+			$("#posted-article10").hide();
+			$("#posted-article-preview10").click(function(){
+				$("#posted-article10").slideToggle("slow");
 			});
 		}
 		counter++

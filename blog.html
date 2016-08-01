@@ -682,7 +682,7 @@
 								<!-- Article Preview 1 -->
 								<div id="article-preview-1" class="article-preview">
 									<div class="article-header">
-										<h3 class="article-title" id="title-1">G</h3>
+										<h3 class="article-title" id="title-1">My Top 3 favourite Overwatch Characters.</h3>
 									</div>
 									<hr>
 									<div class="article-subheader">
@@ -722,11 +722,11 @@
 								<!-- Article Preview 2 -->
 								<div id="article-preview-2" class="article-preview">
 									<div class="article-header">
-										<h3 class="article-title" id="title-2">Where do bananas come from? </h3>
+										<h3 class="article-title" id="title-2">Call of Duty&reg;: Infinite Warfare <b>or</b> Justin Bieber - Baby?</h3>
 									</div>
 									<hr>
 									<div class="article-subheader">
-										<h4 class="article-subtitle" id="subtitle-2">Due to a recent science new breakthrough, bananas are found not to growing on trees but... </h4>
+										<h4 class="article-subtitle" id="subtitle-2">We at FuzzBeed have concluded the results to bring you which will be </h4>
 										<div class="show-time">
 											<p id="time2"></p>
 										</div>
@@ -747,7 +747,7 @@
 										</div>
 										<!-- Article Image -->
 										<div class="article-image">
-											<img id="img-2" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/3_Bananas.jpg" />
+											
 										</div>
 									</div>
 								</div>
@@ -1414,7 +1414,7 @@
 			</div>
 			<!-- Side Navigation -->
 			<div id="navigation-side-left">
-				<button id="newblog"><span>New Post</span></button>
+				<button id="newblog" onclick="firstWordCheck()"><span>New Post</span></button>
 				<div>
 					<ul id="bloglist">
 					</ul>
@@ -1445,7 +1445,7 @@
 						Article: <br>
 						<textarea rows="5" cols="100" id="Article" placeholder="Article" class="forminput" onfocusout="wordcheck(this.id)"></textarea><br>
 
-						<button class="sbutton" type="reset" id="afterpressjavascriptdoesnotwork"><span>Reset</span></button>
+						<button class="sbutton" type="reset" id="afterpressjavascriptdoesnotwork" onclick="firstWordCheck()"><span>Reset</span></button>
 						<button class="sbutton" onclick="verify(); creatingDiv(); posting(); showtime();"><span>Submit</span></button>
 						</p>
 					</form>
@@ -1505,40 +1505,20 @@
 				var minute = addZero(date3.getMinutes());
 				var second = addZero(date3.getSeconds());
 				document.getElementById("time3").innerHTML = "-" + date3.toDateString() + " " + hour + ":" + minute + ":" + second;
-			}, 2000);
+			}, 1000);
 			
-			var press = 0
+			var press = 1;
+			var x;
 			function showtime() {
-				switch (press){
-				case 0:	var postdate = new Date();
-						var hour = addZero(postdate.getHours());
-						var minute = addZero(postdate.getMinutes());
-						var second = addZero(postdate.getSeconds());
-						document.getElementById("posted-time").innerHTML = "-" + postdate.toDateString() + " " + hour + ":" + minute + ":" + second;
-						break;
-
-				case 1:	var postdate1 = new Date();
-						var hour = addZero(postdate1.getHours());
-						var minute = addZero(postdate1.getMinutes());
-						var second = addZero(postdate1.getSeconds());
-						document.getElementById("posted-time1").innerHTML = "-" + postdate1.toDateString() + " " + hour + ":" + minute + ":" + second;
-						break;
-
-				case 2:	var postdate2 = new Date();
-						var hour = addZero(postdate2.getHours());
-						var minute = addZero(postdate2.getMinutes());
-						var second = addZero(postdate2.getSeconds());
-						document.getElementById("posted-time2").innerHTML = "-" + postdate2.toDateString() + " " + hour + ":" + minute + ":" + second;
-						break;
-						
-				case 3:	var postdate3 = new Date();
-						var hour = addZero(postdate3.getHours());
-						var minute = addZero(postdate3.getMinutes());
-						var second = addZero(postdate3.getSeconds());
-						document.getElementById("posted-time3").innerHTML = "-" + postdate3.toDateString() + " " + hour + ":" + minute + ":" + second;
-						break;
+				for(x = 0; x < press; x++){
+					var postdate = new Date();
+					var hour = addZero(postdate.getHours());
+					var minute = addZero(postdate.getMinutes());
+					var second = addZero(postdate.getSeconds());
+					document.getElementById("posted-time" + press).innerHTML = "-" + postdate.toDateString() + " " + hour + ":" + minute + ":" + second;
 				}
 				press++
+				x = press;
 			}
 		</script>
 	</body>
