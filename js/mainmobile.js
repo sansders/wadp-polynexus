@@ -278,7 +278,6 @@ function loadChatoutput(){
     var div1 = document.createElement("DIV");
     div1.className="chatinputbox";
     div1.innerHTML= '<input type="text" placeholder="Type a message" class="chatinputbox1"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
-	
 	container.className = "activetab chatinterface";
     container.id = "chat-" + ++index;
     div.className = "chatoutput";

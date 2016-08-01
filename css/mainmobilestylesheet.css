@@ -363,12 +363,14 @@ button
 
 .chatinputbox1
 {
-	width: 260px;
+	width: 240px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .chatinputbox2
 {
-	width: 260px;
+	width: 240px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
