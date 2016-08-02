@@ -68,7 +68,7 @@ function setLanguage(language){
 	document.getElementById('settingsiconsdesc').innerHTML= "改变你的图标";
 	document.getElementById('setting6-1').innerHTML= "用户图标";
 	document.getElementById('setting6-2').innerHTML= "请选择一个图标";
-	document.getElementById('setting6-3').innerHTML= "您目前的图标:<img src='icons/icon0.jpg' id='changeableIcon'>"
+	document.getElementById('setting6-3').innerHTML= "您目前的图标:<img src='icons/icon0.jpg' id='changeableIcon'>";
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建活动";
 	document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建小组";
 	console.log("Current Language: Chinese");
@@ -140,7 +140,7 @@ function setLanguage(language){
 	document.getElementById('settingsiconsdesc').innerHTML= "Change your icon!";
 	document.getElementById('setting6-1').innerHTML= "User Icon";
 	document.getElementById('setting6-2').innerHTML= "Please select an icon";
-	document.getElementById('setting6-3').innerHTML= "Your current icon is:<img src='icons/icon0.jpg' id='changeableIcon'>"
+	document.getElementById('setting6-3').innerHTML= "Your current icon is:<img src='icons/icon0.jpg' id='changeableIcon'>";
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> Create an event.";
     document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> Add a group";
 	console.log("Current Language: English");
