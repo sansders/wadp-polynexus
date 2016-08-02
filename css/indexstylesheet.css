@@ -255,7 +255,8 @@ hr
 and (max-width:640px)
 {
 	body{
-		width:95%;
+		width:100%;
+		zoom: 90%;
 	}
 
 	.signup {
