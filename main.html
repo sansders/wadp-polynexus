@@ -23,10 +23,17 @@
   <script src="js/icons.js"></script>
   <script src="js/jquery.profanityfilter.js"></script>
   <script src="js/profanityFilter.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
   <script>
     if (screen.width <= 800) {
       window.location = "mainmobile.html";
     } //redirect
+    var socket = io("http://c.jztan.me");
+    socket.on("chat message" , function(msg){
+      $("div[aria-hidden='false']>div.chatoutput").append(msg);
+      $("li[aria-expanded='true']>a p.textchat").html(msg);
+      $("li[aria-expanded='true']>a p.timestamp").html(date.getHours()+":"+date.getMinutes());
+    })
   </script>
   <title>polyNexus</title>
 </head>
@@ -295,7 +302,7 @@
   </div>
 
 </div>
-<!-- HERE IS THE CODE 
+<!-- HERE IS THE CODE
 <video autoplay style="display: none;" id="troll">
 	<source src="img/9.mp4" type="video/mp4">
 </video>

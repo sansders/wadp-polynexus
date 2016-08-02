@@ -7,7 +7,7 @@ function setLanguage(language){
     document.getElementById('tab-4').innerHTML="ブログ";
     document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> チャットを足す";
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> イベントを開催する";
-    document.getElementById('chatinputbox').placeholder="メセージを入力";
+    document.getElementsByClassName('chatinputbox').placeholder="メセージを入力";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
     document.getElementById('settingsdesc').innerHTML="Change how the application works.";
     document.getElementById('settingsusernamedesc').innerHTML="Change your username.";
@@ -22,7 +22,7 @@ function setLanguage(language){
     document.getElementById('tab-2').innerHTML="活动";
     document.getElementById('tab-3').innerHTML="设定";
     document.getElementById('tab-4').innerHTML="博客";
-    document.getElementById('chatinputbox').placeholder="输入信息";
+    document.getElementsByClassName('chatinputbox').placeholder="输入信息";
 	document.getElementById('event1-1').innerHTML="活动";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
 	document.getElementById('event1-2').innerHTML="<i class='eventtitle' aria-hidden='true'></i>举办活动";
@@ -78,7 +78,7 @@ function setLanguage(language){
       document.getElementById('tab-2').innerHTML="Événements";
       document.getElementById('tab-3').innerHTML="Paramètres";
       document.getElementById('tab-4').innerHTML="Blogs";
-      document.getElementById('chatinputbox').placeholder="Écrire un message";
+      document.getElementsByClassName('chatinputbox').placeholder="Écrire un message";
       document.getElementById('eventsdesc').innerHTML="Vous ne pouvez joindre que des événements si vous êtes dans le groupe chat spécifié.";
       document.getElementById('settingsdesc').innerHTML="Changer la manière dont fonctionne l'application.";
       document.getElementById('settingsusernamedesc').innerHTML="Changer votre nom d'utilisateur";
@@ -94,7 +94,7 @@ function setLanguage(language){
     document.getElementById('tab-2').innerHTML="Events";
     document.getElementById('tab-3').innerHTML="Settings";
     document.getElementById('tab-4').innerHTML="Blog";
-    document.getElementById('chatinputbox').placeholder="Type a message";
+    document.getElementsByClassName('chatinputbox').placeholder="Type a message";
 	document.getElementById('event1-1').innerHTML="Events";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
 	document.getElementById('event1-2').innerHTML="<i class='eventtitle' aria-hidden='true'></i>Organize an event ";

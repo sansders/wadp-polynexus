@@ -1,6 +1,7 @@
 var user;
 var xmlDoc;
 var xmlhttp= new XMLHttpRequest();
+var date = new Date();
 $(document).ready(function(){
   user = sessionStorage.getItem('username');
   document.getElementById('userid').innerHTML=user;
@@ -265,15 +266,18 @@ function loadChatoutput(){
   var privchat = JSON.parse(sessionStorage.getItem('privatechats'));
   var index = 0;
   for(var i=0; i<grpchat.length; i++){
+    var idgrpchat = "chat-" + ++index;
     var container = document.createElement("DIV");
     var h2 = document.createElement("H2");
     var div = document.createElement("DIV");
     var div1 = document.createElement("DIV");
     div1.className="chatinputbox";
-    div1.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
+    div1.id=idgrpchat+"input";
+    div1.innerHTML= '<input type="text" placeholder="Type a message" class="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
     container.className = "activetab chatinterface";
-    container.id = "chat-" + ++index;
+    container.id = idgrpchat;
     div.className = "chatoutput";
+    div.id= idgrpchat + "output";
     h2.innerHTML = grpchat[i];
     container.appendChild(h2);
     container.appendChild(div);
@@ -286,7 +290,8 @@ function loadChatoutput(){
     var div2 = document.createElement("DIV");
     var div11 = document.createElement("DIV");
     div11.className="chatinputbox";
-    div11.innerHTML= '<input type="text" placeholder="Type a message" id="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
+
+    div11.innerHTML= '<input type="text" placeholder="Type a message" class="chatinputbox"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
 
 	container1.className = "activetab chatinterface";
     container1.id = "chat-" + ++index;
@@ -299,6 +304,19 @@ function loadChatoutput(){
   }
   $("#chat").tabs();
 }
+$(document).keypress(function(event){
+
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        var textvalue = $("div[aria-hidden='false']>div.chatinputbox>input").val();
+        $("div[aria-hidden='false']>div.chatoutput").append("<p class='chattext'>"+textvalue+"</p>");
+        $("div[aria-hidden='false']>div.chatinputbox>input").val("");
+        socket.emit('chat message', user+": "+textvalue);
+        $("li[aria-expanded='true']>a p.textchat").html(user+": "+textvalue);
+        $("li[aria-expanded='true']>a p.timestamp").html(date.getHours()+":"+date.getMinutes());
+    }
+    event.stopPropagation();
+});
 
 var j = 2;
 
