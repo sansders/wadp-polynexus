@@ -351,11 +351,11 @@ button
 .chatoutput
 {
   position: fixed;
-  top: 20%;
+  top: 15%;
   overflow: auto;
   padding: 10px 10px;
   width: 70%;
-  height: 65%;
+  height: 70%;
   margin: 5px 1px;
   border: 1px solid #dcdcdc;
   border-radius: 5px;
@@ -366,10 +366,21 @@ button
 {
 	width: 240px;
 	margin-right: 10px;
+	position:fixed;
+	bottom: 4.5%;
 }
 
 .chatinputbox2
 {
 	width: 240px;
 	margin-right: 10px;
+	position:fixed;
+	bottom: 4.5%;
+}
+
+.fa-paper-plane
+{
+	position: fixed;
+	bottom: 4.5%;
+	left: 75%;
 }
