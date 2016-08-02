@@ -254,12 +254,12 @@ function loadChats(){
     time1.innerHTML = "13:13";
 
     h31.innerHTML = xmlDoc.users[privchat[x]].username;
-    a1.href = "#chat-" + ++index;
+    a1.href = "#chat1-" + ++index;
     a1.appendChild(h31);
     a1.appendChild(p1);
     a1.appendChild(time1);
     li1.appendChild(a1);
-	li1.setAttribute('onclick','nextPageIsPrivChats' + ++x + '()'); 
+	li1.setAttribute('onclick','nextPageIsPrivChats' + index + '()'); 
     document.getElementById('chatul').insertBefore(li1, addchat);
   } 
   loadChatoutput();
@@ -299,7 +299,7 @@ function loadChatoutput(){
     div11.className="chatinputbox";
     div11.innerHTML= '<input type="text" placeholder="Type a message" class="chatinputbox2"/><i class="fa fa-paper-plane" aria-hidden="true"></i>';
     container1.className = "activetab chatinterface";
-    container1.id = "chat-" + ++index;
+    container1.id = "chat1-" + ++index;
     div2.className = "chatoutput";
     h21.innerHTML = xmlDoc.users[privchat[x]].username;
     container1.appendChild(h21);
