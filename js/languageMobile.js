@@ -20,6 +20,8 @@ function setLanguage(language){
     document.getElementById('tab-1').innerHTML="对话";
     document.getElementById('tab-2').innerHTML="活动";
     document.getElementById('tab-3').innerHTML="设定";
+	document.getElementById('tab-4').innerHTML="博客";
+    document.getElementById('chatinputbox').placeholder="输入信息";
     document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> 创建小组";
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
     document.getElementById('settingsdesc').innerHTML="更改应用程序的功能";
@@ -36,6 +38,8 @@ function setLanguage(language){
       document.getElementById('tab-1').innerHTML="Chats";
       document.getElementById('tab-2').innerHTML="Événements";
       document.getElementById('tab-3').innerHTML="Paramètres";
+	  document.getElementById('tab-4').innerHTML="Bloge";
+      document.getElementById('chatinputbox').placeholder="Faire une message";
       document.getElementById('eventsdesc').innerHTML="Vous ne pouvez joindre que des événements si vous êtes dans le groupe chat spécifié.";
       document.getElementById('settingsdesc').innerHTML="Changer la manière dont fonctionne l'application.";
       document.getElementById('settingsusernamedesc').innerHTML="Changer votre nom d'utilisateur.";
@@ -63,3 +67,4 @@ function setLanguage(language){
     document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> Add a group";
   }
 }
+
