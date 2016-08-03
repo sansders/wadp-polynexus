@@ -65,7 +65,7 @@ function changetheme(n){
   if(n === 'mono'){
     //monochrome theme
     var sheet = document.createElement('style');
-    sheet.innerHTML = ".navbarlist li:hover {background-color: #ebebeb;} h1{  background-color: white; color: black; border-bottom:2px solid #dcdcdc;} .navbarlist li a{color: black} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  #dcdcdc;} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border: 1px solid dcdcdc;} #bars {color:black;}";
+    sheet.innerHTML = ".navbarlist li:hover {background-color: #ebebeb;} h1{  background-color: white; color: black; border-bottom:2px solid #dcdcdc;} .navbarlist li a{color: black} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  #dcdcdc;} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border: 1px solid dcdcdc;} #bars {color:black;} button:hover{color:black; } button:active{color:black}";
     document.body.appendChild(sheet);
 	sessionStorage.setItem("theme","mono");
 	$('meta[name=theme-color]').remove();
@@ -73,7 +73,7 @@ function changetheme(n){
   }
   else if(n === 'pink'){
     var sheet = document.createElement('style');
-    sheet.innerHTML = ".navbarlist li:hover {background-color: rgb(219,112,147);} h1{  background-color: rgb(255,182,193); color: white; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color:rgb(199,21,133)} .currentchatlist{ border:solid 1px rgb(255,192,203);} .currentchatlist li{ border: solid 1px  	rgb(255,192,203);} .addchat:hover{ background-color: rgb(255,192,203)} .chatinputbox input[type='text']{border: solid 1px rgb(255,192,203); } .chatoutput{ border 1px solid rgb(255,192,203);} button:hover{background-color: rgb(255,192,203);} #bars {color:white;}";
+    sheet.innerHTML = ".navbarlist li:hover {background-color: rgb(219,112,147);} h1{  background-color: rgb(255,182,193); color: white; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color:rgb(199,21,133)} .currentchatlist{ border:solid 1px rgb(255,192,203);} .currentchatlist li{ border: solid 1px  	rgb(255,192,203);} .addchat:hover{ background-color: rgb(255,192,203)} .chatinputbox input[type='text']{border: solid 1px rgb(255,192,203); } .chatoutput{ border 1px solid rgb(255,192,203);} button:hover{background-color: rgb(255,192,203);} #bars {color:white;} button:hover{color:black; } button:active{color:black}";
     document.body.appendChild(sheet);
 	sessionStorage.setItem("theme","pink");
 	$('meta[name=theme-color]').remove();
@@ -81,18 +81,18 @@ function changetheme(n){
   }
   else if(n === 'classic'){
     var sheet = document.createElement('style');
-    sheet.innerHTML = ".navbarlist li:hover {background-color: rgba(0, 76, 159, 0.7);} h1{  background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  rgba(0, 76, 159, 0.7);} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border 1px solid dcdcdc;} button:hover{background-color: rgba(30, 172, 253, 1);} #bars {color:white;}" ;
+    sheet.innerHTML = ".navbarlist li:hover {background-color: rgba(0, 76, 159, 0.7);} h1{  background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  rgba(0, 76, 159, 0.7);} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border 1px solid dcdcdc;} button:hover{background-color: rgba(30, 172, 253, 1);} #bars {color:white;} button:hover{color:black; } button:active{color:black}" ;
     document.body.appendChild(sheet);
 	sessionStorage.setItem("theme","classic");
 	$('meta[name=theme-color]').remove();
     $('head').append( '<meta name="theme-color" content="#004c9f">' );
   }
   
-    else if(n === 'red'){
+    else if(n === 'patriotic'){
 	  var sheet = document.createElement('style');
-	  sheet.innerHTML = ".navbarlist li:hover {background-color: #C70039;} h1{  background-color: #C70039; color: #C70039; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color: #C70039} .currentchatlist{ border:solid 1px #C70039;} .currentchatlist li{ border: solid 1px  #C70039;} .addchat:hover{ background-color: #C70039} .chatinputbox input[type='text']{border: solid 1px #C70039; } .chatoutput{ border 1px solid #C70039;} button:hover{background-color: #C70039;} #titlebar { color: white } h1{color:white}";
+	  sheet.innerHTML = ".navbarlist li:hover {background-color: #C70039;} h1{  background-color: #C70039; color: #C70039; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color: #C70039} .currentchatlist{ border:solid 1px #C70039;} .currentchatlist li{ border: solid 1px  #dcdcdc;} .addchat:hover{ background-color: #C70039} .chatinputbox input[type='text']{border: solid 1px #C70039; } .chatoutput{ border 1px solid #C70039;} button:hover{background-color: #C70039;} #titlebar { color: white;} h1{color:white;} button:hover{color:white; } button:active{color:white} " ;  
 	  document.body.appendChild(sheet);
-	  sessionStorage.setItem("theme","red");
+	  sessionStorage.setItem("theme","patriotic");
 	  $('meta[name=theme-color]').remove();
 	  $('head').append( '<meta name="theme-color" content="#C70039">' );
   }
