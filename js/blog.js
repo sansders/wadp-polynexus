@@ -577,6 +577,19 @@ $(document).ready(function() {
 					i9 = container.removeChild(Sports);
 					wf = container.removeChild(Original);
 					break;
+					
+			default:
+					a1 = container.removeChild(Anime);
+					b2 = container.removeChild(Belson);
+					c3 = container.removeChild(Chinese);
+					d4 = container.removeChild(French);
+					e5 = container.removeChild(Gaming);
+					f6 = container.removeChild(Gardening);
+					g7 = container.removeChild(Money);
+					h8 = container.removeChild(School);
+					i9 = container.removeChild(Sports);
+					j10 = container.removeChild(Weird);
+					break;
 		}
 		
 		for(var a = 0; a < blogGroup.length; a++){

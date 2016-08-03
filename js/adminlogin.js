@@ -27,11 +27,19 @@ function login(){
     }
     else{
       alert('Invalid User');
+	  /* STARTS HERE */
+	  document.getElementById("troll").style.display = "block";
+	  document.getElementById("troll").play();
+	  /* ENDS HERE */
     }
   }
   catch(err){
     if(err.name === 'TypeError'){
       alert('Invalid User');
+	  /* STARTS HERE */
+	  document.getElementById("troll").style.display = "block";
+	  document.getElementById("troll").play();
+	  /* ENDS HERE */
     }
     else{
       alert('error');

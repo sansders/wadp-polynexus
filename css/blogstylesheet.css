@@ -170,6 +170,7 @@ header
 
 .article-title
 {
+	font-family: sans-serif, 黑体;
 	text-align: center;
 }
 
@@ -187,6 +188,7 @@ header
 
 .article-subtitle
 {
+	font-family: sans-serif, 仿宋;
 	width: 100%;
 	height: 90%;
 	text-align: center;
@@ -209,14 +211,15 @@ header
 
 .written
 {
+	font-family: sans-serif, 宋体;
 	height: 90%;
 	width: 100%;
-	padding: 50px;
+	overflow: auto;
 }
 
 .article-container p
 {
-	padding-left: 50px;
+	padding-left: 30px;
 }
 
 .article-image
