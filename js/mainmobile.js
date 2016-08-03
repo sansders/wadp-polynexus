@@ -90,7 +90,7 @@ function changetheme(n){
   
     else if(n === 'red'){
 	  var sheet = document.createElement('style');
-	  sheet.innerHTML = ".navbarlist li:hover {background-color: #C70039;} h1{  background-color: #C70039; color: #C70039; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color: #C70039} .currentchatlist{ border:solid 1px #C70039;} .currentchatlist li{ border: solid 1px  #C70039;} .addchat:hover{ background-color: #C70039} .chatinputbox input[type='text']{border: solid 1px #C70039; } .chatoutput{ border 1px solid #C70039;} button:hover{background-color: #C70039;} #titlebar { color: white }";
+	  sheet.innerHTML = ".navbarlist li:hover {background-color: #C70039;} h1{  background-color: #C70039; color: #C70039; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color: #C70039} .currentchatlist{ border:solid 1px #C70039;} .currentchatlist li{ border: solid 1px  #C70039;} .addchat:hover{ background-color: #C70039} .chatinputbox input[type='text']{border: solid 1px #C70039; } .chatoutput{ border 1px solid #C70039;} button:hover{background-color: #C70039;} #titlebar { color: white } h1{color:white}";
 	  document.body.appendChild(sheet);
 	  sessionStorage.setItem("theme","red");
   }
