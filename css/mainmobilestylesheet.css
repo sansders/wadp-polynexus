@@ -364,23 +364,27 @@ button
 
 .chatinputbox1
 {
-	width: 240px;
-	margin-right: 10px;
+	width: 67%;
 	position:fixed;
 	bottom: 4.5%;
+	border-radius: 5px;
+    padding: 1%;
+	min-height= 2.2%;
 }
 
 .chatinputbox2
 {
-	width: 240px;
-	margin-right: 10px;
+	width: 67%;
 	position:fixed;
 	bottom: 4.5%;
+	border-radius: 5px;
+    padding: 1%;
+	min-height= 2.2%;
 }
 
 .fa-paper-plane
 {
 	position: fixed;
-	bottom: 4.5%;
+	bottom: 5.5%;
 	left: 75%;
 }
