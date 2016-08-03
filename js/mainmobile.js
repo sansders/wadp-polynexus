@@ -84,7 +84,7 @@ function changetheme(n){
     sheet.innerHTML = ".navbarlist li:hover {background-color: rgba(0, 76, 159, 0.7);} h1{  background-color: rgba(0, 76, 159, 0.7); color: white; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color:#dcdcdc} .currentchatlist{ border:solid 1px #dcdcdc;} .currentchatlist li{ border: solid 1px #dcdcdc;} .addchat:hover{ background-color:  rgba(0, 76, 159, 0.7);} .chatinputbox input[type='text']{border: solid 1px #dcdcdc; } .chatoutput{ border 1px solid dcdcdc;} button:hover{background-color: rgba(30, 172, 253, 1);} #bars {color:white;}" ;
     document.body.appendChild(sheet);
 	sessionStorage.setItem("theme","classic");
-		$('meta[name=theme-color]').remove();
+	$('meta[name=theme-color]').remove();
     $('head').append( '<meta name="theme-color" content="#004c9f">' );
   }
   
@@ -93,6 +93,7 @@ function changetheme(n){
 	  sheet.innerHTML = ".navbarlist li:hover {background-color: #C70039;} h1{  background-color: #C70039; color: #C70039; border-bottom: none;} .navbarlist li a{color: white} button:hover{background-color: #C70039} .currentchatlist{ border:solid 1px #C70039;} .currentchatlist li{ border: solid 1px  #C70039;} .addchat:hover{ background-color: #C70039} .chatinputbox input[type='text']{border: solid 1px #C70039; } .chatoutput{ border 1px solid #C70039;} button:hover{background-color: #C70039;} #titlebar { color: white } h1{color:white}";
 	  document.body.appendChild(sheet);
 	  sessionStorage.setItem("theme","red");
+	  $('meta[name=theme-color]').remove();
 	  $('head').append( '<meta name="theme-color" content="#C70039">' );
   }
 
