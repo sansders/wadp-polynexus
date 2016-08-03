@@ -312,8 +312,8 @@ $(document).keypress(function(event){
         $("div[aria-hidden='false']>div.chatoutput").append("<p class='chattext'>"+textvalue+"</p>");
         $("div[aria-hidden='false']>div.chatinputbox>input").val("");
         socket.emit('chat message', user+": "+textvalue);
-        $("li[aria-expanded='true']>a p.textchat").html(user+": "+textvalue);
-        $("li[aria-expanded='true']>a p.timestamp").html(date.getHours()+":"+date.getMinutes());
+        $("#chatul>li[aria-expanded='true']>a p.textchat").text(user+": "+textvalue);
+        $("#chatul>li[aria-expanded='true']>a p.timestamp").html(date.getHours()+":"+date.getMinutes());
     }
     event.stopPropagation();
 });
