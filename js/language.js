@@ -5,14 +5,11 @@ function setLanguage(language){
     document.getElementById('tab-2').innerHTML="イベント";
     document.getElementById('tab-3').innerHTML="セッティング";
     document.getElementById('tab-4').innerHTML="ブログ";
-<<<<<<< HEAD
     document.getElementById('chatinputbox').placeholder="メセージを入力";
 	document.getElementById('event1-1').innerHTML="Events";
-=======
     document.getElementById('addchat').innerHTML="<i class='fa fa-plus-square-o' aria-hidden='true'></i> チャットを足す";
     document.getElementById('addevent').innerHTML= "<i class='fa fa-plus-square-o' aria-hidden='true'></i> イベントを開催する";
     document.getElementsByClassName('chatinputbox').placeholder="メセージを入力";
->>>>>>> origin/gh-pages
     document.getElementById('eventsdesc').innerHTML="You can only join events if you are in the specified chat group.";
 	document.getElementById('event1-2').innerHTML="<i class='eventtitle' aria-hidden='true'></i>Organize an event ";
 	document.getElementById('event1-3').innerHTML="Event Name:";
@@ -122,12 +119,9 @@ function setLanguage(language){
       document.getElementById('tab-2').innerHTML="Événements";
       document.getElementById('tab-3').innerHTML="Paramètres";
       document.getElementById('tab-4').innerHTML="Blogs";
-<<<<<<< HEAD
       document.getElementById('chatinputbox').placeholder="Écrire un message";
 	  document.getElementById('event1-1').innerHTML="Events";
-=======
       document.getElementsByClassName('chatinputbox').placeholder="Écrire un message";
->>>>>>> origin/gh-pages
       document.getElementById('eventsdesc').innerHTML="Vous ne pouvez joindre que des événements si vous êtes dans le groupe chat spécifié.";
 	  document.getElementById('event1-2').innerHTML="<i class='eventtitle' aria-hidden='true'></i>Organize an event ";
 	  document.getElementById('event1-3').innerHTML="Event Name:";
