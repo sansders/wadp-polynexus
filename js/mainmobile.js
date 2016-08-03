@@ -294,6 +294,7 @@ function loadChatoutput(){
 	container.appendChild(div1);
 	container.style.paddingTop="53px";
 	container.style.position="fixed";
+	container.style.fontSize="110%";
     document.getElementById("chat").appendChild(container);
 }
   for(var x=0; x<privchat.length; x++){
@@ -313,6 +314,7 @@ function loadChatoutput(){
     container1.appendChild(div11);
 	container1.style.paddingTop="53px";
 	container1.style.position="fixed";
+	container1.style.fontSize="110%";
     document.getElementById("chat").appendChild(container1);
   } 
   $("#chat").tabs();
